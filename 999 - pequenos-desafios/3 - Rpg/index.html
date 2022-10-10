@@ -26,6 +26,13 @@
             min-width: 300px;
             padding: 10px;
         }
+        button {
+            margin: 20px;
+            padding: 10px;
+        }
+        button.perso {
+            width: 70%;
+        }
     </style>
 </head>
 <body>
@@ -36,20 +43,26 @@
     <div id="container">
         <div class="personagens" id="personagem1">
             <h3 id="nome1">Personagem 1</h3>
-            <p id="live-1">NONE</p>
-            <p id="power-atk-1">NONE</p>
-            <p id="power-1">NONE</p>
-            <p id="shield-1">NONE</p>
+            <p id="live-1">VIDA</p>
+            <p id="power-atk-1">ATAQUE</p>
+            <p id="power-1">DEFEZA</p>
+            <p id="shield-1">ESCUDO</p>
+            <button class="perso" onclick="personagem1()">Criar</button>
         </div>
 
         <div class="personagens" id="personagem1">
             <h3 id="nome2">Personagem 2</h3>
-            <p id="live-2">NONE</p>
-            <p id="power-atk-2">NONE</p>
-            <p id="power-2">NONE</p>
-            <p id="shield-2">NONE</p>
+            <p id="live-2">VIDA</p>
+            <p id="power-atk-2">ATAQUE</p>
+            <p id="power-2">DEFEZA</p>
+            <p id="shield-2">ESCUDO</p>
+            <button class="perso" onclick="personagem2()">Criar</button>
         </div>
     </div>
+
+    <p id="naracao"></p>
+
+    <button onclick="pular()">PULAR ROUD</button>
 
     
     <h1 id="resultado">
