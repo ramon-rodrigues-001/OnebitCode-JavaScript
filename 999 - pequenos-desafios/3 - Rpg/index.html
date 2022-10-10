@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Dano</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-size: 1.1em;
+        }
+        p {
+            margin: auto;
+            max-width: 500px;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .personagens {
+            border: solid 2px black;
+            min-width: 300px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>RPG</h1>
+    <p>Você é um viking e se deparou com um adiversario mais poderoso que você, Seu cogido de honra não permite que você recue de um combate</p>
+    <h4>Boa Sorte</h4>
+
+    <div id="container">
+        <div class="personagens" id="personagem1">
+            <h3 id="nome1">Personagem 1</h3>
+            <p id="live-1">NONE</p>
+            <p id="power-atk-1">NONE</p>
+            <p id="power-1">NONE</p>
+            <p id="shield-1">NONE</p>
+        </div>
+
+        <div class="personagens" id="personagem1">
+            <h3 id="nome2">Personagem 2</h3>
+            <p id="live-2">NONE</p>
+            <p id="power-atk-2">NONE</p>
+            <p id="power-2">NONE</p>
+            <p id="shield-2">NONE</p>
+        </div>
+    </div>
+
+    
+    <h1 id="resultado">
+
+    </h1>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
