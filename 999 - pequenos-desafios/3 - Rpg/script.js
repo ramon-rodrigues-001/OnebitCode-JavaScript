@@ -16,7 +16,6 @@ const power_atk_2 = document.querySelector('p#power-atk-2')
 const power_2 = document.querySelector('p#power-2')
 const shield_2 = document.querySelector('p#shield-2')
 
-
 function personagem1() {
     let personagem1_Vida_txt = prompt('Vida do personagem_1 0/100')
     let personagem1_power_atk_txt = prompt('Ataque do personagem_1 0/100')
