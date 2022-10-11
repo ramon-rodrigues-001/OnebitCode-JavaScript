@@ -9,11 +9,9 @@ let velocidadeCar2 = prompt('Velocindade do Segundo Veiculo')
 if (velocidadeCar1 > velocidadeCar2) {
     alert(car1)
 }
+else if (velocidadeCar1 < velocidadeCar2) {
+    alert(car2)
+}
 else {
-    if (velocidadeCar1 === velocidadeCar2) {
-        alert('Mesma Velociadade')
-    }
-    else {
-        alert(car2)
-    }
+    alert('Mesma Velociadade')
 }
