@@ -6,8 +6,8 @@ for (let i = teste.length - 1 ; i >= 0; i--) {
 }
 
 if (teste === espelhado) {
-    console.log('É um palindromo')
+    console.log(teste + 'É um palindromo')
 }
 else {
-    console.log(`Não é palindromo \n${teste} \n${espelhado}`)
+    console.log(`${teste} Não é palindromo!. \n\n${teste} \n${espelhado}`)
 }
