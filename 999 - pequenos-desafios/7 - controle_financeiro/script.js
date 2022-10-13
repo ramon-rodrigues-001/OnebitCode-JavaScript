@@ -1,6 +1,6 @@
 let nome = prompt('Qual seu nome?: ').toUpperCase()
-let dinheroTotal = prompt('Qual valor atual na conta: ')
-let total = Number(dinheroTotal)
+let total = prompt('Qual valor atual na conta: ')
+total = Number(total)
 
 do {
     fleg = prompt('Qual ação deseja fazer: \n1 - Depositar \n2 - Sacar \n3 - Sair')
