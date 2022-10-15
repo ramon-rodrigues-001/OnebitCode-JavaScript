@@ -6,6 +6,8 @@ if (escolha === '1') {
     let newcard = 
 }
 if (escolha === '2') {
+
+    
     
 }
 if (escolha === '3') {
