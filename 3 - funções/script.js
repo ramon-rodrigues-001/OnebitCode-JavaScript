@@ -28,7 +28,7 @@ console.log(creating('Ramon', 18, 'Masculino'))
 
 // Objeto ou Array como parametro
 function objComoParametro(parametro) {
-    console.log(parametro)
+    return (parametro)
 }
 let obj = {
     nome: 'Ramon',
@@ -37,4 +37,21 @@ let obj = {
     prof: 'Developer',
     numero: 1124442
 }
-objComoParametro(obj)
+console.log (objComoParametro(obj))
+
+
+
+// Mais de um retorn
+function idade(i) {
+    if (i >= 18) {
+        return 'Maior de idade'
+    }
+    else {
+        return 'Menor de idade'
+    }
+}
+let maioridade = idade(19)
+console.log(maioridade)
+
+
+// function com outro function, Tem como mais estou com pregiça de fazer c é mais experiente faz você.
