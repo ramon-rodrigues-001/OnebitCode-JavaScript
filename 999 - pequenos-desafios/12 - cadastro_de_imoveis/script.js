@@ -1,10 +1,7 @@
 let arr = []
-let obj = {}
-let organizado = ''
-let choice;
+let choice = ''
 
 do {
-    organicao()
     choice = prompt(
         `====== CADASTRO DE IMOVEIS ======
         \nIMOVEIS CADASTRADOS: ${arr.length}
@@ -12,21 +9,20 @@ do {
     )
 
     if (choice === '1') {
+        let obj = {}
         obj.nome = prompt('Informe o nome do proprietário')
-        obj.quartos = prompt('Quantos quartos posuem no imovel: ')
-        obj.banheiros = prompt('Quantos banheiros posuem no imovel: ')
-        obj.garagem = prompt('O imovel posue garagem: [Sim/Nao]')
+        obj.quartos = prompt('Quantos quartos possuem no imovel: ')
+        obj.banheiros = prompt('Quantos banheiros possuem no imovel: ')
+        obj.garagem = prompt('O imovel possue garagem: [Sim/Nao]')
 
-        arr.push(obj)
+        let confirmacao = confirm("Quer Mesmo salvar esse imovel?:")
+        if (confirmacao === true) {
+            arr.push(obj)
+        }
     }
     else if (choice === '2') {
-        alert(`1º Imovel \n${organizado}`)
+        for (let i = 0; i<arr.length; i++) {
+            alert(`${i + 1}º IMOVEL \n\nProprietario: ${arr[i].nome}\nQuartos: ${arr[i].quartos} \nBanheiros: ${arr[i].banheiros} \nPossui Garagem?: ${arr[i].garagem}`)
+        }
     }
-
 } while(choice !== '3')
-
-function organicao() {
-    for (let i = 0; i<arr.length; i++) {
-        organizado += `${arr[i]} \n`
-    }
-}
