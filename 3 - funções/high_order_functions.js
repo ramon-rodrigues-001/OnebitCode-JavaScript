@@ -33,6 +33,7 @@ function mostrarElemento(elemento, indice, array) {
         array: array
     }
     console.log(obj)
+    
 }
 
 let arr = ['Maça', 'Laranja', 'Melão', 'Uva'] 
