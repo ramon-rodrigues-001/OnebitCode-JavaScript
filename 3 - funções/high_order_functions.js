@@ -1,22 +1,3 @@
-// É QUANDO PASSA UM PARAMETRO COM A CHAMADA DE OUTRA FUNÇÃO QUE PEGA OS DADOS DA PRIMEIRA E UTILIZA COMO PARAMETRO, ALGO ASSIM!
-
-
-// MOSTRANDO ELEMENTOS DE UMA LISTA
-function mostrarElemento(elemento, indice, array) {
-    console.log({
-        elemento: elemento,
-        indice: indice,
-        array: array
-    })
-}
-let arr = ['Maça', 'Laranja', 'Melão', 'Uva'] 
-
-for (let i = 0; i<arr.length; i++) {
-    mostrarElemento(arr[i], i, arr)
-}
-/*======= OU arr.forEach =======*/  arr.forEach(mostrarElemento)
-
-
 // Adicionando uma lista de objetos em uma lista de string
 let persona = [
     {Nome: 'Ramon', Class: 'Humano', Nivel: 99},
@@ -27,24 +8,39 @@ let persona = [
     {Nome: 'Is', Class: 'Elfo', Nivel: 58},
 ]
 
+
 // Utilizando metodo [MAP]
+// ESTE METODO SERVE PARA PEGAR TODOS OS ELEMENTOS COMO NOME DE UM ARRAY, E COLOCAR EM OUTRO ARRAY
 let nomes = persona.map((mapeamento1) => mapeamento1.Nome)
 console.log(nomes)
 
+
 // Utilizando metodo [FILTER]
+// ESTE METODO SERVE PARA SELECIONAR ELEMENTOS COM DETERMMINADO VALOR
 let humanos = persona.filter((mapeamento2) => mapeamento2.Class === 'Humano')
 console.log(humanos)
 
 
 // Utilizando metodo [REDUCE]
+// ESTE TETODO SERVE PARA SOMAR OU SEPARAR UM DETERMINADO ELEMENTO EM ARRAYS DIFERENTES ORGANIZANDO-O
 let organização = persona.reduce((valorAcumulado, parametro2) => {
     if (valorAcumulado[parametro2.Class]) {
-        valorAcumulado[parametro2.Class]
+        valorAcumulado[parametro2.Class].push(parametro2)
     }
     else {
-        valorAcumulado[parametro2.Class] = parametro2
+        valorAcumulado[parametro2.Class] = [parametro2]
     }
     
     return valorAcumulado
 }, {})
 console.log(organização)
+
+
+// Utilizando metodo [FOREACH]
+// PARA CADA ELEMENTO DETRO DE UM ARRAY ELE VAI DEVOLVER O ELEMENTO O INDICE E O ARRAY COMPLETO
+persona.forEach((elemento, indice) => {
+    console.log(
+        elemento,
+        indice
+    )
+})
