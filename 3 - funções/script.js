@@ -55,3 +55,40 @@ console.log(maioridade)
 
 
 // function com outro function, Tem como mais estou com pregiça de fazer c é mais experiente faz você.
+
+
+
+//========== ??????? ==========
+function arr(n1, n2, funcao) {
+    let resultado = funcao(n1, n2)
+    console.log(resultado)
+}
+arr(5,5,multiplicar)
+
+function somar(x, y) {
+    console.log(`Somando ${x} e ${y}`)
+    return x + y
+}
+function multiplicar(x, y) {
+    console.log(`Multiplicando ${x} e ${y}`)
+    return x * y
+}
+
+
+
+//========== ANONIMA ==========
+let somar = (n1, n2) => n1 + n2
+console.log(somar(5, 5))
+
+
+//========== RECURSIVAS ==========
+let repetirAte10 = (n1) => {
+    console.log(n1)
+    if (n1 < 10) {
+        repetirAte10(n1 + 1)
+    }
+    else {
+        console.log('FIM')
+    }
+}
+repetirAte10(1)
