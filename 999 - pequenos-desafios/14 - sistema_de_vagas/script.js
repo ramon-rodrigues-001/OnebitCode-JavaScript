@@ -1,10 +1,10 @@
-let listaCandidatos = []
+let listaDeVagas = []
 
 // MOSTRAR AS VAGAS QUE ESTÃO NA LISTA
 function mostrarVagas() {
     let vagas = []
-    listaCandidatos.map((mapeamento, indice) => {
-        vagas.push(`\n${indice} - ${mapeamento.nome}`)
+    listaDeVagas.map((mapeamento, indice) => {
+        vagas.push(`\n${indice} - ${mapeamento.nome} [${mapeamento.candidato.length} Candidatos]`)
     })
     alert(vagas)
 }
@@ -15,18 +15,31 @@ function adicionar() {
     newVaga.nome = prompt('Informe o nome para a vaga: ')
     newVaga.descricao = prompt('Informe uma descrição para a vaga: ')
     newVaga.data = prompt('Informe uma data limite dd/mm/aaaa: ')
+    newVaga.candidato = []
 
     let salvarVaga = confirm('DESEJA MESMO SALVAR ESTA VAGA?:' + 
-    `\n- ${newVaga.nome} \n- ${newVaga.descricao} \n- ${newVaga.data}`)
+    `\n- ${newVaga.nome} \n- ${newVaga.descricao} \n- ${newVaga.data} \n- [${newVaga.candidato.length} Candidatos]`)
     if (salvarVaga) {
-        listaCandidatos.push(newVaga)
+        listaDeVagas.push(newVaga)
     }
 }
 
 // VISUALIZAR DADOS DE UMA VAGA
 function visualizarVaga() {
-    let indeceDaVaga = prompt('Informe o indece da vaga que deseja visualizar:')
-    alert(`Vaga de ${listaCandidatos[indeceDaVaga].nome} \n- ${listaCandidatos[indeceDaVaga].descricao} \n- ${listaCandidatos[indeceDaVaga].data}`)
+    if (listaDeVagas.length > 0) {
+        let indeceDaVaga = prompt('Informe o indece da vaga que deseja visualizar:')
+        alert(`Vaga de ${listaDeVagas[indeceDaVaga].nome} 
+        ${listaDeVagas[indeceDaVaga].descricao} 
+        ${listaDeVagas[indeceDaVaga].data}
+        \n--> Candidatos: ${() => {
+            for (let i = 0; i<listaDeVagas[indeceDaVaga].candidato.length; i++) {
+                listaDeVagas[indeceDaVaga].candidato[i]
+            }
+        }}`)
+    }
+    else {
+        alert('Não tem vagas disponiveis')
+    }
 }
 
 // EXCLUIR VAGA
@@ -34,9 +47,24 @@ function excluirVaga() {
     let indiceVagaExcluir = prompt('Informe o indece da vaga que deseja excluir:')
 
     let confirmarExcluir = confirm('DESEJA MESMO EXCLUIR ESTA VAGA?:' + 
-        `Vaga de ${listaCandidatos[indiceVagaExcluir].nome} \n- ${listaCandidatos[indiceVagaExcluir].descricao} \n- ${listaCandidatos[indiceVagaExcluir].data}`)
+        `Vaga de ${listaDeVagas[indiceVagaExcluir].nome} \n- ${listaDeVagas[indiceVagaExcluir].descricao} \n- ${listaDeVagas[indiceVagaExcluir].data}`)
     if (confirmarExcluir) {
-        listaCandidatos.splice(indiceVagaExcluir, 1)
+        listaDeVagas.splice(indiceVagaExcluir, 1)
+    }
+}
+
+// ADICIONANDO CANDIDATOS A UMA VAGA
+function adicionarCandidato() {
+    let indeceDaVagaParaAdicionarCandidato = prompt('Informe o indece da vaga que deseja adicionar o candidato:')
+
+    let nomeDoCandidato = prompt('Nome do candidato: ')
+
+    let confirmandoCandidato = confirm(`DESEJA MESMO ADICIONAR O CANDIDATO ${nomeDoCandidato} A ESTA VAGA?:` + 
+    `Vaga: ${listaDeVagas[indeceDaVagaParaAdicionarCandidato].nome}, 
+    ${listaDeVagas[indeceDaVagaParaAdicionarCandidato].descricao}`)
+
+    if (confirmandoCandidato) {
+        listaDeVagas[indeceDaVagaParaAdicionarCandidato].candidato = nomeDoCandidato
     }
 }
 
@@ -62,6 +90,15 @@ do {
             break
         case '4':
             excluirVaga()
+            break
+        case '5':
+            adicionarCandidato()
+            break
+        case '6':
+            alert('Saindo....')
+            break
+        default:
+            alert('Acho que você não entendeu os regras amigo,\nTente novamente.')
             break
     }
 
