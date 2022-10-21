@@ -9,7 +9,7 @@ function mostrarVagas() {
     alert(vagas)
 }
 
-// ADICIONAR UMA FAGA A LISTA
+// ADICIONAR UMA VAGA A LISTA
 function adicionar() {
     let newVaga = {}
     newVaga.nome = prompt('Informe o nome para a vaga: ')
@@ -28,14 +28,11 @@ function adicionar() {
 function visualizarVaga() {
     if (listaDeVagas.length > 0) {
         let indeceDaVaga = prompt('Informe o indece da vaga que deseja visualizar:')
-        alert(`Vaga de ${listaDeVagas[indeceDaVaga].nome} 
-        ${listaDeVagas[indeceDaVaga].descricao} 
-        ${listaDeVagas[indeceDaVaga].data}
-        \n--> Candidatos: ${() => {
-            for (let i = 0; i<listaDeVagas[indeceDaVaga].candidato.length; i++) {
-                listaDeVagas[indeceDaVaga].candidato[i]
-            }
-        }}`)
+
+        alert(`Vaga de ${listaDeVagas[indeceDaVaga].nome} \n${listaDeVagas[indeceDaVaga].descricao} \n${listaDeVagas[indeceDaVaga].data}
+        \n--> Candidatos:\n${listaDeVagas[indeceDaVaga].candidato.map((parametro) => {
+            return ` -  ${parametro} \n`
+        })}`)
     }
     else {
         alert('Não tem vagas disponiveis')
@@ -55,16 +52,14 @@ function excluirVaga() {
 
 // ADICIONANDO CANDIDATOS A UMA VAGA
 function adicionarCandidato() {
-    let indeceDaVagaParaAdicionarCandidato = prompt('Informe o indece da vaga que deseja adicionar o candidato:')
-
     let nomeDoCandidato = prompt('Nome do candidato: ')
 
-    let confirmandoCandidato = confirm(`DESEJA MESMO ADICIONAR O CANDIDATO ${nomeDoCandidato} A ESTA VAGA?:` + 
-    `Vaga: ${listaDeVagas[indeceDaVagaParaAdicionarCandidato].nome}, 
-    ${listaDeVagas[indeceDaVagaParaAdicionarCandidato].descricao}`)
+    let indeceDaVagaParaAdicionarCandidato = prompt('Informe o indece da vaga que deseja adicionar o candidato:')
+
+    let confirmandoCandidato = confirm(`DESEJA MESMO ADICIONAR O CANDIDATO ${nomeDoCandidato} A ESTA VAGA?:` +`\n\nVaga: ${listaDeVagas[indeceDaVagaParaAdicionarCandidato].nome}, \n${listaDeVagas[indeceDaVagaParaAdicionarCandidato].descricao}`)
 
     if (confirmandoCandidato) {
-        listaDeVagas[indeceDaVagaParaAdicionarCandidato].candidato = nomeDoCandidato
+        listaDeVagas[indeceDaVagaParaAdicionarCandidato].candidato.push(nomeDoCandidato)
     }
 }
 
