@@ -18,8 +18,9 @@ function adicionar() {
     newVaga.data = prompt('Informe uma data limite dd/mm/aaaa: ')
     newVaga.candidato = []
 
-    let confirmarSalvarVaga = confirm('DESEJA MESMO SALVAR ESTA VAGA?:' + 
-    `\n- ${newVaga.nome} \n- ${newVaga.descricao} \n- ${newVaga.data} \n- [${newVaga.candidato.length} Candidatos]`)
+    let confirmarSalvarVaga = confirm(
+        'DESEJA MESMO SALVAR ESTA VAGA?:' + `\n- ${newVaga.nome} \n- ${newVaga.descricao} \n- ${newVaga.data} \n- [${newVaga.candidato.length} Candidatos]`
+    )
 
     if (confirmarSalvarVaga) {
         listaDeVagas.push(newVaga)
@@ -32,10 +33,11 @@ function visualizarVaga() {
     let indeceDaVaga = prompt('Informe o indece da vaga que deseja visualizar:')
 
     if (indeceDaVaga >= 0 && indeceDaVaga < listaDeVagas.length) {
-        alert(`Vaga de ${listaDeVagas[indeceDaVaga].nome} \n${listaDeVagas[indeceDaVaga].descricao} \n${listaDeVagas[indeceDaVaga].data}
-        \n--> Candidatos:\n${listaDeVagas[indeceDaVaga].candidato.map((parametro) => {
-            return ` -  ${parametro} \n`
-        })}`)
+        alert(
+            `Vaga de ${listaDeVagas[indeceDaVaga].nome} \n${listaDeVagas[indeceDaVaga].descricao} \n${listaDeVagas[indeceDaVaga].data} \n--> Candidatos:\n${listaDeVagas[indeceDaVaga].candidato.map((parametro) => {
+                return ` -  ${parametro} \n`
+            })}`
+        )
     }
     else {
         alert('Não existe uma vaga com esta indice')
