@@ -1,18 +1,20 @@
 let corpo = document.getElementsByTagName('body')[0]
+let lista
+let divF
 
 function adicionar() {
-    let div = document.createElement('div')
-    div.style.border = 'solid 1px black'
-    div.style.maxWidth = '400px'
-    div.style.margin = '10px'
-    div.style.padding = '10px'
-    div.style.display = 'inline-block'
+    divF = document.createElement('div')
+    divF.style.border = 'solid 1px black'
+    divF.style.maxWidth = '400px'
+    divF.style.margin = '10px'
+    divF.style.padding = '10px'
+    divF.style.display = 'inline-block'
 
     let title = document.createElement('h2')
     title.innerText = 'Contato'
 
-    let lista = document.createElement('ul')
-
+    lista = document.createElement('ul')
+ 
     let arr = ['Nome', 'Telefone', 'Endereço']
     for (let i = 0; i < 3; i++) {
         let item_text = document.createElement('li')
@@ -26,8 +28,14 @@ function adicionar() {
         lista.appendChild(item_text)  
     }
 
-    div.appendChild(title)
-    div.appendChild(lista)
+    divF.appendChild(title)
+    divF.appendChild(lista)
 
-    corpo.appendChild(div)
+    corpo.appendChild(divF)
+}
+
+
+function remover() {
+    divF = document.getElementsByTagName('div')
+    corpo.removeChild(divF[divF.length - 1])
 }
