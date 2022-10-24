@@ -5,9 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escalação de time</title>
+
+    <style>
+        body {
+            font-weight: bolder;
+        }
+        label {
+            margin-left: 20px;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Escalação de Time</h1> <hr>
+    <h2>Adicionar Jogador</h2>
+    <label for="posicao">Posição: </label> <input id="posicao" type="text">
+    <label for="nome">Nome: </label> <input id="nome" type="text">
+    <label for="numero">numero: </label> <input id="numero" type="text">
+    <br> <button onclick="adicionar()">Adicionar</button> <hr>
+
+    <h2>Remover Jogador</h2>
+    <label for="remover">Numero do jogador que deseja remover: </label>
+    <input id="remover" type="text">
+    <button onclick="remover()">Remover</button> <hr>
+
+    <h2>Time</h2>
+    <div id="time">
+
+    </div>
 
     <script src="script.js"></script>
 </body>
