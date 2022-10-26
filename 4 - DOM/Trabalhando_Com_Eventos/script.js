@@ -16,3 +16,26 @@ function chamada(parametro) {
         alert('Senhas não confere')
     }
 }
+
+
+// FAZ A MESMA COISA MAIS SEM USAR O [THIS] ACHEI MAIS INTEREÇANTE
+
+function register(ev) {
+    console.log(ev)
+
+    const parentPai = ev.currentTarget.parentNode
+
+    const nome = parentPai.children.name.value
+    const senha = parentPai.children.pass.value
+    const confirmSenha = parentPai.children.Confirm_pass.value
+    console.log({nome, senha, confirmSenha})
+}
+const segundoButão = document.getElementById('segundoButao')
+segundoButão.addEventListener('click', register)
+
+
+// Para remover um evento de um elemento basta fazer o exemplo abaixo
+
+function remover() {
+    segundoButão.removeEventListener('click', register)
+}
