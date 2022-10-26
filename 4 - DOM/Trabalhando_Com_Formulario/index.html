@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalhando Com Formularios</title>
+
+    <style>
+        label {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        input[type="submit"] {
+            font-size: 1em;
+            font-weight: bold;
+        }
+    </style>
+
 </head>
 <body>
     <h1>Trabalhando Com Formularios</h1> <hr>
@@ -21,6 +33,7 @@
         
         <label for="ibread">Tipo de Pão:</label> <br>
         <select name="bread" id="ibread">
+            <option value="Não Informado">Qualquer Um</option>
             <option value="3 Queijos">3 Queijos</option>
             <option value="Parmesão e Oregano">Parmesão e Oregano</option>
             <option value="9 Grãos">9 Grãos</option>
@@ -39,21 +52,23 @@
     
         <label for="">Salada:</label> <br>
         <input type="checkbox" name="salada" id="alface" value="Alface">
-        <label for="alface">Carne</label>
+        <label for="alface">Alface</label>
         <input type="checkbox" name="salada" id="tomate" value="Tomate">
-        <label for="tomate">Frango</label>
+        <label for="tomate">Tomate</label>
         <input type="checkbox" name="salada" id="azeitonas" value="Azeitonas">
-        <label for="azeitonas">Vegano</label> 
+        <label for="azeitonas">Azeitonas</label> 
         <input type="checkbox" name="salada" id="cenoura" value="Cenoura">
-        <label for="cenoura">Frango</label>
+        <label for="cenoura">Cenoura</label>
         <input type="checkbox" name="salada" id="picles" value="Picles">
-        <label for="picles">Frango</label> <br><br>
+        <label for="picles">Picles</label> <br><br>
     
         <label for="ionservation">Observation:</label> <br>
         <textarea name="onservation" id="ionservation" cols="50" rows="5">
         </textarea> <br><br>
     
-        <input type="submit" value="Confirmar Pedido">
+        <input id="butaoSubmit" type="submit" value="Confirmar Pedido">
     </form>
+
+    <script src="index.js"></script>
 </body>
 </html>
