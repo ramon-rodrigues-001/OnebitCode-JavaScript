@@ -4,8 +4,9 @@ const addHabilidade = document.getElementById('adicionar')
 addHabilidade.addEventListener('click', (evento) => {
     evento.preventDefault()
 
-    const habilidade = document.getElementById('habilidades')
+    let habilidade = document.getElementById('habilidades')
     let lista_li = document.createElement('li')
+    lista_li.id = `item${quantasVezes}`
 
     let labelFeramenta = document.createElement('label')
     labelFeramenta.for = 'feramenta'
@@ -45,7 +46,10 @@ addHabilidade.addEventListener('click', (evento) => {
     let removerHabilidade = document.createElement('button')
     removerHabilidade.innerText = 'Remover Habilidade'
     removerHabilidade.id = 'remover' + quantasVezes
-    removerHabilidade.addEventListener('click', remover('remover' + quantasVezes))
+    removerHabilidade.addEventListener('click', (evento2) => {
+        let removerLi = evento2.currentTarget.parentNode
+        document.querySelector('ul#habilidades').removeChild(removerLi)
+    })
 
 
     lista_li.innerHTML += ' - Experiencia: '
@@ -59,9 +63,4 @@ addHabilidade.addEventListener('click', (evento) => {
     quantasVezes++
 })
 
-function remover(vez) {
-    const habilidade = document.getElementById('habilidades')
-    let lista_li = document.getElementById(vez)
-
-    habilidade.removeChild(lista_li)
-}
+c
