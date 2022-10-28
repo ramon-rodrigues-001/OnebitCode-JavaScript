@@ -1,4 +1,5 @@
 let quantasVezes = 0
+lista_de_Habilidades = []
 
 const addHabilidade = document.getElementById('adicionar')
 addHabilidade.addEventListener('click', (evento) => {
@@ -34,6 +35,9 @@ addHabilidade.addEventListener('click', (evento) => {
     experiencia1.name = 'inputRadio' + quantasVezes
     experiencia2.name = 'inputRadio' + quantasVezes
     experiencia3.name = 'inputRadio' + quantasVezes
+    experiencia1.value = '0-2 Anos'
+    experiencia2.value = '3-4 Anos'
+    experiencia3.value = '5+ Anos'
 
     labelExperiencia1.appendChild(experiencia1)
     labelExperiencia2.appendChild(experiencia2)
@@ -61,6 +65,21 @@ addHabilidade.addEventListener('click', (evento) => {
 
     habilidade.appendChild(lista_li)
     quantasVezes++
+
+    let radio = document.getElementsByTagName(`inputRadio${quantasVezes}`)
+    radio.map((elemento)=> {
+        lista_de_Habilidades.push(elemento.value)
+    })
 })
 
-c
+
+
+let submit = document.getElementById('submit')
+submit.addEventListener('click', (evento) => {
+    evento.preventDefault()
+    let nome = document.getElementById('name').value
+    let ul = document.getElementById('habilidades')
+
+
+    console.log(lista_de_Habilidades)
+})
