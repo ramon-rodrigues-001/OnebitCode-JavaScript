@@ -35,6 +35,9 @@ addHabilidade.addEventListener('click', (evento) => {
     experiencia1.name = 'inputRadio' + quantasVezes
     experiencia2.name = 'inputRadio' + quantasVezes
     experiencia3.name = 'inputRadio' + quantasVezes
+    experiencia1.id = '2Anos'
+    experiencia1.id = '3Anos'
+    experiencia1.id = '5Anos'
     experiencia1.value = '0-2 Anos'
     experiencia2.value = '3-4 Anos'
     experiencia3.value = '5+ Anos'
@@ -42,9 +45,9 @@ addHabilidade.addEventListener('click', (evento) => {
     labelExperiencia1.appendChild(experiencia1)
     labelExperiencia2.appendChild(experiencia2)
     labelExperiencia3.appendChild(experiencia3)
-    labelExperiencia1.innerHTML += '0-2 Anos'
-    labelExperiencia2.innerHTML += '3-4 Anos' 
-    labelExperiencia3.innerHTML += '5+ Anos'
+    labelExperiencia1.innerHTML += '0-2 Anos' + quantasVezes
+    labelExperiencia2.innerHTML += '3-4 Anos' + quantasVezes
+    labelExperiencia3.innerHTML += '5+ Anos' + quantasVezes
 
 
     let removerHabilidade = document.createElement('button')
@@ -64,22 +67,20 @@ addHabilidade.addEventListener('click', (evento) => {
     lista_li.appendChild(removerHabilidade)
 
     habilidade.appendChild(lista_li)
-    quantasVezes++
 
-    let radio = document.getElementsByTagName(`inputRadio${quantasVezes}`)
-    radio.map((elemento)=> {
-        lista_de_Habilidades.push(elemento.value)
+
+    let submit = document.getElementById('submit')
+    submit.addEventListener('click', (evento) => {
+        evento.preventDefault()
+        let nome = document.getElementById('name').value
+        let feramenta = document.getElementById('feramenta')
+
+        let radiosObj = document.querySelector(`input[type="radio"]:checked`).value
+        console.log(radiosObj)
     })
+
+    
+    quantasVezes++
 })
 
 
-
-let submit = document.getElementById('submit')
-submit.addEventListener('click', (evento) => {
-    evento.preventDefault()
-    let nome = document.getElementById('name').value
-    let ul = document.getElementById('habilidades')
-
-
-    console.log(lista_de_Habilidades)
-})
