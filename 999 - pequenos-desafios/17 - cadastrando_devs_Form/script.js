@@ -42,6 +42,7 @@ addtech.addEventListener('click', (evento)=>{
     const labelRadio3 = criarLabel(`iradio3${numeroDeRepeticoes}`, '5+ Anos ')
 
     const inputRadio1 = criarInput(`iradio1${numeroDeRepeticoes}`, '0-2 Anos', `radio${numeroDeRepeticoes}`, 'radio')
+    inputRadio1.checked = true
     const inputRadio2 = criarInput(`iradio2${numeroDeRepeticoes}`, '3-4 Anos', `radio${numeroDeRepeticoes}`, 'radio')
     const inputRadio3 = criarInput(`iradio3${numeroDeRepeticoes}`, '5+ Anos', `radio${numeroDeRepeticoes}`, 'radio')
 
@@ -73,32 +74,22 @@ let submitDeveloper = document.getElementById('submit')
 submitDeveloper.addEventListener('click', (evento)=>{
     evento.preventDefault()
 
+    let aNome = document.getElementById('name').value
+    let listaDeHabilidades = []
+
+
     let numDeLi = document.getElementsByTagName('li').length
-
-    let nome = document.getElementById('name').value
-    let radio = []
-
     for (let i = numDeLi - 1; i>=0; i--) {
-        if (document.querySelector(`#li${i} > input[type="radio"]:checked`) !== null) {
 
-            var nomeDaHabilidade = document.querySelector(`li#li${i} > input`).value
-            var experiencia = document.querySelector(`li#li${i} > input[type="radio"]:checked`).value
+        var linguagem = document.querySelector(`li#li${i} > input`).value
+        var experiencia = document.querySelector(`li#li${i} > input[type="radio"]:checked`).value
 
-            radio.push({nomeDaHabilidade, experiencia})
-        }
-        else(
-            alert('Campo não preenchido')
-        )
+        listaDeHabilidades.push({linguagem, experiencia})
+
+        linguagem = document.querySelector(`li#li${i} > input`).value = ''
+        experiencia = document.querySelector(`li#li${i} > input[type="radio"]`).checked = true
     }
 
-    console.log({nome, radio})
-    radio = []
-    nome.value = ''
-    nomeDaHabilidade.value = ''
+    console.log({aNome, listaDeHabilidades})
+    aNome = document.getElementById('name').value = ''
 })
-
-// pode ser util
-// parametro.preventDefault()
-
-// parametro.currentTarget.parentNode
-// evento.children.iname.value
