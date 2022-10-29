@@ -18,17 +18,18 @@ let numeroDeRepeticoes = 0
 
 const addtech = document.getElementById('adicionar')
 addtech.addEventListener('click', (evento)=>{
-    numeroDeRepeticoes += 1
 
     // Pegando o elemento ul HTML
     const habilidades_ul = document.getElementById('habilidades')
     // Criando [li]
     const li = document.createElement('li')
+    li.id = `li${numeroDeRepeticoes}`
 
 
     // Criando campo de nome da feramenta
     const labelFerramenta = criarLabel('iferramenta', 'Nome da Linguagem: ')
     const inputFerramenta = criarInput('iferramenta', '', 'ferramenta')
+    inputFerramenta.id = `nomeFerramenta${numeroDeRepeticoes}`
 
     // Add campo de nome da ferramenta a [li]
     li.appendChild(labelFerramenta); li.appendChild(inputFerramenta)
@@ -41,8 +42,8 @@ addtech.addEventListener('click', (evento)=>{
     const labelRadio3 = criarLabel(`iradio3${numeroDeRepeticoes}`, '5+ Anos ')
 
     const inputRadio1 = criarInput(`iradio1${numeroDeRepeticoes}`, '0-2 Anos', `radio${numeroDeRepeticoes}`, 'radio')
-    const inputRadio2 = criarInput(`iradio2${numeroDeRepeticoes}`, '0-2 Anos', `radio${numeroDeRepeticoes}`, 'radio')
-    const inputRadio3 = criarInput(`iradio3${numeroDeRepeticoes}`, '0-2 Anos', `radio${numeroDeRepeticoes}`, 'radio')
+    const inputRadio2 = criarInput(`iradio2${numeroDeRepeticoes}`, '3-4 Anos', `radio${numeroDeRepeticoes}`, 'radio')
+    const inputRadio3 = criarInput(`iradio3${numeroDeRepeticoes}`, '5+ Anos', `radio${numeroDeRepeticoes}`, 'radio')
 
 
     // Removendo habilidades
@@ -62,6 +63,8 @@ addtech.addEventListener('click', (evento)=>{
     li.appendChild(btnRemoverHabilidade)
 
     habilidades_ul.appendChild(li)
+    
+    numeroDeRepeticoes += 1
 })
 
 
@@ -70,14 +73,28 @@ let submitDeveloper = document.getElementById('submit')
 submitDeveloper.addEventListener('click', (evento)=>{
     evento.preventDefault()
 
-    let nome = document.getElementById('nome')
-    
-    let rowLi = document.getElementsByTagName('li')
-    rowLi.map((elemento)=>{
-        developers.push(elemento.value)
-    })
+    let numDeLi = document.getElementsByTagName('li').length
 
-    console.log(developers)
+    let nome = document.getElementById('name').value
+    let radio = []
+
+    for (let i = numDeLi - 1; i>=0; i--) {
+        if (document.querySelector(`#li${i} > input[type="radio"]:checked`) !== null) {
+
+            var nomeDaHabilidade = document.querySelector(`li#li${i} > input`).value
+            var experiencia = document.querySelector(`li#li${i} > input[type="radio"]:checked`).value
+
+            radio.push({nomeDaHabilidade, experiencia})
+        }
+        else(
+            alert('Campo não preenchido')
+        )
+    }
+
+    console.log({nome, radio})
+    radio = []
+    nome.value = ''
+    nomeDaHabilidade.value = ''
 })
 
 // pode ser util
