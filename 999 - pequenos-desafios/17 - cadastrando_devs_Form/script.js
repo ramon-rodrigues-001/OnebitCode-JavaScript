@@ -1,86 +1,87 @@
-let quantasVezes = 0
-lista_de_Habilidades = []
+function criarLabel(htmlfor, text) {
+    const label = document.createElement('label')
+    label.htmlFor = htmlfor
+    label.innerText = text
+    return label
+}
 
-const addHabilidade = document.getElementById('adicionar')
-addHabilidade.addEventListener('click', (evento) => {
-    evento.preventDefault()
+function criarInput(Id, Value, Name, Type = 'text') {
+    const input = document.createElement('input')
+    input.id = Id
+    input.value = Value
+    input.name = Name
+    input.type = Type
+    return input
+}
 
-    let habilidade = document.getElementById('habilidades')
-    let lista_li = document.createElement('li')
-    lista_li.id = `item${quantasVezes}`
+let numeroDeRepeticoes = 0
 
-    let labelFeramenta = document.createElement('label')
-    labelFeramenta.for = 'feramenta'
-    labelFeramenta.innerText = 'Ferramenta: '
+const addtech = document.getElementById('adicionar')
+addtech.addEventListener('click', (evento)=>{
+    numeroDeRepeticoes += 1
 
-    let feramenta = document.createElement('input')
-    feramenta.type = 'text'
-    feramenta.id = 'feramenta'
-
-    labelFeramenta.appendChild(feramenta)
-    lista_li.appendChild(labelFeramenta)
-
-
-    
-    let labelExperiencia1 = document.createElement('label')
-    let labelExperiencia2 = document.createElement('label')
-    let labelExperiencia3 = document.createElement('label')
-
-    let experiencia1 = document.createElement('input')
-    let experiencia2 = document.createElement('input')
-    let experiencia3 = document.createElement('input')
-    experiencia1.type = 'radio'
-    experiencia2.type = 'radio'
-    experiencia3.type = 'radio'
-    experiencia1.name = 'inputRadio' + quantasVezes
-    experiencia2.name = 'inputRadio' + quantasVezes
-    experiencia3.name = 'inputRadio' + quantasVezes
-    experiencia1.id = '2Anos'
-    experiencia1.id = '3Anos'
-    experiencia1.id = '5Anos'
-    experiencia1.value = '0-2 Anos'
-    experiencia2.value = '3-4 Anos'
-    experiencia3.value = '5+ Anos'
-
-    labelExperiencia1.appendChild(experiencia1)
-    labelExperiencia2.appendChild(experiencia2)
-    labelExperiencia3.appendChild(experiencia3)
-    labelExperiencia1.innerHTML += '0-2 Anos' + quantasVezes
-    labelExperiencia2.innerHTML += '3-4 Anos' + quantasVezes
-    labelExperiencia3.innerHTML += '5+ Anos' + quantasVezes
+    // Pegando o elemento ul HTML
+    const habilidades_ul = document.getElementById('habilidades')
+    // Criando [li]
+    const li = document.createElement('li')
 
 
-    let removerHabilidade = document.createElement('button')
-    removerHabilidade.innerText = 'Remover Habilidade'
-    removerHabilidade.id = 'remover' + quantasVezes
-    removerHabilidade.addEventListener('click', (evento2) => {
-        let removerLi = evento2.currentTarget.parentNode
-        document.querySelector('ul#habilidades').removeChild(removerLi)
+    // Criando campo de nome da feramenta
+    const labelFerramenta = criarLabel('iferramenta', 'Nome da Linguagem: ')
+    const inputFerramenta = criarInput('iferramenta', '', 'ferramenta')
+
+    // Add campo de nome da ferramenta a [li]
+    li.appendChild(labelFerramenta); li.appendChild(inputFerramenta)
+
+
+    const labelTetalheExperiencia = criarLabel('', ' Experiencia: ')
+
+    const labelRadio1 = criarLabel(`iradio1${numeroDeRepeticoes}`, '0-2 Anos')
+    const labelRadio2 = criarLabel(`iradio2${numeroDeRepeticoes}`, '3-4 Anos')
+    const labelRadio3 = criarLabel(`iradio3${numeroDeRepeticoes}`, '5+ Anos ')
+
+    const inputRadio1 = criarInput(`iradio1${numeroDeRepeticoes}`, '0-2 Anos', `radio${numeroDeRepeticoes}`, 'radio')
+    const inputRadio2 = criarInput(`iradio2${numeroDeRepeticoes}`, '0-2 Anos', `radio${numeroDeRepeticoes}`, 'radio')
+    const inputRadio3 = criarInput(`iradio3${numeroDeRepeticoes}`, '0-2 Anos', `radio${numeroDeRepeticoes}`, 'radio')
+
+
+    // Removendo habilidades
+    let btnRemoverHabilidade = document.createElement('button')
+    btnRemoverHabilidade.type = 'button'
+    btnRemoverHabilidade.innerText = 'Remover Habilidade'
+    btnRemoverHabilidade.addEventListener('click', (butao)=>{
+        let removerLi = butao.currentTarget.parentNode
+        habilidades_ul.removeChild(removerLi)
     })
 
 
-    lista_li.innerHTML += ' - Experiencia: '
-    lista_li.appendChild(labelExperiencia1)
-    lista_li.appendChild(labelExperiencia2)
-    lista_li.appendChild(labelExperiencia3)
-    lista_li.innerHTML += ' - '
-    lista_li.appendChild(removerHabilidade)
+    li.appendChild(labelTetalheExperiencia)
+    li.append(inputRadio1, labelRadio1)
+    li.append(inputRadio2, labelRadio2)
+    li.append(inputRadio3, labelRadio3)
+    li.appendChild(btnRemoverHabilidade)
 
-    habilidade.appendChild(lista_li)
-
-
-    let submit = document.getElementById('submit')
-    submit.addEventListener('click', (evento) => {
-        evento.preventDefault()
-        let nome = document.getElementById('name').value
-        let feramenta = document.getElementById('feramenta')
-
-        let radiosObj = document.querySelector(`input[type="radio"]:checked`).value
-        console.log(radiosObj)
-    })
-
-    
-    quantasVezes++
+    habilidades_ul.appendChild(li)
 })
 
 
+let developers = []
+let submitDeveloper = document.getElementById('submit')
+submitDeveloper.addEventListener('click', (evento)=>{
+    evento.preventDefault()
+
+    let nome = document.getElementById('nome')
+    
+    let rowLi = document.getElementsByTagName('li')
+    rowLi.map((elemento)=>{
+        developers.push(elemento.value)
+    })
+
+    console.log(developers)
+})
+
+// pode ser util
+// parametro.preventDefault()
+
+// parametro.currentTarget.parentNode
+// evento.children.iname.value
