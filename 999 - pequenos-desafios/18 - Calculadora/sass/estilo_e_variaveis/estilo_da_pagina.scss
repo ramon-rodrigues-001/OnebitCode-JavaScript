@@ -1,0 +1,112 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.is-dark {
+    background-color: $bg-color;
+    color: $font-color;
+    
+    #mudarTema {
+        background-color: $bg-color;
+        color: $font-color;
+        border: solid 2px $font-color;
+    }
+    
+    input {
+        background-color: $bg-color;
+        color: $font-color;
+        border: solid 2px $font-color;
+    }
+
+    button#copy {
+        background-color: $bg-color;
+        color: $font-color;
+        border: solid 2px $font-color;
+    }
+}
+.is-white {
+    background-color: $font-color;
+    color: $bg-color;
+    
+    #mudarTema {
+        background-color: $font-color;
+        color: $bg-color;
+        border: solid 2px $bg-color;
+    }
+    
+    input {
+        background-color: $font-color;
+        color: $bg-color;
+        border: solid 2px $bg-color;
+    }
+
+    button#copy {
+        background-color: $font-color;
+        color: $bg-color;
+        border: solid 2px $bg-color;
+    }
+}
+
+div#intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 450px;
+    height: 100px;
+
+    #mudarTema {
+        font-size: 13px;
+        font-weight: bold;
+        padding: 0px 10px;
+        height: 30px;
+    }
+}
+
+
+#container {
+    max-width: 450px;
+    margin: auto;
+
+    input {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 8px 0px;
+        margin: 20px 0px;
+        border-radius: 5px;
+        text-align: right;
+        width: 100%;
+    }
+
+    #buttoes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        
+
+        .teclas {
+            background-color: $primary-color;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+        }
+    }
+    
+    div#res {
+        button#copy {
+            border-radius: 5px 0px 0px 5px;
+            font-size: 1.3em;
+            padding: 9.5px;
+            cursor: pointer;
+            width: 15%;
+        }
+        input#res {
+            border-radius: 0px 5px 5px 0px;
+            width: 82%;
+        }
+    }
+}

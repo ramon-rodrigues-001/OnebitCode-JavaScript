@@ -8,44 +8,46 @@
     <!-- FONT [Ubunto]-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"> <!--font-family: 'Ubuntu', sans-serif;-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Ancora com CSS -->
     <link rel="stylesheet" href="Css/style.css">
     <title>Calculadora</title>
 </head>
-<body class="is-white">
+<body class="is-dark">
     <div id="intro">
         <h1>Calc.JS</h1>
         <button id="mudarTema">Switch Thema Dark/light</button>
     </div>
     <section id="container">
-        <input type="text">
+        <input type="text" id="tela">
 
-        <button class="teclas">C</button>
-        <button class="teclas">(</button>
-        <button class="teclas">)</button>
-        <button class="teclas">/</button>
-        <button class="teclas">7</button>
-        <button class="teclas">8</button>
-        <button class="teclas">9</button>
-        <button class="teclas">*</button>
-        <button class="teclas">4</button>
-        <button class="teclas">5</button>
-        <button class="teclas">6</button>
-        <button class="teclas">-</button>
-        <button class="teclas">1</button>
-        <button class="teclas">2</button>
-        <button class="teclas">3</button>
-        <button class="teclas">+</button>
-        <button class="teclas">0</button>
-        <button class="teclas">.</button>
-        <button class="teclas">MOD</button>
-        <button class="teclas">=</button>
+        <div id="buttoes">
+            <button class="teclas">C</button>
+            <button class="teclas" value="(">(</button>
+            <button class="teclas" value=")">)</button>
+            <button class="teclas" value="/">/</button>
+            <button class="teclas" value="7">7</button>
+            <button class="teclas" value="8">8</button>
+            <button class="teclas" value="9">9</button>
+            <button class="teclas" value="*">*</button>
+            <button class="teclas" value="4">4</button>
+            <button class="teclas" value="5">5</button>
+            <button class="teclas" value="6">6</button>
+            <button class="teclas" value="-">-</button>
+            <button class="teclas" value="1">1</button>
+            <button class="teclas" value="2">2</button>
+            <button class="teclas" value="3">3</button>
+            <button class="teclas" value="+">+</button>
+            <button class="teclas" value="0">0</button>
+            <button class="teclas" value=".">.</button>
+            <button class="teclas" >MOD</button>
+            <button class="teclas" id="efetuarCalculo">=</button>
+        </div>
 
-        <div>
-            <span>Copy</span>
-            <input type="text">
+        <div id="res">
+            <button id="copy">Copy</button>
+            <input type="text" id="res">
         </div>
     </section>
 
