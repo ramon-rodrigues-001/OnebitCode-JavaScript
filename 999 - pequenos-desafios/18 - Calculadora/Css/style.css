@@ -50,7 +50,7 @@ div#intro {
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  max-width: 450px;
+  max-width: 440px;
   height: 100px;
 }
 div#intro #mudarTema {
@@ -61,7 +61,7 @@ div#intro #mudarTema {
 }
 
 #container {
-  max-width: 450px;
+  max-width: 440px;
   margin: auto;
 }
 #container input {
@@ -92,7 +92,7 @@ div#intro #mudarTema {
   cursor: pointer;
   width: 15%;
 }
-#container div#res input#res {
+#container div#res input#telaDeResposta {
   border-radius: 0px 5px 5px 0px;
   width: 82%;
 }
