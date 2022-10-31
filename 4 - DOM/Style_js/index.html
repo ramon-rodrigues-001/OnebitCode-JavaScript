@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando stylo com JS</title>
+
+    <style>
+        .is-white {
+            color: black;
+            background-color: white;
+        }
+        .is-dark {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+        }
+    </style>
+
+</head>
+<body class="is-white">
+    <h1>Manipulando stylo com JS</h1> <hr>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus cupiditate cum unde excepturi deserunt facilis inventore nam est. Perferendis, animi. Temporibus sapiente similique reiciendis. Minus fugit enim iusto quod nostrum!</p>
+    <button onclick="white()">Tema Claro</button>
+    <button onclick="dark()">Tema Escuro</button>
+    <button id="dynamics" onclick="dynamics()">Mudar de forma dinamica</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

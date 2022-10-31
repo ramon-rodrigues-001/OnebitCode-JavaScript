@@ -90,6 +90,13 @@ submitDeveloper.addEventListener('click', (evento)=>{
         experiencia = document.querySelector(`li#li${i} > input[type="radio"]`).checked = true
     }
 
-    console.log({aNome, listaDeHabilidades})
-    aNome = document.getElementById('name').value = ''
+    
+    // FERIFICANDO SE OS CAMPO DE ESTÃO PREENCHIDOS
+    if (aNome !== '') {
+        alert('Dev cadastrado com sucesso')
+        console.log({aNome, listaDeHabilidades})
+        aNome = document.getElementById('name').value = ''
+    }else {
+        alert('Como quer que eu saiba quem é você!.')
+    }
 })
