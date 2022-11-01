@@ -4,12 +4,25 @@ document.getElementById('mudarTema').addEventListener('click', ()=>{
     document.body.classList.toggle('is-white')
 })
 
-let tela = document.getElementById('tela')
-let telaDeResult = document.getElementById('telaDeResposta')
+const tela = document.getElementById('tela')
+const telaDeResult = document.getElementById('telaDeResposta')
 telaDeResult.setAttribute('disabled', !telaDeResult.disabled)
+
 const allowedKeys = ['(', ')', '/', '7', '8', '9', '*', '4', '5', '6', '-', '1', '2', '3', '+', '0', '-', '%']
 
-let calculo = []
+
+function efetuarCalculo() {
+    telaDeResult.value = 'Erro'
+    telaDeResult.classList.add('resultInvalido')
+
+    const resultado = eval(tela.value)
+    if (resultado === NaN) {
+        telaDeResult.value = 'Erro'
+        telaDeResult.classList.add('resultInvalido')
+    }
+    telaDeResult.value = resultado
+    telaDeResult.classList.remove('resultInvalido')
+}
 
 // Adicionando atraves do input
 tela.addEventListener('keydown', (evInput)=>{
@@ -17,7 +30,6 @@ tela.addEventListener('keydown', (evInput)=>{
 
     if (allowedKeys.includes(evInput.key)) {
         tela.value += evInput.key
-        calculo.push(evInput.key)
     }
 })
 
@@ -25,23 +37,32 @@ tela.addEventListener('keydown', (evInput)=>{
 document.querySelectorAll('.teclas').forEach((elButton)=>{
     elButton.addEventListener('click', (evento)=>{
 
-        let elementoAcionado = evento.currentTarget
+        const elementoAcionado = evento.currentTarget
 
         if (elementoAcionado.value === 'apagar') {
             tela.value = tela.value.slice(0, -1)
-            telaDeResult = ''
-            calculo.pop()
+            telaDeResult.value = ''
         }
         else if (elementoAcionado.value === 'igual') {
             efetuarCalculo()
         }
         else {
             tela.value += `${elementoAcionado.value}`
-            calculo.push(elementoAcionado.value)
         }
     })
 })
 
-function efetuarCalculo() {
-    alert('efetuando')
-}
+
+document.getElementById('copy').addEventListener('click', (evCopy)=>{
+    const copy = evCopy.currentTarget
+    
+    if (copy.innerText === 'Copy') {
+        copy.innerText = 'Copied'
+        copy.classList = 'copied'
+        window.navigator.clipboard.writeText(telaDeResult.value)
+    }
+    else {
+        copy.innerText = 'Copy'
+        copy.classList = 'copy'
+    }
+})

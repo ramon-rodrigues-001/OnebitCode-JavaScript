@@ -20,10 +20,16 @@
         border: solid 2px $font-color;
     }
 
-    button#copy {
+    div#res {
         background-color: $bg-color;
         color: $font-color;
-        border: solid 2px $font-color;
+        border: solid 1px $font-color;
+
+        button#copy{
+            color: $font-color;
+            border: solid 1px transparent;
+            border-right: solid 1px $font-color;
+        }
     }
 }
 .is-white {
@@ -42,14 +48,21 @@
         border: solid 2px $bg-color;
     }
 
-    button#copy {
+    div#res {
         background-color: $font-color;
         color: $bg-color;
-        border: solid 2px $bg-color;
+        border: solid 1px $bg-color;
+
+        button#copy{
+            color: $bg-color;
+            border: solid 1px transparent;
+            border-right: solid 1px $bg-color;
+        }
     }
 }
 
 div#intro {
+    padding: 0px 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -68,14 +81,19 @@ div#intro {
 
 
 #container {
+    padding: 0px 15px;
     max-width: 440px;
     margin: auto;
+
+
+    #tela, #res {
+        margin: 25px 0px;
+    }
 
     input {
         font-size: 1.5em;
         font-weight: bold;
-        padding: 8px 0px;
-        margin: 20px 0px;
+        padding: 5.2px 0px;
         border-radius: 5px;
         text-align: right;
         width: 100%;
@@ -97,17 +115,62 @@ div#intro {
     }
     
     div#res {
+        border-radius: 5px;
+
         button#copy {
-            border-radius: 5px 0px 0px 5px;
-            font-size: 1.3em;
+            font-size: 17px;
+            background-color: transparent;
             padding: 9.5px;
             cursor: pointer;
             margin: 0;
-            width: 15%;
+            width: 80px;
+            height: 44px;
+
+            &.copied {
+                border: solid 2px $primary-color;
+                color: $primary-color;
+                border-radius: 5px 0px 20px 5px;
+            }
         }
         input#telaDeResposta {
-            border-radius: 0px 5px 5px 0px;
-            width: 82%;
+            width: 80%;
+            border: none;
+
+            &.resultInvalido {
+                color: $error-color;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    #container {
+        div#intro {
+            h1 {
+                font-size: 1.7em;
+            }
+        }
+        div#res {
+
+            input#telaDeResposta {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 325px) {
+    div#intro {
+        h1 {
+            font-size: 1.3em;
+        }
+    }
+    #container {
+        div#res {
+            input#telaDeResposta {
+                width: 65%;
+            }
         }
     }
 }
