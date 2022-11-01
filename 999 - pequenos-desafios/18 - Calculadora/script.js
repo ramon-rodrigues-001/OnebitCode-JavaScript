@@ -5,23 +5,36 @@ document.getElementById('mudarTema').addEventListener('click', ()=>{
 })
 
 let tela = document.getElementById('tela')
-let telaDeResultado = document.getElementById('telaDeResposta')
+tela.setAttribute('disabled', !tela.disabled)
+let telaDeResult = document.getElementById('telaDeResposta')
+telaDeResult.setAttribute('disabled', !telaDeResult.disabled)
+const allowedKeys = [' ( ', ' ) ', ' / ', '7', '8', '9', ' * ', '4', '5', '6', ' - ', '1', '2', '3', ' + ', '0', ' - ', ' % ']
+
 let calculo = []
-let res;
 
 document.querySelectorAll('.teclas').forEach((el)=>{
     el.addEventListener('click', (evento)=>{
 
         let elementoAcionado = evento.currentTarget
 
-        calculo.push(elementoAcionado.value)
-
-        tela.value += `${elementoAcionado.value}`
+        if (elementoAcionado.value === 'apagar') {
+            tela.value = ''
+            telaDeResult = ''
+            calculo = []
+        }
+        else if (elementoAcionado.value === 'igual') {
+            efetuarCalculo()
+        }
+        else if (allowedKeys.indexOf(elementoAcionado.value) > -1) {
+            tela.value += `${elementoAcionado.value}`
+            calculo.push(elementoAcionado.value)
+        }
+        else (
+            alert('Apenas numero')
+        )
     })
 })
 
-let sosd = []
-document.getElementById('efetuarCalculo').addEventListener('click', ()=>{
-
-    console.log(calculo)
-})
+function efetuarCalculo() {
+    alert('efetuando')
+}
