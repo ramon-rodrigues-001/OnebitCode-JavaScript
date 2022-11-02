@@ -42,5 +42,14 @@ body {
   width: 90px;
   height: 90px;
 }
+#jogoDaVelha .marcado {
+  background-color: rgb(161, 156, 156);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  width: 90px;
+  height: 90px;
+}
 
 /*# sourceMappingURL=style.css.map */
