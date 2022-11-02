@@ -8,15 +8,21 @@ document.getElementById('btnComecar').addEventListener('click', (evComecar)=>{
     if (jogadorX.value !== '' && jogadorO.value !== '') {
         alert('Lest Go!')
         document.querySelectorAll('.espaco').forEach(element => {
+
+            element.classList.remove('espaco')
+            element.classList.add('marcado')
+
+            if ()
+
             element.addEventListener('click', (eventoClicar)=>{
                 const espacoClicado = eventoClicar.currentTarget
+
                 if (numJugada % 2 === 0) {
                     espacoClicado.innerText = 'X'
                 } 
                 else {
                     espacoClicado.innerText = 'O'
                 }
-                espacoClicado
                 numJugada += 1
             })
         });
