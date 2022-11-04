@@ -1,36 +1,37 @@
 
 let numJugada = 0
-let jogadorX;
-let jogadorO;
+let table = [['', '', ''], ['', '', ''], ['', '', '']]
+const jogadorX = document.getElementById('jogadorX')
+const jogadorO = document.getElementById('jogadorO')
+const vezDoJogador = document.getElementById('vezDoJogador')
 
 function MudarJogador() {
-    const vezDoJogador = document.getElementById('vezDoJogador')
-    
-    if (vezDoJogador.innerText === 'Jogador' || vezDoJogador.innerText === jogadorO.value) {
+    if (vezDoJogador.innerText === '' || vezDoJogador.innerText === jogadorO.value) {
         vezDoJogador.innerText = jogadorX.value
-    }
-    else if (vezDoJogador.innerText === jogadorX.value) {
+    } else if (vezDoJogador.innerText === jogadorX.value) {
         vezDoJogador.innerText = jogadorO.value
     }
-
-    return
 }
 
-document.getElementById('btnComecar').addEventListener('click', (evComecar)=>{
+
+function ChecarVencedor() {
     
+}
+
+
+document.getElementById('btnComecar').addEventListener('click', (evComecar)=>{
+
+    table = [['', '', ''], ['', '', ''], ['', '', '']]
+    vezDoJogador.innerText = ''
+    MudarJogador() 
+
     let espacos = document.querySelectorAll('.marcado').forEach(element =>{
         element.classList.remove('marcado')
-        element.classList.add('espaco')
         element.innerText = ''
         numJugada = 0
     })
 
-    jogadorX = document.getElementById('jogadorX')
-    jogadorO = document.getElementById('jogadorO')
     
-    MudarJogador()
-
-
     if (jogadorX.value !== '' && jogadorO.value !== '') {
         alert('Lest Go!')
 
@@ -38,30 +39,32 @@ document.getElementById('btnComecar').addEventListener('click', (evComecar)=>{
             element.addEventListener('click', (eventoClicar)=>{
                 const espacoClicado = eventoClicar.currentTarget
 
+                let region = espacoClicado.dataset.region
+                let arryRegion = region.split('.')
+                let row = arryRegion[0]
+                let collum = arryRegion[1]
+
                 if (espacoClicado.classList == 'espaco') {
                     if (numJugada % 2 === 0) {
                         espacoClicado.innerText = 'X'
-                        element.classList.remove('espaco')
+                        table[row][collum] = 'X'
                         element.classList.add('marcado')
-                    } 
-                    else {
-                        
+                    } else {
                         espacoClicado.innerText = 'O'
-                        element.classList.remove('espaco')
+                        table[row][collum] = 'O'
                         element.classList.add('marcado')
                     }
                     
                     MudarJogador()
+                    ChecarVencedor()
                     numJugada += 1
+                    console.table(table)
                 }
             })
-
-
         });
+
     }
     else {
         alert('Favor preencher campos de nome')
     }
-
-
 })
