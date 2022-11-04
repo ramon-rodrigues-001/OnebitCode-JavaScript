@@ -15,7 +15,35 @@ function MudarJogador() {
 
 
 function ChecarVencedor() {
-    
+    let monitor = []
+    if (table[0][0] && table[0][0] === table[0][1] && table[0][1] === table[0][2]) {
+        monitor.push('0.0', '0.1', '0.2')
+    }
+    if (table[1][0] && table[1][0] === table[1][1] && table[1][1] === table[1][2]) {
+        monitor.push('1.0', '1.1', '1.2')
+    }
+    if (table[2][0] && table[2][0] === table[2][1] && table[2][1] === table[2][2]) {
+        monitor.push('2.0', '2.1', '2.2')
+    }
+
+    if (table[0][0] && table[0][0] === table[1][0] && table[1][0] === table[2][0]) {
+        monitor.push('0.0', '1.0', '2.0')
+    }
+    if (table[0][1] && table[0][1] === table[1][1] && table[1][1] === table[2][1]) {
+        monitor.push('0.1', '1.1', '2.1')
+    }
+    if (table[0][2] && table[0][2] === table[1][2] && table[1][2] === table[2][2]) {
+        monitor.push('0.2', '1.2', '2.2')
+    }
+
+    if (table[0][0] && table[0][0] === table[1][1] && table[1][1] === table[2][2]) {
+        monitor.push('0.0', '1.1', '2.2')
+    }
+    if (table[0][2] && table[0][2] === table[1][1] && table[1][1] === table[2][0]) {
+        monitor.push('0.2', '1.1', '2.0')
+    }
+
+    return monitor
 }
 
 
@@ -56,7 +84,7 @@ document.getElementById('btnComecar').addEventListener('click', (evComecar)=>{
                     }
                     
                     MudarJogador()
-                    ChecarVencedor()
+                    let vencedor = ChecarVencedor()
                     numJugada += 1
                     console.table(table)
                 }
