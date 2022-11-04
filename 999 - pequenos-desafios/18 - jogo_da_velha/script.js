@@ -5,6 +5,8 @@ const jogadorX = document.getElementById('jogadorX')
 const jogadorO = document.getElementById('jogadorO')
 const vezDoJogador = document.getElementById('vezDoJogador')
 
+
+
 function MudarJogador() {
     if (vezDoJogador.innerText === '' || vezDoJogador.innerText === jogadorO.value) {
         vezDoJogador.innerText = jogadorX.value
@@ -47,6 +49,16 @@ function ChecarVencedor() {
 }
 
 
+function pintandoVencedor(arryRegionGanhador) {
+    arryRegionGanhador.forEach(element =>{
+        let area = document.querySelector(`[data-region="${element}"]`)
+        area.classList.add('vencedor')
+    })
+    document.getElementById('h1#title').innerHTML = `<h1>Vencedor jogador ${vezDoJogador}</h1>`
+}
+
+
+
 document.getElementById('btnComecar').addEventListener('click', (evComecar)=>{
 
     table = [['', '', ''], ['', '', ''], ['', '', '']]
@@ -67,12 +79,13 @@ document.getElementById('btnComecar').addEventListener('click', (evComecar)=>{
             element.addEventListener('click', (eventoClicar)=>{
                 const espacoClicado = eventoClicar.currentTarget
 
-                let region = espacoClicado.dataset.region
-                let arryRegion = region.split('.')
-                let row = arryRegion[0]
-                let collum = arryRegion[1]
-
                 if (espacoClicado.classList == 'espaco') {
+
+                    let region = espacoClicado.dataset.region
+                    let arryRegion = region.split('.')
+                    let row = arryRegion[0]
+                    let collum = arryRegion[1]
+
                     if (numJugada % 2 === 0) {
                         espacoClicado.innerText = 'X'
                         table[row][collum] = 'X'
@@ -83,14 +96,16 @@ document.getElementById('btnComecar').addEventListener('click', (evComecar)=>{
                         element.classList.add('marcado')
                     }
                     
-                    MudarJogador()
-                    let vencedor = ChecarVencedor()
                     numJugada += 1
                     console.table(table)
+
+                    let vencedor = ChecarVencedor()
+                    if (vencedor.length > 0) {
+                        pintandoVencedor(vencedor)
+                    }
                 }
             })
         });
-
     }
     else {
         alert('Favor preencher campos de nome')
