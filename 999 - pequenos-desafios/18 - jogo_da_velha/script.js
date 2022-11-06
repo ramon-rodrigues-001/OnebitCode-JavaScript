@@ -67,9 +67,10 @@ document.getElementById('btnComecar').addEventListener('click', (evComecar)=>{
 
     let espacos = document.querySelectorAll('.marcado').forEach(element =>{
         element.classList.remove('marcado')
+        element.classList.add('espaco')
         element.innerText = ''
         numJugada = 0
-    })
+    }) 
 
     
     if (jogadorX.value !== '' && jogadorO.value !== '') {
@@ -97,6 +98,7 @@ document.getElementById('btnComecar').addEventListener('click', (evComecar)=>{
                     }
                     
                     numJugada += 1
+                    MudarJogador()
                     console.table(table)
 
                     let vencedor = ChecarVencedor()
