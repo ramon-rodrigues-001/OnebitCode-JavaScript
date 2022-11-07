@@ -54,7 +54,12 @@ function pintandoVencedor(arryRegionGanhador) {
         let area = document.querySelector(`[data-region="${element}"]`)
         area.classList.add('vencedor')
     })
-    document.getElementById('h1#title').innerHTML = `<h1>Vencedor jogador ${vezDoJogador}</h1>`
+
+    document.getElementById('title').innerHTML = `<h1>Vencedor jogador ${vezDoJogador.innerText}</h1>`
+
+    espacos = document.querySelectorAll('.espaco').forEach(element => {
+        element.removeEventListener('click')
+    })
 }
 
 
@@ -96,15 +101,14 @@ document.getElementById('btnComecar').addEventListener('click', (evComecar)=>{
                         table[row][collum] = 'O'
                         element.classList.add('marcado')
                     }
-                    
-                    numJugada += 1
-                    MudarJogador()
-                    console.table(table)
 
                     let vencedor = ChecarVencedor()
                     if (vencedor.length > 0) {
                         pintandoVencedor(vencedor)
                     }
+
+                    numJugada += 1
+                    MudarJogador()
                 }
             })
         });

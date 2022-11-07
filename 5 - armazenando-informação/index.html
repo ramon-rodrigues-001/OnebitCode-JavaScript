@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenando Dados</title>
+</head>
+<body>
+    <h1>Resursos de armazenação do navegador</h1>
+
+    <div id="container">
+        <h2>Session Store</h2>
+        <label for="session">Armazenar um dado session store: </label>
+        <input type="text" id="session">
+        <button onclick="salvarSession()">Salvar!</button>
+        <button onclick="lerSession()">Ler!</button> <br> <br>
+
+        
+        <h2>Local Store</h2>
+        <label for="local">Armazenar um dado local store: </label>
+        <input type="text" id="local">
+        <button onclick="salvarLocal()">Salvar!</button>
+        <button onclick="lerLocal()">Ler!</button> <br> <br>
+
+ 
+        <h2>Cokies</h2>
+        <label for="cokies">Armazenar um cokies: </label>
+        <input type="text" id="cokies">
+        <button onclick="salvarCokies()">Salvar!</button>
+        <button onclick="lerCokies()">Ler!</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
