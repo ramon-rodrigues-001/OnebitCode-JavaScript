@@ -28,13 +28,15 @@ function lerLocal() {
 // COKIES
 // Este metodo tem varias utilidades a mais como tempo de expiração e em quais paginas essa informação sera utilizada  +MAIS+
 // FORMATO DE UM COKIES: document.Cokies = Nome=Info; expires=NEW-DATE; path=/
+
+
 function salvarCokies() {
-    const inputCokies = document.getElementById('cokies')
-
-    const cookie = `Informação=${inputCokies.value};`
-    const dataExpiration = `expires=${new Date(2022,13, 31)};`
+    const input = document.getElementById('cokies')
+    // cookieName=value; expires=UTCStringDate; path=/;
+    const cookie = 'info=' + input.value + ';'
+    const expiration = 'expires=' + new Date(2022,13, 9) + ';'
     const path = 'path=/;'
-
-    document.cookie = cookie + dataExpiration + path
-    inputCokies.value = ''
+    document.cookie = cookie + expiration + path
+    input.value = ''
+    console.log(document.cookie)
 }
