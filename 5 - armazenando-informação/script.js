@@ -36,7 +36,7 @@ function salvarCokies() {
     const cookie = 'info=' + input.value + ';'
     const expiration = 'expires=' + new Date(2022,13, 9) + ';'
     const path = 'path=/;'
-    document.cookie = cookie + expiration + path
+    document.cookie = `nome=Ramon; expires=${new Date(2022,13, 9)}; path=/;`
     input.value = ''
     console.log(document.cookie)
 }
