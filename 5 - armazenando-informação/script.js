@@ -27,8 +27,14 @@ function lerLocal() {
 
 // COKIES
 // Este metodo tem varias utilidades a mais como tempo de expiração e em quais paginas essa informação sera utilizada  +MAIS+
-// FORMATO DE UM COKIES: K
+// FORMATO DE UM COKIES: document.Cokies = Nome=Info; expires=NEW-DATE; path=/
 function salvarCokies() {
     const inputCokies = document.getElementById('cokies')
 
+    const cookie = `Informação=${inputCokies.value};`
+    const dataExpiration = `expires=${new Date(2022,13, 31)};`
+    const path = 'path=/;'
+
+    document.cookie = cookie + dataExpiration + path
+    inputCokies.value = ''
 }
