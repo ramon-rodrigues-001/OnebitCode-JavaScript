@@ -25,18 +25,25 @@ function lerLocal() {
 }
 
 
+
+
+
 // COKIES
 // Este metodo tem varias utilidades a mais como tempo de expiração e em quais paginas essa informação sera utilizada  +MAIS+
 // FORMATO DE UM COKIES: document.Cokies = Nome=Info; expires=NEW-DATE; path=/
 
-
+// NÂO FUNCIONOU
 function salvarCokies() {
     const input = document.getElementById('cokies')
     // cookieName=value; expires=UTCStringDate; path=/;
     const cookie = 'info=' + input.value + ';'
     const expiration = 'expires=' + new Date(2022,13, 9) + ';'
     const path = 'path=/;'
-    document.cookie = `nome=Ramon; expires=${new Date(2022,13, 9)}; path=/;`
+    document.cookie = 'Nome=Ramon';
+    document.cookie = 'Profissão=Programador';
     input.value = ''
     console.log(document.cookie)
+}
+function lerCokies() {
+    alert('cee')
 }
