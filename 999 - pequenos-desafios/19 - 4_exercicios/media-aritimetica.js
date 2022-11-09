@@ -1,10 +1,14 @@
 function CalcMedia(...numbers) {
     let digitos = 0
-    let valorTotal = numbers.reduce((valorAtual, num)=> {
+    let soma = numbers.reduce((valorAtual, num)=>{
         digitos++
-        valorAtual += num
-    },0)
-    return valorTotal / digitos
+        return valorAtual += num
+    }, 0)
+
+    return {digitos, soma, numbers}
 }
 
-CalcMedia(2, 6, 8)
+let arry = [CalcMedia(4, 5, 2, 6)]
+
+console.log(`Seu total de pontos foi ${arry[0].soma} porem a sua media esta em ${(arry[0].soma / arry[0].digitos).toFixed(1)} 
+Suas notas forão ${arry[0].numbers}`)
