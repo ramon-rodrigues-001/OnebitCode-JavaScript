@@ -2,7 +2,7 @@
 
 
 function mediana(...numbers) {
-    if (numbers.length % 2 > 0) {
+    if (numbers.length % 2 !== 0) {
         return numbers[(numbers.length -1) / 2]
     }
     else {
