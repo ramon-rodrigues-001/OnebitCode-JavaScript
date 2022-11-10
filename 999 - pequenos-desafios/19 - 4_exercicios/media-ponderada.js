@@ -1,3 +1,5 @@
+// Media ponderada é a soma de todos os pontos junto com os pesos depois dividido pelos pesos 
+
 function medPonderada(...objs) {
     console.log(objs)
 

@@ -1,3 +1,5 @@
+// A soma de todos os numeros dividido pela quantidade de numeros
+
 function CalcMedia(...numbers) {
     let digitos = 0
     let soma = numbers.reduce((valorAtual, num)=>{
