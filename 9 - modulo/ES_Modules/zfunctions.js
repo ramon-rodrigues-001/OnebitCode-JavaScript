@@ -16,3 +16,6 @@ export function br() {
     const element = document.createElement('br')
     return element
 }
+
+// Ou você pode fazer dessa forma abaixo
+// export {label, input, br}

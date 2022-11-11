@@ -3,6 +3,7 @@
 
 import { label, input, br } from "./zfunctions.js"
 
+
 console.log(label({for: 'input', TextContent: 'OLAAAAAAA'}))
 console.log(input({id: 'input', type: 'text', placeholder: 'Digite algo...'}))
 console.log(br())
