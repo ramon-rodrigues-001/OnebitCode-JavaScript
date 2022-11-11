@@ -4,9 +4,9 @@
 
 
 const render = require("./render.js")
-const store = require("./store.js");
+const store = require("./store.js")
 
 console.log("Iniciando aplicação");
-render();
-store();
+render()
+store()
 console.log("Aplicação finalizada");
