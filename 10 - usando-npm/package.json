@@ -1,0 +1,14 @@
+{
+  "name": "10---usando-npm",
+  "version": "1.0.0",
+  "description": "Primeiro teste com Npm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ramon 001",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
