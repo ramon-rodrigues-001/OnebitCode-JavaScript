@@ -1,11 +1,18 @@
-const bibliotecaDayjs = require("dayjs")
+const dayJs = require("dayjs")
 
-const inputNacimento = '2004-05-10'
-const obj = inputNacimento.split('-')
 
-const idade = bibliotecaDayjs().subtract(obj[0], 'year').get('year')
-const mesRestante = bibliotecaDayjs().subtract(obj[1], 'month').get('month')
-const diasRestante = bibliotecaDayjs().subtract(obj[2], 'day').get('day')
+function birtday(date) {
+    const today = dayJs()
+    const birtday = dayJs(date)
 
-console.log(`Você Tem ${idade} anos
-E falta ${mesRestante} Meses e ${diasRestante} Dias`)
+    const idade = today.diff(birtday, 'y')
+    const nextBirtday = birtday.add(idade + 1, 'year')
+    const diasRestantes = nextBirtday.diff(today, 'day') +1
+
+    console.log(`Você tem ${idade} Anos`)
+    console.log(`Procimo aniversario em: ${nextBirtday.format('DD/MM/YYYY')}`)
+    console.log(`Dias restasntes para ${idade} Anos: ${diasRestantes}`)
+}
+
+
+birtday(dayJs("2004-05-10"))

@@ -1,0 +1,27 @@
+PARA CODIFICAR:
+
+Primeiro você baixas as bibliotecas Babel 
+[@babel/core @babel/cli @babel/preset-env],
+@babel/core = ?
+@babel/cli = ?
+@babel/preset = Deixa o codigo primitivo, para navegadores das cavernas.
+
+Dpois digite o codigo [npx babel NomeDoModulo] ou
+[npm rum Atalho.json NomeDoModulo]
+
+
+
+
+TEM COMO CODIFICAR E SALVAR EM UM MODULO:
+
+Com o codigi [npx babel NomeDoModulo --out-file NovoNovaPasta.js ]
+é bom usar como nome da nova pasta dist.js
+
+
+
+
+E UTILIZANDO O METODO DE DEIXAR PRIMITIVO:
+
+codigo 
+[npx babel jscript --out-file NovoNovaPasta.js --presets=@babel/preset-env]
+assim ele já vai para outro modulo
