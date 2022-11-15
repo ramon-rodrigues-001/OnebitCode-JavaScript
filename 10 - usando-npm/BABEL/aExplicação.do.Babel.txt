@@ -6,7 +6,8 @@ Primeiro você baixas as bibliotecas Babel
 @babel/cli = ?
 @babel/preset = Deixa o codigo primitivo, para navegadores das cavernas.
 
-Dpois digite o codigo [npx babel NomeDoModulo] ou
+Utilizando forma simples
+[npx babel NomeDoModulo] ou
 [npm rum Atalho.json NomeDoModulo]
 
 
@@ -23,5 +24,5 @@ Com o codigi [npx babel NomeDoModulo --out-file NovoNovaPasta.js ]
 E UTILIZANDO O METODO DE DEIXAR PRIMITIVO:
 
 codigo 
-[npx babel jscript --out-file NovoNovaPasta.js --presets=@babel/preset-env]
+[npx babel jscript --out-file NomeNovaPasta.js --presets=@babel/preset-env]
 assim ele já vai para outro modulo
