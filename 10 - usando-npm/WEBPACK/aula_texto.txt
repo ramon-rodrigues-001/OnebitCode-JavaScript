@@ -1,0 +1,11 @@
+O probrema de enviar muitos arquivos para o git hub acabou.
+Essa biblioteca empacota tudo que precisa para o programa rodar assim você pode apagar as outras bibliotecas.
+
+1ª Baixar a biblioteca [webpack]:
+npm i -D webpack webpack-cli
+
+2ª Organizar os arquivos:
+Parece que ela só le aqueles com nome [Index] e ela cria um arquivo chamado [main.js] por preocaução UTILIZE O INDEX DENTRO DE UMA PASTA [DIST]
+
+3ª Rodar o codigo:
+npx webpack
