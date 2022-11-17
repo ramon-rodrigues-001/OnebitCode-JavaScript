@@ -9,3 +9,8 @@ Parece que ela só le aqueles com nome [Index] e ela cria um arquivo chamado [ma
 
 3ª Rodar o codigo:
 npx webpack
+
+
+4ª ARQUIVO DE CONFIGURAÇÃO WEBPACK:
+Criar arquivo: [webpack.config.json]
+
