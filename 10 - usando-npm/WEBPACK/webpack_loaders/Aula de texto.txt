@@ -1,0 +1,21 @@
+1ª CRIAR OS ARQUIVOS E INICIOAR O NPM:
+
+2ª BAIXAS AS BIBLIOTECAS:
+[npm i -D webpack webpack-cli style-loader css-loader]
+
+
+3º CONFIGURAR O WEBPACK.CONFIG.JS:
+    module: {
+        rules: [{
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+        }]
+    }
+Essa parte vai fazer as regras e permitir que o webpack avalie Css mais você pode permitir outros tipos de arquivos
+
+
+4ª VAI ADICIONAR O CSS NO JAVASCRIPT DE ENTRADA COM UM MODULE:
+require("./style.css")
+
+
+5ª RODAR O WEBPACK:

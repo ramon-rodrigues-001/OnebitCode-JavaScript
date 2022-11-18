@@ -18,7 +18,7 @@ module.exports = {
         text: "./src/script3.js"
     },
 
-    mode: "production",
+    mode: "development",
 
     output: {
         path: url.resolve(__dirname, 'arquivo_principal'),
