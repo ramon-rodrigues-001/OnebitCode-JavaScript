@@ -14,3 +14,18 @@ npx webpack
 4ª ARQUIVO DE CONFIGURAÇÃO WEBPACK:
 Criar arquivo: [webpack.config.json]
 
+
+
+UTILIZANDO WEBPACK COM CSS / SASS / MAIS
+
+1ª BAIXAR OS EXTENÇÕES STYLE-LOADER E CSS-LOADER:
+[npm i -D style-loader css-loader]
+
+2ª configurar o arquivo [webpack.config.json]
+    module: {
+        rules: [{
+            test: /\.css$/,
+            use: ['styl-loader', 'css-loader']
+        }]
+    }
+
