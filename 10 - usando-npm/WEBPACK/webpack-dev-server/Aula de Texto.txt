@@ -1,0 +1,18 @@
+1ª INICIAR O NPM:
+
+2ª BAIXAR AS BIBLIOTECAS:
+npm i -D webpack webpack-cli webpack-dev-server
+
+3ª CONFIGURAR O WEBPACK.CONFIG.JS:
+
+4ª INCREMENTAR ESSE CODIGO NA CONFIGURAÇÃO:
+devServe: {
+    static: {
+        directory: url.resolve(__dirname, 'Arquivos')
+    }
+},
+
+5ª EXECULTAR O NPX WEBPACK-DEV-SERVER:
+
+
+com isso o webpack vai ficar carregando sempre que modificar o codigo e precisando digitar o codigo webpack no terminal alem de abrir uma porta no navegador
