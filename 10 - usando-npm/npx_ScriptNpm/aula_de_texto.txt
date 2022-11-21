@@ -7,7 +7,7 @@ A PRIMEIRA MANEIRA
 digitando o seguinte comando: [npx NomeDoModulo]
 
 
-A SEGUNDA MANEIRA É MUITO MAIS INTEREÇAMTE
+ A SEGUNDA MANEIRA É MUITO MAIS INTEREÇAMTE
 entre na pasta [package.json] e encontre o campo [script] dentro coloque a chave para chamar a função e o nome do modulo,
 
 dpois basta colocar o seguinte comando: [npm rum chave] a chave que você colocou

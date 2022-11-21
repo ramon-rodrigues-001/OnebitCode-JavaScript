@@ -1,0 +1,14 @@
+1ª Organizar os arquivos e iniciar o NPM:
+
+2ª baixar a biblioteca:
+npm i -D mini-css-extract-plugin
+
+3º dentro do webpack.config.js deve-se começar importando um modulo
+const NomeEscolhido = require('mini-css-extract-plugin')
+
+rule: {
+    test: /.css$/
+    use: [NomeEscolhido.loader, 'css.loader']
+}
+
+plugins: [new NomeEscolhido()]

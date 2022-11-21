@@ -1,11 +1,14 @@
 {
-  "name": "exercicio_webpack_e_babel",
+  "name": "webpack_plugin",
   "version": "1.0.0",
-  "description": "Webpack e Babel",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ramon",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mini-css-extract-plugin": "^2.7.0"
+  }
 }
