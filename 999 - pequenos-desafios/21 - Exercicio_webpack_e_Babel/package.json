@@ -1,14 +1,15 @@
 {
-  "name": "exercicio_webpack_e_babel",
+  "name": "22---exercicio_webpack_e_babel",
   "version": "1.0.0",
-  "description": "Webpack e Babel",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "WP": "webpack"
   },
   "author": "Ramon",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.0",
     "css-loader": "^6.7.2",
