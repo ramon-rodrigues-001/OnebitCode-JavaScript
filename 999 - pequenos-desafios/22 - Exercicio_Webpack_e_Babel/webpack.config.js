@@ -34,35 +34,28 @@ apos isso deve-se conectar os modulos CSS no JS assim o JS sera o unico arquvo c
 
 
 
+
 const url = require('path')
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     entry: {
-        index: "./arquivo_de_desenvolvimento/build.js"
+        index: "./desenvolvimento/build.js"
     },
 
-    mode: "production",
+    mode: "development",
 
     output: {
-        path: url.resolve(__dirname, 'arquivo_principal'),
+        path: url.resolve(__dirname, 'arquivo-final'),
         filename: "[name].min.js"
     },
 
     module: {
         rules: [{
             test: /\.m?js$/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                  presets: [
-                    ['@babel/preset-env', { targets: "defaults" }]
-                  ]
-                }
-            }
-        }],
-        rules: [{
+            use: ['babel-loader']
+        }, {
             test: /\.css$/,
             use: [MiniCssExtractPlugin.loader, 'css-loader']
         }]
