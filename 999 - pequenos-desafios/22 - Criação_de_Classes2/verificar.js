@@ -1,7 +1,12 @@
 function verificando(fullName, email, password, listaDeUsuarios) {
 
-    if (email.indexOf(listaDeUsuarios) > -1 && 
-    password.indexOf(listaDeUsuarios) > -1) {
+    listaDeUsuarios.push({fullName, email, password})
+
+
+    console.log(listaDeUsuarios)
+
+    if (listaDeUsuarios.User?.indexOf(email) > -1 && 
+    listaDeUsuarios.User?.indexOf(password) > -1) {
         return `Seja bem-vindo novamente`
     }
     else {
