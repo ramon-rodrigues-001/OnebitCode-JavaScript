@@ -2,7 +2,6 @@ function verificando(fullName, email, password, listaDeUsuarios) {
 
     listaDeUsuarios.push({fullName, email, password})
 
-
     console.log(listaDeUsuarios)
 
     if (listaDeUsuarios.User?.indexOf(email) > -1 && 
