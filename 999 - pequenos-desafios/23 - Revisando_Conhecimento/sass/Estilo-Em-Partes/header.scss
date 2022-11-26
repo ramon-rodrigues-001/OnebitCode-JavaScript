@@ -1,0 +1,97 @@
+// ESTILO DO HEADER 
+
+header {
+    position: fixed;
+    background-color: $PretoFraco;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 53px;
+    width: 100vw;
+    z-index: 999;
+
+
+    div#buttonsHeader {
+        padding: 10px;
+
+        div#menu {
+            display: none;
+    
+            background-color: $VermelhoLetra;
+            border-radius: 5px;
+            width: 32px;
+            height: 32px;
+        }
+    
+        div#nav {
+            display: flex;
+            justify-content: space-around;
+            flex-grow: 1;
+            gap: 40px;
+            
+            .btnNav {
+                font-size: 1.1em;
+                font-weight: bold;
+                color: $BrancoAbsoluto;
+                text-decoration: none;
+            }
+        }
+    }
+
+    #githubBTN {
+        background-color: $VermelhoLetra;
+        height: 30px;
+        width: 100px;
+    }
+
+    
+    span#letraVermelha {
+        color: $VermelhoLetra;
+    }
+}
+
+
+// Media Queries para menos dos 900px
+@media screen and (max-width: 900px) {
+    header {
+
+        #logoHeader {
+            font-size: .8em;
+        }
+
+        div#buttonsHeader {
+            div#nav {
+                gap: 30px;
+
+                .btnNav {
+                    font-size: 1em;
+                }
+            }
+        }
+
+        #githubBTN {
+            display: none;
+        }
+    }
+}
+
+
+
+// Media Queries para menos dos 580px
+@media screen and (max-width: 580px) {
+    header {
+        justify-content: space-between;
+        padding: 0px 20px;
+
+        div#buttonsHeader {
+            div#menu {
+                display: block;
+            }
+    
+            div#nav {
+                display: none;
+            }
+        } 
+    }
+}
