@@ -11,7 +11,6 @@
 // [output] = A saida, você pode diser onde que que este arquivo compacto sejá criado e tambem qual vai ser o nome dele [se o output não for criado o nome vai ser a chave pasada no [entry] UTILIZE UM MODULO PARA PEGAR O CAMINHO CORRETAMENTE]
 
 
-
 const url = require('path')
 
 module.exports = {
