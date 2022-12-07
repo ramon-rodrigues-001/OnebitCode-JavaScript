@@ -8,4 +8,3 @@ post.addComment('Viny', 'Muito Bom')
 post.addComment('Ana', 'Intereçante')
 
 console.log(ramon)
-console.log(postagem)
