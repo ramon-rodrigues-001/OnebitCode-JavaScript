@@ -1,16 +1,16 @@
-const Comments = require('./Comment')
+const Comment = require('./Comment.js')
 
 class Post {
     constructor(title, body, author) {
         this.title = title
         this.body = body
         this.author = author
-        this.dataPublication = new Date()
-        this.comments = []
+        this.datePublication = new Date()
+        this.comment = []
     }
 
-    addComment(comentarista, comentario) {
-        this.comments.push(new Comments(comentarista, comentario))
+    addComment(nome, comentario) {
+        this.comment.push(new Comment(nome, comentario))
     }
 }
 

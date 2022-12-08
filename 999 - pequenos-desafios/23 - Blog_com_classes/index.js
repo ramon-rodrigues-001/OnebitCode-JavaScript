@@ -1,11 +1,12 @@
-const Author = require('./Author')
+const Author = require('./Author.js')
+
 
 let ramon = new Author('Ramon Rodrigues')
 
-let post = ramon.creatPost('The king of Pangeia', 'Um garoto que tranformou os trumas em habilidade de guerra')
+let post = ramon.createPost('The king of Percia', 'loren ipyso... Um garoto que se tornou rei de uma nação com estrategia e suraterismo etc etc etc mais esse texto ficou pequeno e estou incrementando um pouco de balela')
 
-post.addComment('Viny', 'Muito Bom')
-post.addComment('Ana', 'Intereçante')
+post.addComment('Ana', 'Muito Bom')
+post.addComment('Viny', 'Intereçante parabens!!')
 
 console.log(ramon)
 console.log(post)

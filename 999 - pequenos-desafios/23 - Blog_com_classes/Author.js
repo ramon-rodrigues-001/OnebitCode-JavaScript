@@ -1,12 +1,12 @@
-const Post = require("./Post")
+const Post = require('./Post.js')
 
 class Author {
-    constructor(nome) {
-        this.author = nome
+    constructor(autor) {
+        this.author = autor
         this.posts = []
     }
 
-    creatPost(title, body) {
+    createPost(title, body) {
         let post = new Post(title, body, this)
         this.posts.push(post)
         return post
