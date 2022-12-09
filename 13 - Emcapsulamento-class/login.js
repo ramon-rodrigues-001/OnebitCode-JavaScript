@@ -1,11 +1,12 @@
-const User = require('./User.js')
+const System = require('./System.js')
 
 
-const user = {
-    email: 'ramon@gmail.com',
-    password: '12345',
-    saldo: 'R$4033,00'
-}
+const ramon = new System('ramon@gmail.com', '111', 4033)
+ramon.addSaldo(456)
 
-const usuario = new User(user)
-console.log(usuario.getSaldo('ramon@gmail.com', '12345'))
+
+const fulano = new System('fulano@gmail.com', '222', 1200)
+fulano.removeSaldo(200)
+
+
+console.log(ramon.loginUser('ramon@gmail.com', '111'))
