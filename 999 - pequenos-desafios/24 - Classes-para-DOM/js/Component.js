@@ -1,4 +1,8 @@
-class Component {
+import { Input } from "./Input"
+import { Label } from "./Label"
+
+
+export class Component {
     #element = null
 
     constructor(teg, parent, options) {
@@ -22,7 +26,7 @@ class Component {
             this.parent.getElement().append(this.#element)
         }
         else {
-            document.querySelector(this.parent).append(this.teg)
+            document.querySelector(this.parent).append(this.getElement())
         }
     }
 }
