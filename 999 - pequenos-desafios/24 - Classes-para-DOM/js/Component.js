@@ -1,5 +1,5 @@
 export class Component {
-    #element = null
+    #element = null 
 
     constructor(teg, parents, options) {
         this.teg = teg
