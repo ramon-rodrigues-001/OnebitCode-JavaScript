@@ -1,7 +1,3 @@
-import { Input } from "./Input"
-import { Label } from "./Label"
-
-
 export class Component {
     #element = null
 
@@ -9,6 +5,7 @@ export class Component {
         this.teg = teg
         this.parent = parent
         this.options = options 
+        this.build()
     }
 
     getElement() {
@@ -26,14 +23,7 @@ export class Component {
             this.parent.getElement().append(this.#element)
         }
         else {
-            document.querySelector(this.parent).append(this.getElement())
+            document.querySelector(this.parent).append(this.#element)
         }
     }
 }
-
-
-const title = new Component('h1', 'body')
-title.build()
-title.render()
-
-document.querySelector('h1').innerText = 'dddfdf'

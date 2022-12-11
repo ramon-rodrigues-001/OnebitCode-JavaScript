@@ -1,4 +1,4 @@
-import { Component } from "./Component";
+import { Component } from "./Component.js";
 
 export class Label extends Component {
     constructor(text, parent, options) {
