@@ -7,19 +7,14 @@ class Mage extends Character {
     }
 
     attack(person) {
-            if (person.escudo) {
-                if ((this.atacar + this.magia) - (person.defesa + person.escudo) > 0) {
-                    person.vida -= (this.atacar + this.magia) - (person.defesa + person.escudo)
-                }
-            }
-            else {
-                if ((this.atacar + this.magia) - person.defesa > 0) {
-                    person.vida -= (this.atacar + this.magia) - person.defesa
-                }
-            }
+        if ((this.atacar + this.magia) - person.defesa > 0) {
+            person.vida -= (this.atacar + this.magia) - person.defesa
+        }
     }
 
-    // curar(person)
+    curar(person) {
+        person.vida += this.magia * 2
+    }
 }
 
 module.exports = Mage
