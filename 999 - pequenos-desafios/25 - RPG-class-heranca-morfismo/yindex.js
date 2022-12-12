@@ -16,4 +16,4 @@ guerrero.posicao()
 
 ladao.attack(guerrero)
 
-console.table([mago, ladao, guerrero])
+console.table({mago, ladao, guerrero})
