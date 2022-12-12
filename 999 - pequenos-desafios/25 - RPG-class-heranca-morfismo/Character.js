@@ -7,7 +7,16 @@ class Character {
     }
 
     attack(person) {
-        person.vida -= this.atacar - person.defesa
+        if (person.escudo) {
+            if (this.atacar - (person.defesa + person.escudo) > 0) {
+                person.vida -= this.atacar - (person.defesa + person.escudo)
+            }
+        }
+        else {
+            if (this.atacar - person.defesa > 0) {
+                person.vida -= this.atacar - person.defesa
+            }
+        }
     }
 }
 

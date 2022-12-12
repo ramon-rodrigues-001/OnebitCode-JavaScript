@@ -6,14 +6,14 @@ const Warrion = require('./Warrion.js')
 
 // name, life, attack, defense 
 
-const mago = new Mage('Merlin', 150, 15, 5, 15)
+const mago = new Mage('Merlin', 150, 15, 5, 20)
 const ladao = new Thief('Athur', 200, 30, 15)
-const guerrero = new Warrion('Ragnar', 230, 20, 15, 20)
+const guerrero = new Warrion('Ragnar', 230, 25, 15)
 
+guerrero.attack(mago)
 
-mago.attack(ladao)
 guerrero.posicao()
-ladao.attack(guerrero)
 
+ladao.attack(guerrero)
 
 console.table([mago, ladao, guerrero])

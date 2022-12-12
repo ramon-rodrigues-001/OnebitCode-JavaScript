@@ -6,7 +6,16 @@ class Thief extends Character {
     }
 
     attack(person) {
-        person.vida -= (this.atacar - person.defesa) * 2
+        if (person.escudo > 0) {
+            if ((this.atacar - (person.defesa + person.escudo)) * 2 > 0) {
+                person.vida -= (this.atacar - (person.defesa + person.escudo)) * 2
+            }   
+        }
+        else {
+            if ((this.atacar - person.defesa > 0)) {
+                person.vida -= (this.atacar - person.defesa) * 2
+            }
+        }
     }
 }
 

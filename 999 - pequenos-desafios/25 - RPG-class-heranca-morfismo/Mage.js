@@ -7,7 +7,16 @@ class Mage extends Character {
     }
 
     attack(person) {
-        person.vida -= (this.atacar + this.magia) - person.defesa
+            if (person.escudo) {
+                if ((this.atacar + this.magia) - (person.defesa + person.escudo) > 0) {
+                    person.vida -= (this.atacar + this.magia) - (person.defesa + person.escudo)
+                }
+            }
+            else {
+                if ((this.atacar + this.magia) - person.defesa > 0) {
+                    person.vida -= (this.atacar + this.magia) - person.defesa
+                }
+            }
     }
 
     // curar(person)
