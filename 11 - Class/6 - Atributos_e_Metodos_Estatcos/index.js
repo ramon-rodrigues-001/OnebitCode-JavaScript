@@ -30,5 +30,5 @@ class Primium extends Reservation {
     }
 }
 Primium.lerDiaria
-const reser2 = new Primium(4, 2, 7)
-console.log(reser2) 
+const reser2 = new Primium(4, 2, 7)  
+console.log(reser2)
