@@ -12,6 +12,7 @@ class Book {
 const livro1 = new Book('Exiled')
 livro1.puplic()
 
+
 console.log(livro1)
 
 
