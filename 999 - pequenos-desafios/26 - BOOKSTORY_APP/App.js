@@ -1,6 +1,7 @@
 const Database = require('./Database.js')
 const Author = require('./entities/Author.js')
 const Book = require('./entities/Book.js')
+const Order = require('./entities/Order.js')
 const Poster = require('./entities/Poster.js')
 const User = require('./entities/User.js')
 
@@ -13,7 +14,7 @@ class App {
         App.#database.saveUser(user)
     }
     getUsers() {
-        return App.#database.fild('users')
+        return App.#database.find('users')
     }
 
 
@@ -22,7 +23,7 @@ class App {
         App.#database.saveAuthor(author)
     }
     getAuthor() {
-        return App.#database.fild('author')
+        return App.#database.find('authores')
     }
 
 
@@ -33,6 +34,9 @@ class App {
     addBook(bookName, quantity) {
         App.#database.addBookToStock(bookName, quantity)
     }
+    getBook() {
+        return App.#database.find('books')
+    }
 
 
     createPoster(name, description, height, width, price, inStock) {
@@ -42,4 +46,30 @@ class App {
     addPoster(PosterName, quantity) {
         App.#database.addPosterToStock(PosterName, quantity)
     }
+
+
+    createOrder(items, user) {
+        const order = new Order(items, user)
+        App.#database.saveOrder(order)
+        order.dados.items.forEach(({ product, quantity }) => {
+            if (product instanceof Book) {
+                App.#database.removeBookToStock(product.name, quantity)
+            }
+            else if (product instanceof Poster) {
+                
+                App.#database.removePosterToStock(product.name, quantity)
+            }
+        });
+    }
+    getOrder() {
+        return App.#database.find('orders')
+    }
+
+
+    showDatabase() {
+        App.#database.showStorage()
+    }
 }
+
+
+module.exports = App

@@ -3,7 +3,7 @@ class Database {
         authores: [],
         books: [],
         posters: [],
-        ouders: [],
+        orders: [],
         users: []
     }
 
@@ -79,7 +79,7 @@ class Database {
     // Order
 
     saveOrder(order) {
-        this.#storage.ouders.push(order)
+        this.#storage.orders.push(order)
     }
 
 
@@ -90,7 +90,7 @@ class Database {
         console.table(this.#storage.books)
         console.table(this.#storage.posters)
         console.table(this.#storage.users)
-        console.table(this.#storage.ouders.map(objeto => objeto.data()))
+        console.table(this.#storage.orders.map(objeto => objeto.data()))
     }
 }
 
