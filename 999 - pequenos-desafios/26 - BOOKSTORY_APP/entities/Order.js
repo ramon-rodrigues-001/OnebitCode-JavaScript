@@ -8,13 +8,11 @@ class Order {
             if (product > product.inStock) {
                 throw new Error('Quantidade insuficiete em intoque!')
             }
-
-            this.#items = items
-            this.#user = user
-            this.#total = items.reduce((sun, {product, quantity}) => {
-                sun + (product * quantity)
-            }, 0)
-        });
+        })
+            
+        this.#items = items
+        this.#user = user
+        this.#total = items.reduce((sun, { product, quantity }) => sun + (product.price + quantity), 0)
     }
 
     get dados() {

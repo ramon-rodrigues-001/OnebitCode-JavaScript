@@ -68,7 +68,7 @@ class Database {
     // Users
 
     saveUser(user) {
-        const userExist = this.#storage.users.fild(u => u.email === user.email)
+        const userExist = this.#storage.users.find(u => u.email === user.email)
 
         if (!userExist) {
             this.#storage.users.push(user)
@@ -90,7 +90,7 @@ class Database {
         console.table(this.#storage.books)
         console.table(this.#storage.posters)
         console.table(this.#storage.users)
-        console.table(this.#storage.orders.map(objeto => objeto.data()))
+        console.table(this.#storage.orders.map(objeto => objeto.dados))
     }
 }
 
