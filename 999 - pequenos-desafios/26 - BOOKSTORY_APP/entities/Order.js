@@ -5,7 +5,7 @@ class Order {
 
     constructor(items, user) {
         items.forEach(({ product, quantity }) => {
-            if (product > product.inStock) {
+            if (quantity > product.inStock) {
                 throw new Error('Quantidade insuficiete em intoque!')
             }
         })
