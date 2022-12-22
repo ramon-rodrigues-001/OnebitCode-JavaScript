@@ -58,8 +58,22 @@ class BaseDeDados {
     }
 
 
-    salvarVendas(venda) {
-        
+    salvarVendas(itens, user) {
+        const order = new Vendas(itens, user)
+        this.#storage.push(order)
+        order.dados.itens.forEach(({ product, quantity }) => {
+            if (product instanceof Livro) {
+                this.vendas.removeBookToStock(product.name, quantity)
+            }
+        });
+    }
+
+
+    showStorage() {
+        console.table(this.#storage.autores)
+        console.table(this.#storage.livros)
+        console.table(this.#storage.usuarios)
+        console.table(this.#storage.vendas.map(objeto => objeto.dados))
     }
 }
 

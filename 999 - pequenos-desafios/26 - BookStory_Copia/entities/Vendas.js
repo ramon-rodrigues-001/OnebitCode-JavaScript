@@ -6,7 +6,7 @@ class Vendas {
     constructor(item, usuario) {
 
         item.forEach(({ produto, quantidade }) => {
-            if (quantidade > produto.EsEstoque) {
+            if (quantidade > produto.EmEstoque) {
                 throw new Error('Quantidade insuficiete em intoque!')
             }
         });

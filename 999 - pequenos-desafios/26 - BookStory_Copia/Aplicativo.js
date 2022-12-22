@@ -1,4 +1,5 @@
 const BaseDeDados = require("./BaseDeDados.js")
+const Usuario = require("./entities/Usuario.js")
 const dataBase = new BaseDeDados()
 
 dataBase.criarAutor('Ramon', 'Escritor Pleno', 'Capelinha MG')
@@ -15,5 +16,23 @@ const livros = dataBase.mostrarLivros()
 
 
 dataBase.criarUsuario('Ramon', 'ramon@gmail.com', 12345)
+const user = dataBase.mostrarUsuarios()
 
-const usuarios = dataBase.mostrarUsuarios()
+const itens = [
+    {
+        product: livros[0],
+        quantity: 2
+    },
+    {
+        product: livros[0],
+        quantity: 5
+    },
+    {
+        product: livros[1],
+        quantity: 4
+    }
+]
+
+dataBase.salvarVendas(itens, user[0])
+
+console.table(dataBase.showStorage())
