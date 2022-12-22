@@ -18,21 +18,23 @@ const livros = dataBase.mostrarLivros()
 dataBase.criarUsuario('Ramon', 'ramon@gmail.com', 12345)
 const user = dataBase.mostrarUsuarios()
 
+console.log(user[0])
+
 const itens = [
     {
-        product: livros[0],
-        quantity: 2
+        produto: livros[0],
+        quantidade: 2
     },
     {
-        product: livros[0],
-        quantity: 5
+        produto: livros[0],
+        quantidade: 5
     },
     {
-        product: livros[1],
-        quantity: 4
+        produto: livros[1],
+        quantidade: 4
     }
 ]
 
-dataBase.salvarVendas(itens, user[0])
+dataBase.salvarVendas(itens, user[0].nome)
 
 console.table(dataBase.showStorage())

@@ -13,15 +13,13 @@ class Vendas {
 
         this.#item = item
         this.#usuario = usuario
-        this.#total = item.reduce((sun, { product, quantity }) => {
-            sun + (product.preco + quantity), 0
-        }, 0)
+        this.#total = item.reduce((sun, { produto, quantidade }) => sun + (produto.preco + quantidade), 0)
     }
 
 
-    letVenda() {
+    get dados() {
         return {
-            item: this.#item,
+            itens: this.#item,
             user: this.#usuario,
             total: this.#total
         }

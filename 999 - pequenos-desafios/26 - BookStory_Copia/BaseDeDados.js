@@ -39,6 +39,14 @@ class BaseDeDados {
             this.#storage.livros.push(livro)
         }
     }
+    removeLivrosStore(nome, quantidade) {
+        const book = this.ifLivroExiste(nome)
+        book.addEstoque(quantidade)
+    }
+    removeLivrosStore(nome, quantidade) {
+        const book = this.ifLivroExiste(nome)
+        book.removerEstoque(quantidade)
+    }
     mostrarLivros() {
         return this.#storage.livros
     }
@@ -46,7 +54,7 @@ class BaseDeDados {
 
 
     criarUsuario(nome, email, senha) {
-        let user = new Usuario(nome, email, senha).lerUsuario()
+        let user = new Usuario(nome, email, senha)
         const userExist = this.#storage.usuarios.find(u => u.email === user.email)
 
         if (!userExist) {
@@ -59,11 +67,13 @@ class BaseDeDados {
 
 
     salvarVendas(itens, user) {
-        const order = new Vendas(itens, user)
-        this.#storage.push(order)
-        order.dados.itens.forEach(({ product, quantity }) => {
-            if (product instanceof Livro) {
-                this.vendas.removeBookToStock(product.name, quantity)
+        let order = new Vendas(itens, user)
+        this.#storage.vendas.push(order)
+        
+        order.dados.itens.forEach(({ produto, quantidade }) => {
+            if (produto instanceof Livro) {
+                let book = this.ifLivroExiste(produto)
+                book.removerEstoque(quantidade)
             }
         });
     }

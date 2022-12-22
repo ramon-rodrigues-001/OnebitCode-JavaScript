@@ -61,7 +61,7 @@ class Database {
 
     removePosterToStock(posterName, quantity) {
         const poster = this.findBookByName(posterName)
-        poster?.remuveFromStock()
+        poster?.remuveFromStock(quantity)
     }
 
 
