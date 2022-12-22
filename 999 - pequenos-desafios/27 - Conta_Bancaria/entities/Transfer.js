@@ -3,7 +3,7 @@ class Transfer {
         this.user_Envio = userEnvio
         this.user_Recebe = userRecebe
         this.valor = valor
-        this.data = new Date().getFullYear()
+        this.data = new Date()
     }
 }
 

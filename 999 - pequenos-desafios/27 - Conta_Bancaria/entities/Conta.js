@@ -1,4 +1,5 @@
-const Deposit = require("./Deposit")
+const Deposit = require("./Deposit.js")
+const Emprest = require("./Emprest.js")
 
 class Conta {
     #saldo = 0
@@ -17,6 +18,12 @@ class Conta {
         this.total_deposit.push(deposito)
     }
 
+    emprestimo(valor, parcelas) {
+        const emprestimo = new Emprest(valor, parcelas)
+        this.#saldo += emprestimo.valor * 100
+        this.total_emprest.push(emprestimo)
+    }
+
     getConta() {
         return this.#saldo / 100
     }
@@ -26,5 +33,8 @@ const conta = new Conta()
 conta.depositar(100.45)
 conta.depositar(57.95)
 
+conta.emprestimo(1000, 12)
+
 console.table(conta.getConta())
+console.table(conta.emprestimo)
 console.log(conta)
