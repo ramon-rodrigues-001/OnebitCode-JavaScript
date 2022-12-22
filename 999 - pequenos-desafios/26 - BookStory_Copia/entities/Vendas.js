@@ -17,6 +17,15 @@ class Vendas {
             sun + (product.preco + quantity), 0
         }, 0)
     }
+
+
+    letVenda() {
+        return {
+            item: this.#item,
+            user: this.#usuario,
+            total: this.#total
+        }
+    }
 }
 
 

@@ -14,6 +14,7 @@ app.createBook('Socied', '...', 'Pishico', 193, autores[1], '...', 200, 100)
 const books = app.getBook()
 
 app.createUser('Issac', 'issak@gmail.com', 123456)
+app.createUser('Issac', 'issak@gmail.com', 123456)
 
 const users = app.getUsers()
 
