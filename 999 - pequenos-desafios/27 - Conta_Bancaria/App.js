@@ -22,32 +22,40 @@ class App {
         else {
             const newUser = new User(nome, email, App.chamarConta(nome))
             App.#UserList.push(newUser)
+            return newUser
         }
     }
 
 
-
-    static chamarConta(Nome_do_usuario) {
-        const conta = new Conta(Nome_do_usuario)
+    static chamarConta(user) {
+        const conta = new Conta()
+        conta.propietario = user
         return conta
     }
 
 
-    static depositar(conta, valor) {
-        conta.depositar(valor)
+    static depositar(valor) {
+        App.chamarConta.depositar(valor)
     }
-    static emprestimo(conta, valor, parcelas) {
-        conta.emprestimo(valor, parcelas)
+    static emprestimo(valor, parcelas) {
+        App.conta.emprestimo(valor, parcelas)
     }
-    static transferencia(conta, userEnvio, userRecebe, valor) {
-        conta.transferencia(userEnvio, userRecebe, valor)
+    static transferencia(userEnvio, userRecebe, valor) {
+        App.conta.transferencia(userEnvio, userRecebe, valor)
     }
 }
 
+const ramon = App.registerUser('Ramon Rodrigues Cordeiro', 'ramon@gmail.com')
+const pedrao = App.registerUser('Pedrão Chefe', 'ramon@gmail.com')
 
-App.registerUser('Ramon Rodrigues Cordeiro', 'ramon@gmail.com')
+ramon.conta.depositar(500)
+ramon.conta.depositar(1300)
 
-App.verUsuarios()
+ramon.conta.emprestimo(5000.50, 12)
+
+ramon.conta.transferencia(ramon.conta.propietario, pedrao.conta.propietario, 1000)
+
+console.log(ramon, ramon.conta.getConta(), pedrao, pedrao.conta.getConta())
 
 
 
