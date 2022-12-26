@@ -1,7 +1,6 @@
 const Deposit = require("./Deposit.js")
 const Emprest = require("./Emprest.js")
 const Transfer = require("./Transfer.js")
-const App = require("./App.js")
 
 class Conta {
     #saldo = 0
@@ -29,7 +28,7 @@ class Conta {
     transferencia(userEnvio, userRecebe, valor) {
         const transferencia = new Transfer(userEnvio, userRecebe, valor)
 
-        if (this.verContas(userEnvio) && userRecebe === this.propietario) {
+        if (userEnvio && userRecebe === this.propietario) {
             this.#saldo += transferencia.valor * 100
         }
         else {
@@ -42,13 +41,6 @@ class Conta {
 
     getConta() {
         return (this.#saldo / 100).toFixed(2)
-    }
-
-    verContas(user) {
-        const contas = new App().verUsuarios()
-        return contas.forEach(element => {
-            element.email === user.email
-        });
     }
 }
 
