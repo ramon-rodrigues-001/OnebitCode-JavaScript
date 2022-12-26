@@ -28,7 +28,7 @@ class Conta {
     transferencia(userEnvio, userRecebe, valor) {
         const transferencia = new Transfer(userEnvio, userRecebe, valor)
 
-        if (userEnvio && userRecebe === this.propietario) {
+        if (userEnvio && userRecebe.email === this.propietario) {
             this.#saldo += transferencia.valor * 100
         }
         else {

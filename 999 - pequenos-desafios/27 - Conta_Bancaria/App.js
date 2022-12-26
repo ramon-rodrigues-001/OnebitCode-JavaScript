@@ -2,16 +2,16 @@ const Conta = require("./entities/Conta.js")
 const User = require("./entities/User.js")
 
 class App {
-    #UserList = []
+    static #UserList = []
 
     static verUsuarios() {
-        return this.#UserList
+        return App.#UserList
     }
 
 
 
     static localitUser(email) { // Encontrar user por email
-        const localizar = this.#UserList.forEach(e => e.email === email)
+        const localizar = App.#UserList.forEach(e => e.email === email)
         return localizar
     }
 
@@ -21,7 +21,7 @@ class App {
         }
         else {
             const newUser = new User(nome, email, App.chamarConta(nome))
-            this.#UserList.push(newUser)
+            App.#UserList.push(newUser)
             return newUser
         }
     }
@@ -53,10 +53,7 @@ ramon.conta.depositar(1300)
 
 ramon.conta.emprestimo(5000.50, 12)
 
-ramon.conta.transferencia(ramon.conta, pedrao.conta, 1000)
+ramon.conta.transferencia(ramon.conta.propietario, pedrao.conta.propietario, 1000)
 
-console.log(ramon, ramon.conta.getConta(), pedrao, pedrao.conta.getConta())
-
-
-
-module.exports = App
+console.log(ramon.conta.extrato_emprestimo[0], ramon.conta.getConta())
+console.log(pedrao, pedrao.conta.getConta())
