@@ -11,18 +11,19 @@ class App {
 
 
     static localitUser(email) { // Encontrar user por email
-        const localizar = App.#UserList.forEach(e => e.email === email)
-        return localizar
+        const localizar = App.#UserList.find(user => user.email === email)
+        return localizar ?? null
     }
 
-    static registerUser(nome, email, conta) { // registrar user sem repetir email
-        if (App.localitUser(email)) {
-            throw "Este usuario já existe"
-        }
-        else {
+    static registerUser(nome, email) { // registrar user sem repetir email
+        const userExiste = App.localitUser(email)
+        if (!userExiste) {
             const newUser = new User(nome, email, App.chamarConta(nome))
             App.#UserList.push(newUser)
             return newUser
+        }
+        else {
+            throw "Já existe um usuario com este email"
         }
     }
 
@@ -45,15 +46,6 @@ class App {
     }
 }
 
-const ramon = App.registerUser('Ramon Rodrigues Cordeiro', 'ramon@gmail.com')
-const pedrao = App.registerUser('Pedrão Chefe', 'ramon@gmail.com')
 
-ramon.conta.depositar(500)
-ramon.conta.depositar(1300)
+module.exports = App
 
-ramon.conta.emprestimo(5000.50, 12)
-
-ramon.conta.transferencia(ramon.conta.propietario, pedrao.conta.propietario, 1000)
-
-console.log(ramon.conta.extrato_emprestimo[0], ramon.conta.getConta())
-console.log(pedrao, pedrao.conta.getConta())

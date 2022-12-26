@@ -24,6 +24,7 @@ class Conta {
         this.#saldo += emprestimo.valor * 100
         this.extrato_emprestimo.push(emprestimo)
     }
+    
 
     transferencia(userEnvio, userRecebe, valor) {
         const transferencia = new Transfer(userEnvio, userRecebe, valor)
