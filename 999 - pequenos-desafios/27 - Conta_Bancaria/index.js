@@ -9,7 +9,7 @@ ramon.conta.depositar(1300)
 
 ramon.conta.emprestimo(5000.50, 12)
 
-ramon.conta.transferencia(ramon.conta.propietario, pedrao.conta.propietario, 1000)
+ramon.conta.transferencia(ramon.conta, pedrao.conta, 1000)
 
 console.log(ramon, ramon.conta.getConta())
 console.log(pedrao, pedrao.conta.getConta())

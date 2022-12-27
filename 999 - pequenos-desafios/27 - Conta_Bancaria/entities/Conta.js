@@ -1,6 +1,5 @@
 const Deposit = require("./Deposit.js")
 const Emprest = require("./Emprest.js")
-const Transfer = require("./Transfer.js")
 
 class Conta {
     #saldo = 0
@@ -26,17 +25,16 @@ class Conta {
     }
     
 
-    transferencia(userEnvio, userRecebe, valor) {
-        const transferencia = new Transfer(userEnvio, userRecebe, valor)
+    transferencia(transfer) {
 
-        if (userEnvio && userRecebe.email === this.propietario) {
-            this.#saldo += transferencia.valor * 100
+        if (transfer.user_Recebe === this.propietario.email) {
+            this.#saldo += transfer.valor * 100
+            this.extrato_transferencia.push(transfer)
         }
-        else {
-            this.#saldo -= transferencia.valor * 100
+        else if (transfer.user_Envio === this.propietario.email) {
+            this.#saldo -= transfer.valor * 100
+            this.extrato_transferencia.push(transfer)
         }
-
-        this.extrato_transferencia.push(transferencia)
     }
 
 
