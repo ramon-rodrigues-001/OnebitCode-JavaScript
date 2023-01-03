@@ -1,4 +1,5 @@
 * {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -22,6 +23,48 @@
   position: absolute;
   font-weight: bolder;
   right: 10%;
+}
+#container main {
+  margin: 50px auto;
+  max-width: 430px;
+}
+#container main #copyResult {
+  display: flex;
+  align-items: center;
+}
+#container main #btnCopy {
+  border: solid white 2px;
+  color: rgb(255, 255, 255);
+  border-radius: 10px 0px 0px 10px;
+  width: 20%;
+}
+#container main input {
+  border: solid 2px rgb(255, 255, 255);
+  color: white;
+  font-size: 1.5em;
+  font-weight: bolder;
+  border-radius: 10px;
+  text-align: right;
+  background-color: transparent;
+  padding: 15px;
+  margin: 20px 0px;
+  width: 100%;
+  height: 40px;
+}
+#container main input#resultado {
+  width: 80%;
+  border-radius: 0px 10px 10px 0px;
+}
+#container main #teclas {
+  font-size: 1.3em;
+  font-weight: 900;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#container main #teclas .tecla {
+  flex: 1 1 100px;
+  padding: 8px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
