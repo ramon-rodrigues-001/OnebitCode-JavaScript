@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de dois digitos</title>
+
+    <style>
+        body {
+            font-size: 1.1em;
+            text-align: center;
+        }
+
+        select {
+            margin: 10px;
+        }
+
+        #res {
+            margin: 30px auto;
+            border: solid 2px black;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="numero1" id="numero1">
+    <input type="number" name="numero2" id="numero2"> <br>
+
+    <select name="select" id="select">
+        <option value="somar">SOMAR</option>
+        <option value="subitrair">SUBITRAIR</option>
+        <option value="multiplicar">MULTIPLICA</option>
+        <option value="divisão">DIVISÂO</option>
+    </select> <br>
+
+    <input type="button" value="Calcular" onclick="rodar()">
+
+    <div id="res">
+        RESULTADO
+    </div>
+
+
+    <script src="javascript.js"></script>
+</body>
+</html>
