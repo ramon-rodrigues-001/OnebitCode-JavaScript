@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 100vw;
+    min-height: 100vh;
+
+    &.dark {
+        background-color: black;
+    }
+    &.litht {
+        background-color: white;
+    }
+
+    header {
+        position: relative;
+        padding: 20px 0px;
+        height: 100%;
+
+        button {
+            position: absolute;
+            font-weight: bolder;
+            right: 10%;
+        }
+    }
+}

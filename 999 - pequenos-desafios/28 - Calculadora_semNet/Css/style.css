@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 100vw;
+  min-height: 100vh;
+}
+#container.dark {
+  background-color: black;
+}
+#container.litht {
+  background-color: white;
+}
+#container header {
+  position: relative;
+  padding: 20px 0px;
+  height: 100%;
+}
+#container header button {
+  position: absolute;
+  font-weight: bolder;
+  right: 10%;
+}
+
+/*# sourceMappingURL=style.css.map */
