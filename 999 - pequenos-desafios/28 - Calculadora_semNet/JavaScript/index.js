@@ -1,4 +1,5 @@
+import {mudarTema} from "./entities/mudarTema.js"
+
 document.querySelector('#mudarTema').addEventListener('click', ()=> {
-    const body = document.getElementsByTagName('body')
-    body.
+    mudarTema()
 })

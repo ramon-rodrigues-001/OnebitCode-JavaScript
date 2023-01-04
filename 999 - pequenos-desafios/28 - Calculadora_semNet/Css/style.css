@@ -10,9 +10,27 @@
 }
 #container.dark {
   background-color: #22262A;
+  color: white;
+}
+#container.dark main #btnCopy {
+  border: solid 2px white;
+  color: rgb(255, 255, 255);
+}
+#container.dark main input {
+  border: solid 2px rgb(255, 255, 255);
+  color: white;
 }
 #container.litht {
   background-color: white;
+  color: black;
+}
+#container.litht main #btnCopy {
+  border: solid 2px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+#container.litht main input {
+  border: solid 2px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 #container header {
   position: relative;
@@ -23,6 +41,7 @@
   position: absolute;
   font-weight: bolder;
   right: 10%;
+  border-width: 2px;
 }
 #container main {
   margin: 50px auto;
@@ -34,15 +53,11 @@
 }
 #container main #btnCopy {
   font-size: 1.2em;
-  border: solid white 2px;
-  color: rgb(255, 255, 255);
   border-radius: 10px 0px 0px 10px;
   height: 50px;
   width: 20%;
 }
 #container main input {
-  border: solid 2px rgb(255, 255, 255);
-  color: white;
   font-size: 1.5em;
   font-weight: bolder;
   border-radius: 10px;
