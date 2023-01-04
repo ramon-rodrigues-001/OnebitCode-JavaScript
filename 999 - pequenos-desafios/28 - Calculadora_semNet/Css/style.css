@@ -60,6 +60,10 @@
   height: 50px;
   width: 20%;
 }
+#container main #btnCopy.copied {
+  border: solid 2px #00ff00;
+  border-radius: 10px;
+}
 #container main input {
   font-size: 1.5em;
   font-weight: bolder;

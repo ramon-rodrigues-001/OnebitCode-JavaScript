@@ -71,7 +71,13 @@
             border-radius: 10px 0px 0px 10px;
             height: 50px;
             width: 20%;
+
+            &.copied {
+                border: solid 2px #00ff00;
+                border-radius: 10px;
+            }
         }
+        
         
         input {
             font-size: 1.5em;
