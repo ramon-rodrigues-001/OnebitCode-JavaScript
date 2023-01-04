@@ -2,11 +2,13 @@ import { mudarTema } from "./entities/mudarTema.js"
 import { fazerCalculos } from "./entities/fazerCalculos.js"
 import { addTeclado } from "./entities/fazerCalculos.js"
 
+// ======== MUDAR TEMA ESCURO / CLARO =======
 document.querySelector('#mudarTema').addEventListener('click', ()=> {
     mudarTema()
 })
 
 
+// ======== VAZENDO CALCULOS ATRAVEZ DOS BUTÕES ========
 document.querySelectorAll('.tecla').forEach(elemento => {
     elemento.addEventListener('click', (ev)=> {
         const evento = ev.currentTarget
@@ -15,5 +17,6 @@ document.querySelectorAll('.tecla').forEach(elemento => {
 })
 
 
-
-document.querySelector('#tela').addEventListener('keydown', addTeclado)
+// ====== FAZENDO CALCULO PELO TECLADO ========
+const tela = document.querySelector('#tela')
+tela.addEventListener('keydown', addTeclado)

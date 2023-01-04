@@ -7,6 +7,7 @@
 #container {
     width: 100vw;
     min-height: 100vh;
+    padding: 10px;
 
     &.dark {
         background-color: #22262A;
@@ -41,20 +42,22 @@
     }
 
     header {
-        position: relative;
+        display: flex;
+        justify-content: space-between;
         padding: 30px 0px;
+        margin: auto;
+        max-width: 430px;
         height: 100%;
 
         button {
-            position: absolute;
             font-weight: bolder;
-            right: 10%;
+            max-height: 40px;
             border-width: 2px;
         }
     }
 
     main {
-        margin: 50px auto;
+        margin: 0px auto;
         max-width: 430px;
 
 
@@ -88,8 +91,8 @@
         }
 
         #teclas {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 5px;
             width: 100%;
 
@@ -97,8 +100,23 @@
                 background-color: #4DFF91;
                 font-size: 1.3em;
                 font-weight: bold;
-                flex: 1 1 100px;
                 padding: 8px 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #container {
+        font-size: .8em;
+        main {
+            #btnCopy {
+                width: 30%;
+            }
+            input {
+                &#resultado {
+                    width: 70%;
+                }
             }
         }
     }

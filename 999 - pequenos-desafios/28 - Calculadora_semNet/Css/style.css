@@ -7,6 +7,7 @@
 #container {
   width: 100vw;
   min-height: 100vh;
+  padding: 10px;
 }
 #container.dark {
   background-color: #22262A;
@@ -33,18 +34,20 @@
   color: rgb(0, 0, 0);
 }
 #container header {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   padding: 30px 0px;
+  margin: auto;
+  max-width: 430px;
   height: 100%;
 }
 #container header button {
-  position: absolute;
   font-weight: bolder;
-  right: 10%;
+  max-height: 40px;
   border-width: 2px;
 }
 #container main {
-  margin: 50px auto;
+  margin: 0px auto;
   max-width: 430px;
 }
 #container main #copyResult {
@@ -73,8 +76,8 @@
   border-radius: 0px 10px 10px 0px;
 }
 #container main #teclas {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 5px;
   width: 100%;
 }
@@ -82,8 +85,19 @@
   background-color: #4DFF91;
   font-size: 1.3em;
   font-weight: bold;
-  flex: 1 1 100px;
   padding: 8px 10px;
+}
+
+@media screen and (max-width: 400px) {
+  #container {
+    font-size: 0.8em;
+  }
+  #container main #btnCopy {
+    width: 30%;
+  }
+  #container main input#resultado {
+    width: 70%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
