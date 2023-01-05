@@ -23,3 +23,10 @@ i.: pega o i e qualguer letra em seguida
 [a-z]: pega tudo do a até o z
 a{1,3}: pega do primeiro até o terceiro
 */
+
+/*
+i(?=\s) = olhar para frente e pegar se estiver um espaço
+i(?!=\s) = olhar para frente e pegar caso não tenha um espaço
+(?<=l)i = olhar para tras e pegar caso tenha uma letra L
+(?<!l)i = olhar para tras e pegar caso não tenha uma letra L
+*/
