@@ -1,0 +1,74 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  background-color: rgb(222, 180, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+#main #formulario {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 350px;
+}
+#main #formulario img {
+  width: 100%;
+  height: 40%;
+}
+#main #formulario div {
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#main #formulario div input {
+  margin: 10px auto 0px auto;
+  display: block;
+  font-size: 0.8em;
+  padding: 2px 5px;
+  width: 100%;
+}
+#main #formulario div .span {
+  display: block;
+  font-size: 0.6em;
+  margin-bottom: 15px;
+  color: transparent;
+}
+#main #formulario div #submit {
+  background-color: transparent;
+  font-size: 1.2em;
+  display: block;
+  border-radius: 10px;
+  padding: 4px 10px;
+  margin: auto;
+}
+#main #formulario div #submit:hover {
+  border-color: blue;
+  color: blue;
+  box-shadow: 1px 1px 10px 1px blue;
+}
+
+@media screen and (min-width: 770px) {
+  #main #formulario {
+    display: flex;
+    width: 700px;
+  }
+  #main #formulario img {
+    width: 350px;
+    height: 400px;
+    border-bottom-right-radius: 90px;
+  }
+  #main #formulario div {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

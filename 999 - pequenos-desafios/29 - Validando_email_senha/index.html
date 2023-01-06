@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de email e senha</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <main id="main">
+        <form action="#" id="formulario">
+            <img src="img/pexels-pixabay-60504.jpg" alt="Img" id="img">
+
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="ramon@gmail.com">
+                <span class="span" id="span-1">Email não confere</span>
+                
+                <label for="senha">Senha: </label>
+                <input type="password" name="senha" id="senha" placeholder="15$$x89RAMONx89#">
+                <span class="span" id="span-2">Senha não confere</span>
+
+                <label for="tell">Tell: </label>
+                <input type="text" name="tell" id="tell" placeholder="+99 (99) 99999-9999">
+                <span class="span" id="span-3">Telefone não confere</span>
+
+                <input type="submit" value="Enviar" id="submit">
+            </div>
+
+        </form>
+    </main>
+
+    <script src="Script/index.js"></script>
+</body>
+</html>
