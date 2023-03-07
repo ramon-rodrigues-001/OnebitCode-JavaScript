@@ -11,18 +11,137 @@
 
     <!-- Link Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Link Bootstrap Icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
     <section id="section-1">
         <header>
-            <img src="imagens/banner-hero/logo-blizzard.png" alt="logo-blizzard">
+            <div id="logo">
+                <img src="imagens/banner-hero/logo-blizzard.png" alt="logo-blizzard">
+            </div>
 
-            <div>
+            <div id="nav">
+                <!-- ====================================================================================== -->
+                <!-- =====       Canvas do topo chamado pelo botão jogos      ===== -->
+                <!-- ====================================================================================== -->
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasTopLabel" style="font-size: 2em;">JOGOS</h5>
+                        <button type="button" class="btn-close btn" data-bs-dismiss="offcanvas" aria-label="Close" id="btn-close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-1.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-2.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-3.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-4.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-5.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-6.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-7.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-8.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-9.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-10.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-11.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                        <div>
+                            <img src="imagens/banner-hero/icones/menu-Icones/game-11.png" alt="">
+                            <p>Game De One</p>
+                        </div>
+                    </div>
+                </div>
+                
                 <ul>
-                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" role="button">
+                          Jogos
+                        </a>
+                    </li>
+                    <li>
+                        eSports
+                    </li>
+                    <li>
+                        Lojas
+                    </li>
+                    <li>
+                        Noticias
+                    </li>
+                    <li>
+                        Suporte
+                    </li>
                 </ul>
             </div>
+
+            <div id="butoes">
+                <button class="btn btn-outline-warning">Criar Conta</button>
+                
+                <button class="btn btn-outline-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                    <i class="bi bi-person"></i> Login
+                </button>
+                <!-- ====================================================================================== -->
+                <!-- =====       Canvas De formulario login      ===== -->
+                <!-- ====================================================================================== -->
+                <form class="dropdown-menu p-4">
+                    <div class="mb-3">
+                      <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                    </div>
+                    <div class="mb-3">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                        <label class="form-check-label" for="dropdownCheck2">
+                          Remember me
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                  </form>
+            </div>
         </header>
+
+
+        <!-- ====================================================================================== -->
+        <!-- =====       Primeira parte da pagina      ===== -->
+        <!-- ====================================================================================== -->
+        <section id="primeira-parte">
+
+        </section>
     </section>
 
 

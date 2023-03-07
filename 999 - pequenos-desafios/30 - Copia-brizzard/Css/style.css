@@ -11,9 +11,72 @@ body {
 }
 
 #section-1 {
-  background: url(../imagens/banner-hero/games/diablo-bg.png) center center no-repeat;
+  background: url(../imagens/banner-hero/games/diablo-bg.png);
   background-size: cover;
   min-height: 100vh;
+}
+#section-1 header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1.2px solid rgba(153, 153, 153, 0.451);
+}
+#section-1 header #logo {
+  padding: 20px;
+  border-bottom: 1px solid rgb(51, 0, 255);
+}
+#section-1 header #logo img {
+  max-height: 40px;
+}
+#section-1 header #nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section-1 header #nav ul {
+  color: white;
+  display: flex;
+  font-size: 1.03em;
+  font-weight: 500;
+  gap: 30px;
+  list-style: none;
+  margin-bottom: 0px;
+}
+#section-1 header #nav ul li:hover {
+  text-decoration: underline;
+}
+#section-1 header #offcanvasTop {
+  background-color: rgba(0, 0, 0, 0.715);
+  color: white;
+  height: 80%;
+}
+#section-1 header #offcanvasTop .offcanvas-header {
+  padding: 20px 50px;
+}
+#section-1 header #offcanvasTop .offcanvas-header #btn-close {
+  background-color: rgb(255, 230, 0);
+  color: white;
+}
+#section-1 header #offcanvasTop .offcanvas-body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px 50px;
+}
+#section-1 header #offcanvasTop .offcanvas-body div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+#section-1 header #offcanvasTop .offcanvas-body div:hover {
+  background-color: rgba(65, 64, 64, 0.496);
+}
+#section-1 header button {
+  font-weight: bolder;
+  min-width: 130px;
+  border-width: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */
