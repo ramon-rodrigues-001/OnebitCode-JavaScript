@@ -78,5 +78,34 @@ body {
   min-width: 130px;
   border-width: 2px;
 }
+#section-1 #primeira-parte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 60px;
+  height: 87vh;
+}
+#section-1 #primeira-parte #sect-circulos {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+#section-1 #primeira-parte #sect-circulos img {
+  border-top: solid 3px white;
+  border-left: solid 2px white;
+  border-right: solid 2px white;
+  border-bottom: solid 0px white;
+  border-radius: 50%;
+  padding: 5px;
+}
+#section-1 #primeira-parte #sect-texto {
+  color: white;
+  max-width: 500px;
+}
+#section-1 #primeira-parte #sect-texto h1 {
+  font-size: 3.3em;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=style.css.map */

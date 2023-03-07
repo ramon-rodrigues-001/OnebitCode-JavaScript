@@ -90,4 +90,40 @@ body {
             border-width: 2px;
         }
     }
+
+
+
+    #primeira-parte {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding: 60px;
+        height: 87vh;
+
+        #sect-circulos {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+
+            img {
+                border-top: solid 3px white;
+                border-left: solid 2px white;
+                border-right: solid 2px white;
+                border-bottom: solid 0px white;
+                border-radius: 50%;
+                padding: 5px;
+            }
+        }
+
+        #sect-texto {
+            color: white;
+            max-width: 500px;
+
+            h1 {
+                font-size: 3.3em;
+                font-weight: bold;
+            }
+        }
+    }
 }
