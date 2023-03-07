@@ -82,8 +82,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  padding: 60px;
+  gap: 40px;
+  padding: 30px;
   height: 87vh;
 }
 #section-1 #primeira-parte #sect-circulos {
@@ -101,11 +101,23 @@ body {
 }
 #section-1 #primeira-parte #sect-texto {
   color: white;
-  max-width: 500px;
+  max-width: 600px;
 }
 #section-1 #primeira-parte #sect-texto h1 {
   font-size: 3.3em;
   font-weight: bold;
+}
+#section-1 #primeira-parte #sect-texto p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#section-1 #primeira-parte #sect-texto button {
+  font-weight: bolder;
+  min-width: 130px;
+  border-width: 2px;
+}
+#section-1 #primeira-parte #sect-trailer div {
+  border: solid 2px yellow;
 }
 
 /*# sourceMappingURL=style.css.map */

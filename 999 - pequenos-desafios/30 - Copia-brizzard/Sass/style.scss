@@ -97,8 +97,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 50px;
-        padding: 60px;
+        gap: 40px;
+        padding: 30px;
         height: 87vh;
 
         #sect-circulos {
@@ -118,11 +118,28 @@ body {
 
         #sect-texto {
             color: white;
-            max-width: 500px;
+            max-width: 600px;
 
             h1 {
                 font-size: 3.3em;
                 font-weight: bold;
+            }
+
+            p {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+
+            button {
+                font-weight: bolder;
+                min-width: 130px;
+                border-width: 2px;
+            }
+        }
+
+        #sect-trailer {
+            div {
+                border: solid 2px yellow;
             }
         }
     }
