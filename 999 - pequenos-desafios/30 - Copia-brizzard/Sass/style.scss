@@ -133,6 +133,12 @@
         }
 
         #sect-trailer {
+            p {
+                color: white;
+                font-size: 1.2em;
+                font-weight: bold;
+                margin-bottom: 0px;
+            }
             div {
                 border: solid 2px yellow;
             }
@@ -195,12 +201,14 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    overflow: hidden;
     padding: 0px 40px;
 
     #div-texto {
         display: flex;
         flex-direction: column;
         gap: 18px;
+        max-width: 400px;
 
         #logo-battle-net {
             width: 150px;
@@ -214,13 +222,13 @@
         }
         
         #info {
+            color: rgb(133, 133, 133);
             display: flex;
             flex-direction: column;
             gap: 15px;
 
             div {
                 display: flex;
-                justify-content: center;
                 font-size: 1.2em;
                 font-weight: bold;
                 gap: 7px;
@@ -235,6 +243,30 @@
         button {
             padding: 20px 30px;
             font-weight: bold;
+            max-width: 300px;
+        }
+    }
+
+
+    #div-apps {
+        position: relative;
+
+        #app-mini {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-60%);
+            z-index: 1;
+            width: 700px;
+        }
+
+        #app-strong {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+            z-index: 0;
+            width: 900px;
         }
     }
 }
