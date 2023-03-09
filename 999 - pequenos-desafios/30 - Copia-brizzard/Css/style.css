@@ -208,7 +208,7 @@
 #section-4 #div-apps {
   position: relative;
 }
-#section-4 #div-apps #app-mini {
+#section-4 #div-apps #imgs #app-mini {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -216,7 +216,7 @@
   z-index: 1;
   width: 700px;
 }
-#section-4 #div-apps #app-strong {
+#section-4 #div-apps #imgs #app-strong {
   position: absolute;
   top: 50%;
   left: 50%;

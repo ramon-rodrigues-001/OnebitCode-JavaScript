@@ -251,22 +251,25 @@
     #div-apps {
         position: relative;
 
-        #app-mini {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateY(-60%);
-            z-index: 1;
-            width: 700px;
-        }
+        #imgs {
 
-        #app-strong {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateY(-50%);
-            z-index: 0;
-            width: 900px;
+            #app-mini {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-60%);
+                z-index: 1;
+                width: 700px;
+            }
+    
+            #app-strong {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%);
+                z-index: 0;
+                width: 900px;
+            }
         }
     }
 }
