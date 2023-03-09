@@ -4,11 +4,6 @@
     margin: 0;
     padding: 0;
 }
-body {
-    background-color: black;
-    color: rgb(249, 216, 216);
-}
-
 #section-1 {
     background: url(../imagens/banner-hero/games/diablo-bg.png);
     background-size: cover;
@@ -141,6 +136,105 @@ body {
             div {
                 border: solid 2px yellow;
             }
+        }
+    }
+}
+
+
+
+#section-2 {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid 2px white;
+
+    h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        border-top: solid 2px blue;
+        padding: 20px 0px;
+    }
+
+    div#div-icones {
+        display: flex;
+        gap: 30px;
+
+        img {
+            width: 23px;
+        }
+    }
+
+    div#div-verMais {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 10px;
+        }
+        p {
+            color: #03A4C8;
+            font-size: 1.15em;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+
+#incompleto {
+    background-color: black;
+    height: 100vh;
+}
+
+
+#section-4 {
+    background: black url(../imagens/footer-background.png) center center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+
+    #div-texto {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        #logo-battle-net {
+            width: 150px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            padding: 20px 0px;
+        }
+        
+        #info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            div {
+                display: flex;
+                justify-content: center;
+                font-size: 1.2em;
+                font-weight: bold;
+                gap: 7px;
+
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        
+        button {
+            padding: 20px 30px;
+            font-weight: bold;
         }
     }
 }
