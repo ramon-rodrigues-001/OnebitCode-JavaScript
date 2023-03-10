@@ -94,6 +94,9 @@
   border-radius: 50%;
   padding: 5px;
 }
+#section-1 #primeira-parte #sect-circulos img.ativo {
+  border-color: yellow;
+}
 #section-1 #primeira-parte #sect-texto {
   color: white;
   max-width: 600px;
@@ -164,7 +167,7 @@
 #section-4 {
   background: black url(../imagens/footer-background.png) center center no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 110vh;
   display: flex;
   align-items: center;
   overflow: hidden;
