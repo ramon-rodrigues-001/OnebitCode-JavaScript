@@ -6,7 +6,7 @@
 }
 
 #section-1 {
-  background: url(../imagens/banner-hero/games/diablo-bg.png);
+  background: url(../imagens/banner-hero/games/diablo-bg.png) center center no-repeat;
   background-size: cover;
   min-height: 100vh;
 }
@@ -82,7 +82,7 @@
   align-items: center;
   gap: 40px;
   padding: 30px;
-  height: 87vh;
+  min-height: 87vh;
 }
 #section-1 #primeira-parte #sect-circulos {
   display: flex;
@@ -194,7 +194,7 @@
   padding: 20px 0px;
 }
 #section-4 #div-texto #info {
-  color: rgb(133, 133, 133);
+  color: rgb(165, 165, 165);
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -233,6 +233,9 @@
   width: 900px;
 }
 
+/* ===================================================================================
+=====       Primeira Media queries (907px)      =====
+=================================================================================== */
 @media screen and (max-width: 907px) {
   #section-1 header {
     padding: 0px 10px;
@@ -256,6 +259,9 @@
     display: none;
   }
 }
+/* ===================================================================================
+=====       Segunda Media queries (650px)      =====
+=================================================================================== */
 @media screen and (max-width: 650px) {
   #section-1 header #butoes {
     display: none;
@@ -274,17 +280,13 @@
   }
   #section-1 #primeira-parte #sect-texto h1 {
     font-size: 3em;
-    font-weight: bold;
   }
-  #section-1 #primeira-parte #sect-texto p {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-  #section-1 #primeira-parte #sect-texto button {
-    font-weight: bolder;
-    min-width: 130px;
-    border-width: 2px;
+  #section-2 #div-icones img {
+    display: none;
   }
 }
+/* ===================================================================================
+=====       Terceira Media queries (650px)      =====
+=================================================================================== */
 
 /*# sourceMappingURL=style.css.map */
