@@ -73,6 +73,9 @@
   min-width: 130px;
   border-width: 2px;
 }
+#section-1 header #menu {
+  display: none;
+}
 #section-1 #primeira-parte {
   display: flex;
   justify-content: center;
@@ -174,10 +177,12 @@
   padding: 0px 40px;
 }
 #section-4 #div-texto {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 18px;
   max-width: 400px;
+  z-index: 10;
 }
 #section-4 #div-texto #logo-battle-net {
   width: 150px;
@@ -226,6 +231,60 @@
   transform: translateY(-50%);
   z-index: 0;
   width: 900px;
+}
+
+@media screen and (max-width: 907px) {
+  #section-1 header {
+    padding: 0px 10px;
+  }
+  #section-1 header #nav {
+    display: none;
+  }
+  #section-1 header #menu {
+    display: block;
+  }
+  #section-1 #primeira-parte #sect-trailer {
+    display: none;
+  }
+  #section-2 h1 {
+    font-size: 2em;
+  }
+  #section-4 #div-texto {
+    position: absolute;
+  }
+  #section-4 #div-apps #imgs #app-mini {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  #section-1 header #butoes {
+    display: none;
+  }
+  #section-1 #primeira-parte {
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  #section-1 #primeira-parte #sect-circulos {
+    flex-direction: row;
+  }
+  #section-1 #primeira-parte #sect-circulos img {
+    width: 50px;
+  }
+  #section-1 #primeira-parte #sect-texto h1 {
+    font-size: 3em;
+    font-weight: bold;
+  }
+  #section-1 #primeira-parte #sect-texto p {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  #section-1 #primeira-parte #sect-texto button {
+    font-weight: bolder;
+    min-width: 130px;
+    border-width: 2px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

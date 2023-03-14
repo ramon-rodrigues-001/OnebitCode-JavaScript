@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
 }
+
+
 #section-1 {
     background: url(../imagens/banner-hero/games/diablo-bg.png);
     background-size: cover;
@@ -83,6 +85,11 @@
             font-weight: bolder;
             min-width: 130px;
             border-width: 2px;
+        }
+
+
+        #menu {
+            display: none;
         }
     }
 
@@ -209,10 +216,12 @@
     padding: 0px 40px;
 
     #div-texto {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 18px;
         max-width: 400px;
+        z-index: 10;
 
         #logo-battle-net {
             width: 150px;
@@ -282,8 +291,92 @@
 
 @media screen and (max-width: 907px) {
     #section-1 {
+       header {
+             padding: 0px 10px;
+
+            #nav {
+                display: none;
+            }
+
+            #menu {
+                display: block;
+            }
+        }
+
+        #primeira-parte {
+            #sect-trailer {
+                display: none;
+            }
+        }
+    }
+
+    #section-2 {
+        h1 {
+            font-size: 2em;
+        }
+    }
+
+
+    #section-4 {
+        #div-texto {
+            position: absolute;
+        }
+
+        #div-apps {
+            #imgs {
+                #app-mini { 
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 650px) {
+    #section-1 {
+
         header {
-            
-        } 
+            #butoes {
+                display: none;
+            }
+       }
+
+        #primeira-parte {
+            flex-direction: column;
+            justify-content: right;
+            align-items: flex-start;
+            gap: 20px;
+
+            #sect-circulos {
+                flex-direction: row;
+
+                img {
+                    width: 50px;
+                }
+            }
+
+
+            #sect-texto {
+                h1 {
+                    font-size: 3em;
+                    font-weight: bold;
+                }
+    
+                p {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                }
+    
+                button {
+                    font-weight: bolder;
+                    min-width: 130px;
+                    border-width: 2px;
+                }
+            }
+        }
     }
 }
