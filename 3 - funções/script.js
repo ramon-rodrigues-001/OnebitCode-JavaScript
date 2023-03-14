@@ -55,7 +55,7 @@ console.log(maioridade)
 
 
 // function com outro function, Tem como mais estou com pregiça de fazer c é mais experiente faz você.
-
+// Resposta: Meu bom estou a dois meses sem encosta no PC como c me faz uma coisa dessa kkkkkkkkk
 
 
 //========== ??????? ==========

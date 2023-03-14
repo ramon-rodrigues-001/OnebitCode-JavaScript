@@ -8,7 +8,8 @@ console.log(objeto[nome])
 console.log(nome)
 
 
-// Segunda ilustração
-let dicionario = {nome: 'Ramon', idade: 18, sexo: 'masculino'}
-console.log(dicionario)
-console.log(dicionario.nome)
+
+// // Segunda ilustração
+// let dicionario = {nome: 'Ramon', idade: 18, sexo: 'masculino'}
+// console.log(dicionario)
+// console.log(dicionario.nome)
