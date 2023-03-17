@@ -1,5 +1,5 @@
 export function acionar(e) {
-    const input = document.querySelector("input#input")
+    let input = document.querySelector("input#input")
     switch (e.id) {
         case "mu_valor":
             mu_valor(input)
@@ -20,36 +20,22 @@ export function acionar(e) {
 }
 
 function mu_valor(input) {
-    if (input.value === 'Hello World') {
-        input.value = ''
-    }
-    else {
-        input.value = 'Hello World'
-    }
+    input.value = input.value === '' ? 'Hello World' : ''
 }
 
 function mu_tipo(input) {
-    if (input.type === 'text') {
-        input.type = 'radio'
-    }
-    else {
-        input.type = 'text'
-    }
+    input.type = input.type === 'text' ? 'radio' : 'text'
 }
 
 function placeholder(input) {
-    if (input.placeholder === '') {
-        input.placeholder = 'placeholder'
-    }
-    else {
-        input.placeholder = ''
-    }
+    input.placeholder = input.placeholder === '' ? 'Digite Algo...' : ''
 }
 
 function mostrar(input) {
-    alert(dataset.valorAtribuido)
+    let dados = input.dataset.valorAtribuido
+    console.log(`${dados}`)
 }
 
 function desabilitar(input) {
-    alert("desabilitar")
+    input.setAttribute("disabled", !input.disabled)
 }
