@@ -12,3 +12,8 @@ let btns = document.querySelectorAll('.btns').forEach(element => {
         acionar(element_clicado)
     })
 });
+
+
+function confirm_1(parametro) {
+    console.log(parametro)
+}
