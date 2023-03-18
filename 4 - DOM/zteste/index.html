@@ -28,7 +28,7 @@
         <form action="#">
             <label for="name">Nome: </label>
             <input type="text" id="name">
-            <label for="sena">Senha: </label>
+            <label for="senha">Senha: </label>
             <input type="password" id="senha">
             <label for="conf_senha">Confirmar Senha: </label>
             <input type="password" id="conf_senha">
@@ -36,6 +36,41 @@
         </form>
     </section>
 
+
+    <section>
+        <h2>Montando pedido</h2>
+        <form action="#">
+            <label for="name2">Name: </label> <br>
+            <input type="text" id="name2"> <br>
+
+            <label for="address">Endereço de Entrega: </label> <br>
+            <input type="text" id="address"> <br>
+
+            <label for="typePao">Tipo de Pão: </label> <br>
+            <select name="typePao" id="typePao">
+                <option value="Não informado">Qualguer Um!</option>
+                <option value="3 Queijos">3 Queijos</option>
+                <option value="Parmesão e Oregano">Parmesão e Oregano</option>
+                <option value="9 Grãos">9 Grãos</option>
+                <option value="Italiano Branco">Italiano Branco</option>
+                <option value="Granola Salgada">Granola Salgada</option>
+                <option value="Manteiga Temperada">Manteiga Temperada</option>
+            </select>
+
+            <h3>Principal</h3>
+            <input type="radio" name="principal" id="carne" value="Carne">
+            <label for="carne">Carne</label>
+
+            <input type="radio" name="principal" id="frango" value="Frango">
+            <label for="frango">Frango</label>
+
+            <input type="radio" name="principal" id="vegano" value="Vegano">
+            <label for="vegano">Vegano</label> <br>
+
+
+            <input type="submit" value="Pedir" id="pedir"> 
+        </form>
+    </section>
 
     <script src="scripts/index.js" type="module"></script>
 </body> 
