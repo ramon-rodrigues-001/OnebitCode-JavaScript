@@ -4,7 +4,7 @@ function salvarSession() {
     const inputSession = document.getElementById('session')
     window.sessionStorage.setItem('info1', inputSession.value)
     inputSession.value = ''
-    alert('Informação Salva...')
+    alert('Informação Salva...' )
 }
 function lerSession() {
     const ler = window.sessionStorage.getItem('info1')
