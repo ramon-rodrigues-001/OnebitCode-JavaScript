@@ -1,0 +1,54 @@
+header {
+    background-color: rgb(214, 210, 210);
+    box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.28);
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+
+    #voltar {
+        position: absolute;
+        left: 20px;
+        font-weight: bolder;
+        border-width: 2.5px;
+        text-decoration: none;
+    }
+}
+
+main {
+    padding: 20px;
+
+    .addNota {
+        position: relative;
+        background-color: rgb(214, 210, 210);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.28);
+        width: 300px;
+        height: 300px;
+
+        .tracos {
+            background-color: rgb(163, 162, 162);
+            width: 100px;
+            height: 7px;
+            border-radius: 5px;
+
+            &#traco_1 {
+                position: absolute;
+                top: 48%;
+                transform: rotate(-90deg);
+            }&#traco_2 {
+                transform: rotate(0deg);
+            }
+        }
+
+        &:hover {
+            .tracos {
+                width: 110px;
+                height: 8px;
+            }
+        }
+    }
+}
