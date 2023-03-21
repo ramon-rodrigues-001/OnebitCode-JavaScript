@@ -16,10 +16,13 @@ header {
 
 main {
     padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 
     .addNota {
         position: relative;
-        background-color: rgb(214, 210, 210);
+        background-color: #d6d2d2;
         display: flex;
         justify-content: center;
         align-items: center;
