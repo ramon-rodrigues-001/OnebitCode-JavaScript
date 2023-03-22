@@ -26,16 +26,44 @@ export class Notas {
         }
         data.innerText += new Date().getFullYear()
 
+
+
         const h1 = document.createElement('h1')
-        if (this.titulo.lengft > 8) {
-            h1.innerText = this.titulo.fo
+        let letras_title = ''
+        if (this.titulo.length > 8) {
+            let i = 0
+            while (i <= 6) {
+                letras_title += [...this.titulo[i]]
+                i++
+            }
+            console.log(letras_title)
+            h1.innerText = letras_title + '...'
         }
-        h1.innerText = this.titulo
+        else {
+            h1.innerText = this.titulo
+        }
+
+
 
         const p = document.createElement('p')
-        p.innerText = this.texto
+        let letras_text = ''
+        if (this.texto.length > 73) {
+            let i = 0
+            while (i <= 73) {
+                letras_text += [...this.texto[i]]
+                i++
+            }
+            console.log(letras_text)
+            p.innerText = letras_text + '...'
+        }
+        else {
+            p.innerText = this.texto
+        }
 
-        let tetttt = 'Rap do Roy Mustang (Fullmetal Alchemist) | Alquimista das Chamas | Enygma 71'
+
+
+
+        
 
         div.appendChild(h1)
         div.appendChild(data)
