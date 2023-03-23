@@ -1,6 +1,5 @@
 export class Notas {
     constructor(titulo, texto) {
-        this.main = document.querySelector('#main_notas')
         this.titulo = titulo
         this.texto = texto
     }
@@ -127,6 +126,7 @@ export class Notas {
         div.appendChild(input_3)
 
 // Adicionando o bloco [div] no main
-        this.main.appendChild(div)
+        const main = document.querySelector('#main_notas')
+        main.appendChild(div)
     }
 }
