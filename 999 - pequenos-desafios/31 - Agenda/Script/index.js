@@ -1,21 +1,34 @@
 import { Notas } from "./nota.js"
-let i = 0
+
+const main = document.querySelector('#main_notas')
+let index = window.localStorage.length
+
 document.querySelector('#confirm').addEventListener('click', ()=> {
     let title = document.querySelector('#title').value
     let text = document.querySelector('#text').value
+    let i = 0
     const newBloco = new Notas(title, text)
-    console.log(Notas.titulo)
+    console.log(newBloco)
     newBloco.criar()
 
-
-    const index = window.localStorage.length
-    window.localStorage.setItem(index, `${Notas.titulo} ${Notas.texto}`)
-    alert(index)
+    main.classList.remove('inicio')
+    
+    index = window.localStorage.length
+    window.localStorage.setItem(index, `${newBloco.titulo}&${newBloco.texto}`)
+    alert('Nota Salva')
     
 
-    while (index > i) {
-        console.log(window.localStorage.getItem(index))
-        i++
-    }
+    i++
 })
 
+
+if (main.classList.value === 'inicio') {
+    let i = 0
+    while (index > i) {
+        let localStorage = window.localStorage.getItem(i).split('&')
+        console.log(localStorage[0], localStorage[1])
+        const newBloco = new Notas(localStorage[0], localStorage[1])
+        newBloco.criar()
+        i++
+    }
+}
