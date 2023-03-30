@@ -5,3 +5,5 @@ class User {
         this.conta = conta
     }
 }
+
+module.exports = User
