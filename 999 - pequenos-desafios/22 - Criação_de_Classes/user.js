@@ -1,19 +1,21 @@
 class User {
-    constructor(fullName, email, password) {
-        this.fullName = fullName
+    #confirm = 'Email ou senha não confere'
+    
+    constructor(name, email, senha) {
+        this.name = name
         this.email = email
-        this.password = password
-        this.confere = 'Senha e email não confere'
+        this.senha = senha
     }
 
-    verificando(email, senha) {
-        if (email === this.email && senha === this.password) {
-            this.confere = `Seja bem-vindo novamente ${this.fullName}`
+    conferir(email, senha) {
+        if (email === this.email && senha === this.senha) {
+            this.#confirm = "Welcome " + this.name
         }
+        
+        return this.#confirm
     }
 }
 
-const usuario = new User('Ramon Rodrigues', 'ramon@gmail.com', 111)
-usuario.verificando('ramon@gmail.com', 111)
 
-console.log(usuario)
+const play1 = new User('Ramon', 'ramon@gmail.com', 123)
+console.log(play1.conferir('ramon@gmail.com', 123))
