@@ -1,7 +1,6 @@
 export class Componentess {
     #element = null
 
-
     constructor(teg, parent, option) {
         this.teg = teg
         this.parent = parent
@@ -16,7 +15,7 @@ export class Componentess {
     build() {
         this.#element = document.createElement(this.teg)
         Object.assign(this.#element, this.option)
-        return this.#element
+        return this
     }
 
     get render() {
