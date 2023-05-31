@@ -65,7 +65,8 @@ contas.createUser('Pedro', 'pedro@gmail.com')
 
 contas.addTransferencia('ramon@gmail.com', 'pedro@gmail.com', 100)
 
-
+console.log(contas.getcontas[0].conta)
+console.log('')
 console.log(contas.getcontas[0].conta.extrato_transferencia)
 console.log(contas.getcontas[1].conta.extrato_recebimento)
 
