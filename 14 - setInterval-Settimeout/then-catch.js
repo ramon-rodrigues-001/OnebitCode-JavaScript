@@ -1,4 +1,4 @@
-function execult() {
+function execulta() {
     return new Promise((resolve, reject)=> {
         console.log('Execultando promise...')
 
@@ -13,13 +13,13 @@ function execult() {
     })
 }
 
-const execut = execult()
+const executar = execulta()
 // console.log(execut)
 
-execut.then((smg) => {
-    console.log('Promise execultado ' + smg)
+executar.then((smg) => {
+    console.log(`Promise execultado: "${smg}"`)
 }).catch((err) => {
-    console.log('Promise rejeitada ' + err)
+    console.log(`Promise rejeitada "${err}"`)
 })
 
 // setTimeout(() => {
