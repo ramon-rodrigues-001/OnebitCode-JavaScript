@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.containerCalculadora {
+    background-color: rgb(242, 238, 238);
+    box-shadow: inset 2px 2px 10px 2px black;
+    border: solid 2px black;
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.detalhe {
+    background-color: rgb(59, 58, 58);
+    height: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.inputTela {
+    color: rgb(38, 255, 0);
+    background-color: transparent;
+    box-shadow: inset 2px 2px 40px 1px black;
+    text-align: right;
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+
+.containerButtons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 0px;
+}
+.buttons {
+    padding: 5px 0px;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: inset 2px 2px 10px 2px black;
+    transition: .3s;
+}
+.buttons:hover {
+    scale: .95;
+}
+
+
+.containerResposta {
+    display: flex;
+    box-shadow: inset 2px 2px 40px 1px black;
+    justify-content: space-between;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 2px;
+}
+.copy {
+    background-color: transparent;
+    border-radius: 10px;
+    color: rgb(38, 255, 0);
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    transition: .4s;
+}
+.copy:hover {
+    scale: 1.2;
+}
+.inputResultado {
+    color: rgb(38, 255, 0);
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+    text-align: right;
+}
