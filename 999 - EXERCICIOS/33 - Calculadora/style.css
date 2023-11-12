@@ -75,6 +75,7 @@
     color: rgb(38, 255, 0);
     background-color: transparent;
     border: none;
+    padding: 5px 10px;
     font-size: 1.2em;
     text-align: right;
 }
