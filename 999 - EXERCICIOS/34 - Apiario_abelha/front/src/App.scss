@@ -1,0 +1,20 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    padding: 1px 30px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: red;
+}
+img {
+    max-width: 100px;
+}
