@@ -71,14 +71,17 @@
 
 
 /* SOBRE A DEBELL */
-#sobre_a_DeBell {
+.sobre_a_DeBell {
     font-family: 'Averia Serif Libre', sans-serif;
-    background: linear-gradient(to top, #696666, #000000);
     color: rgb(255, 255, 255);
+    background-color: rgb(39, 38, 38);
+    width: 98%;
+    border-radius: 20px;
+    margin: 20px auto;
     font-size: 1.3em;
-    padding: 50px 30px;
+    padding: 30px;
 }
-#sobre_a_DeBell p {
+.sobre_a_DeBell p {
     max-width: 980px;
     margin: auto;
 }
@@ -89,7 +92,6 @@
 
 
 #oferecendo_produto {
-    background: linear-gradient(to top, #ffffff, #696666);
     color: rgb(41, 39, 39);
     display: flex;
     justify-content: space-around;
@@ -128,4 +130,23 @@
 }
 #button_de_compra:hover {
     scale: 1.1;
+}
+
+
+
+#img_Kindle {
+    background: url(./public/istockphoto-918656496-1024x1024.jpg) center center no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    margin: 20px auto;
+    height: 300px;
+    width: 95%;
+}
+#leitura_pelo_Kindle {
+    font-family: 'Averia Serif Libre', sans-serif;
+    font-weight: bold;
+    color: rgb(169, 4, 4);
+    text-align: center;
+    font-size: 1.3em;
+    padding: 20px 40px;
 }
