@@ -17,6 +17,12 @@
     min-height: 100vh;
 }
 
+#livroRECEITAS {
+    max-width: 300px;
+    box-shadow: 10px 10px 20px black;
+    border-radius: 10px;
+}
+
 #introdution #container_neon {
     border-bottom: solid 5px rgb(255, 0, 0);
     border-left: solid 5px rgb(255, 0, 0);
@@ -39,17 +45,13 @@
     font-size: 2em;
 }
 
-#introdution #livroRECEITAS {
-    max-width: 300px;
-    box-shadow: 10px 10px 20px black;
-    border-radius: 10px;
-}
-
 #introdution #mostrar_mais {
     text-align: center;
     font-size: 1.5em;
     position: absolute;
     bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #introdution #Politica_de_Privacidade {
@@ -61,4 +63,69 @@
     padding: 10px;
     top: 20px;
     right: 10px;
+}
+
+
+
+
+
+
+/* SOBRE A DEBELL */
+#sobre_a_DeBell {
+    font-family: 'Averia Serif Libre', sans-serif;
+    background: linear-gradient(to top, #696666, #000000);
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+    padding: 50px 30px;
+}
+#sobre_a_DeBell p {
+    max-width: 980px;
+    margin: auto;
+}
+
+
+
+
+
+
+#oferecendo_produto {
+    background: linear-gradient(to top, #ffffff, #696666);
+    color: rgb(41, 39, 39);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+#oferecendo_produto #livro_a_venda {
+    max-width: 300px;
+}
+
+#oferecendo_produto #descrition_do_livro {
+    font-family: 'Averia Serif Libre', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    max-width: 500px;
+}
+
+#oferta {
+    margin: 20px 0px;
+    border-radius: 20px;
+    background-color: rgb(255, 0, 0);
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+#button_de_compra {
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(149, 149, 218);
+    padding: 15px;
+    transition: .4s;
+    width: 100%;
+}
+#button_de_compra:hover {
+    scale: 1.1;
 }
