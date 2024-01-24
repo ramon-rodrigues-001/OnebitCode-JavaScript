@@ -45,6 +45,14 @@
     border-radius: 10px;
 }
 
+#introdution p {
+    padding: 20px 0px;
+}
+#introdution a {
+    color: white;
+    text-decoration: none;
+}
+
 #introdution #container_neon {
     border-bottom: solid 5px rgb(255, 0, 0);
     border-left: solid 5px rgb(255, 0, 0);
@@ -64,6 +72,7 @@
 
 #introdution #texto_introdution {
     max-width: 500px;
+    padding: 0px 10px;
     font-size: 2em;
 }
 
@@ -85,6 +94,10 @@
     padding: 10px;
     top: 20px;
     right: 10px;
+    z-index: 999;
+}
+#introdution #Politica_de_Privacidade:hover {
+    scale: 1.05;
 }
 
 
@@ -119,6 +132,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 20px;
     padding: 30px;
 }
 
@@ -137,22 +151,23 @@
     margin: 20px 0px;
     border-radius: 20px;
     background-color: rgb(255, 0, 0);
-    color: black;
+    color: #000000;
     text-align: center;
     padding: 10px;
 }
 
 #button_de_compra {
+    display: inline-block;
     font-weight: bold;
     border-radius: 10px;
     border: none;
     background-color: rgb(149, 149, 218);
     padding: 15px;
     transition: .4s;
-    width: 100%;
+    width: 95%;
 }
 #button_de_compra:hover {
-    scale: 1.1;
+    scale: 0.95;
 }
 
 
@@ -177,14 +192,82 @@
     font-size: 1.3em;
     padding: 20px 40px;
 }
-
-
-
-
-
 #kindle {
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     animation: kindleAnimate 2s linear infinite;
-    /* background-color: red; */
     max-width: 400px;
+}
+
+
+
+
+footer {
+    font-family: 'Averia Serif Libre', sans-serif;
+    font-size: 1.2em;
+    background-color: rgb(45, 43, 43);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+footer a {
+    display: inline-block;
+    padding-top: 10px;
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 786px) {
+    #introdution {
+        min-height: 10vh;
+    }
+
+    #introdution #texto_introdution {
+        font-size: 1.5em;
+    } 
+    
+    #introdution #mostrar_mais {
+        display: none;
+    }
+    
+    #livroRECEITAS {
+        max-width: 220px;
+    }
+
+    
+    #oferecendo_produto {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 563px) {
+    #introdution #container_neon {
+        text-align: center;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 10px;
+    }
+    #kindle {
+        width: 280px;
+    }
+    footer {
+        padding: 70px 0px;
+        flex-direction: column;
+    }
 }

@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icons bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Animação de Scroll AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Styles CSS -->
     <link rel="stylesheet" href="./style.css">
+
     <title>Document</title>
 </head>
+
+
+
 <body>
     <section id="introdution">
-        <p id="Politica_de_Privacidade">Politica de Privacidade</p>
+        <a href="./politica_de_privacidade/privacy.html" id="Politica_de_Privacidade">Politica de Privacidade</a>
 
         <div id="container_neon">
             <div id="texto_introdution">
                 <h1 id="titilu_logo">DeBell</h1>
                 <p>Liberte sua mente e seu corpo com o melhor infoproduto do mercado.</p>
+                <button id="button_de_compra">
+                    <i class="bi bi-bookmark-check-fill"></i>
+                    Comprar Livro
+                </button>
             </div>
-            <div id="livro_apresentation_introdution">
-                <img src="./public/livro RECEITAS CASEIRAS PARA CABELOS CACHEADOS.png" alt="livro RECEITAS CASEIRAS" id="livroRECEITAS">
+            <div id="livro_apresentation_introdution" data-aos="flip-left">
+                <img src="./public/livro RECEITAS CASEIRAS PARA CABELOS CACHEADOS.png" alt="livro RECEITAS CASEIRAS" id="livroRECEITAS" >
             </div>
         </div>
 
-        <p id="mostrar_mais">Tem Mais +</p>
+        <p id="mostrar_mais"><i class="bi bi-arrow-down-circle"></i></p>
     </section>
 
     
@@ -28,13 +41,13 @@
 
     <section class="sobre_a_DeBell">
         <!-- <h2>DeBell</h2> -->
-        <p>A DeBell, oferece este infoproduto, com conteúdos atualizados e relevantes para seus clientes. Com uma interface amigável e de fácil navegação, os visitantes podem facilmente encontrar e comprar seu infoproduto. Além disso, este site oferece opções seguras e convenientes de pagamento, garantindo uma experiência de compra agradável para seus clientes. Nosso site é o destino perfeito para aqueles que buscam acesso rápido e fácil a esta modalidade de forma online.</p>
+        <p><i class="bi bi-check2-all"></i> A DeBell, oferece este infoproduto, com conteúdos atualizados e relevantes para seus clientes. Com uma interface amigável e de fácil navegação, os visitantes podem facilmente encontrar e comprar seu infoproduto. Além disso, este site oferece opções seguras e convenientes de pagamento, garantindo uma experiência de compra agradável para seus clientes. Nosso site é o destino perfeito para aqueles que buscam acesso rápido e fácil a esta modalidade de forma online.</p>
     </section>
 
 
 
     <section id="oferecendo_produto">
-        <div id="apresentation_livro">
+        <div id="apresentation_livro" data-aos="flip-left">
             <img src="./public/livro RECEITAS CASEIRAS PARA CABELOS CACHEADOS.png" alt="livro RECEITAS CASEIRAS" id="livroRECEITAS">
         </div>
 
@@ -43,8 +56,13 @@
             <p>O e-Book "Receitas Caseiras para Cabelos Cacheados" apresenta quatro receitas simples e eficazes para cuidar dos cabelos cacheados em casa. Cada receita é feita com ingredientes naturais e ajuda a nutrir, fortalecer e definir os cachos. Este guia é uma opção prática e econômica para quem quer cuidar dos cabelos em casa e ter cabelos cacheados saudáveis e bonitos.</p>
 
             
-            <h3 id="oferta">Oferta Especial: <br>Por: R$14,90</h3>
-            <button id="button_de_compra">COMPRAR</button>
+            <h3 id="oferta" data-aos="fade-left" data-aos-duration="3000">
+                Oferta Especial: <br>Por: R$14,90
+            </h3>
+            <button id="button_de_compra" data-aos="fade-left" data-aos-duration="3000">
+                <i class="bi bi-bookmark-check-fill"></i>
+                COMPRAR
+            </button>
         </div>
     </section>
     
@@ -52,19 +70,35 @@
 
 
     <section class="sobre_a_DeBell">
-        <p>O nosso site de vendas é o lugar perfeito para encontrar e adquirir o melhor infoproduto nesta categoria. Além disso, nosso processo de compra é fácil e seguro, com opções de pagamento seguras. Além disso, nosso preço é competitivo e atualizado regularmente para garantir que você obtenha o melhor valor pelo seu infoproduto. Então, comece a explorar nosso site hoje mesmo e descubra por si mesmo por que somos a sua melhor escolha.  </p>
+        <p><i class="bi bi-check2-all"></i> O nosso site de vendas é o lugar perfeito para encontrar e adquirir o melhor infoproduto nesta categoria. Além disso, nosso processo de compra é fácil e seguro, com opções de pagamento seguras. Além disso, nosso preço é competitivo e atualizado regularmente para garantir que você obtenha o melhor valor pelo seu infoproduto. Então, comece a explorar nosso site hoje mesmo e descubra por si mesmo por que somos a sua melhor escolha.  </p>
     </section>
 
-    <section id="img_Kindle">
-
+    <section id="img_Kindle" data-aos="flip-left">
         <img src="./public/Kindle.webp" alt="Kindle" id="kindle">
     </section>
     <section id="leitura_pelo_Kindle">
-        <h2>ATENÇÂO</h2>
-        <p><strong>Forma de envio:</strong> Receba o e-book "Receitas Caseiras para Cabelos Cacheados" diretamente no seu WhatsApp ou por E-mail! Após a confirmação da sua compra, você receberá um link para download do e-book em formato digital. Você poderá acessar o e-book no seu smartphone ou computador, e começar a desfrutar das receitas caseiras para cuidar dos seus cabelos cacheados de forma natural e econômica. Aproveite a comodidade de receber o e-book imediatamente no seu WhatsApp ou por E-mail, e comece a cuidar dos seus cachos com carinho e atenção!</p>
+        <h2>INPORTANTE</h2>
+        <p><i class="bi bi-patch-exclamation-fill"></i> <strong>Forma de envio:</strong> Receba o e-book "Receitas Caseiras para Cabelos Cacheados" diretamente no seu WhatsApp ou por E-mail! Após a confirmação da sua compra, você receberá um link para download do e-book em formato digital. Você poderá acessar o e-book no seu smartphone ou computador, e começar a desfrutar das receitas caseiras para cuidar dos seus cabelos cacheados de forma natural e econômica. Aproveite a comodidade de receber o e-book imediatamente no seu WhatsApp ou por E-mail, e comece a cuidar dos seus cachos com carinho e atenção!</p>
     </section>
 
 
 
+    <footer>
+        <div>
+            <h3>Contatos</h3>
+            <p><strong>EMAIL</strong>: belgmararaujo15@gmail.com</p>
+            <p><strong>FONE</strong>: (98) 98425-1407</p>
+            <a href="https://www.google.com/url?q=https%3A%2F%2Fshre.ink%2FkAyE&sa=D&sntz=1&usg=AOvVaw0hRC4IwOIDdWcMgzNr45v2">SUPORTE TECNICO</a>
+        </div>
+        <div>
+            <a href="./politica_de_privacidade/privacy.html" >Politica de Privacidade</a>
+        </div>
+    </footer>
 </body>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
