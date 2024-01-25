@@ -31,6 +31,33 @@
 
 
 
+/* ==================== ==================== ====================  */
+/* ========== ESTILOS UTILIZADOS EM MAIS DE UMA SECTION =========  */
+/* ==================== ==================== ====================  */
+#button_de_compra {
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(149, 149, 218);
+    padding: 15px;
+    transition: .4s;
+    width: 95%;
+}
+#button_de_compra:hover {
+    scale: 0.95;
+}
+
+
+
+
+
+
+
+
+/* ====================  ====================  ====================   */
+/* ==================== SECTION INICIAL INTRODUÇÃO ====================   */
+/* ====================  ====================  ====================   */
 #introdution {
     font-family: 'Averia Serif Libre', sans-serif;
     background-color: black;
@@ -105,13 +132,15 @@
 
 
 
-/* SOBRE A DEBELL */
+/* ====================  ====================  ====================   */
+/* =========== SECTION SOBRE A DEBELL UTILIZADO MAIS DE UMA FEZ ============= */
+/* ====================  ====================  ====================   */
 .sobre_a_DeBell {
     font-family: 'Averia Serif Libre', sans-serif;
     color: rgb(255, 255, 255);
     background-color: rgb(39, 38, 38);
     width: 98%;
-    border-radius: 20px;
+    border-radius: 15px;
     margin: 20px auto;
     font-size: 1.3em;
     padding: 30px;
@@ -126,6 +155,9 @@
 
 
 
+/*  ==================== ====================  ====================  */
+/*  ============ SECTION DE INFORMAÇÃO DO LIVRO E VENDA PRINCIPAL =============  */
+/*  ====================  ====================  ====================  */
 #oferecendo_produto {
     background-color: rgb(233, 228, 228);
     color: rgb(41, 39, 39);
@@ -156,18 +188,40 @@
     padding: 10px;
 }
 
-#button_de_compra {
-    display: inline-block;
-    font-weight: bold;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(149, 149, 218);
-    padding: 15px;
-    transition: .4s;
-    width: 95%;
+
+
+
+
+
+/*  ====================  ====================  ====================  */
+/* ==================== SECTION METODOS NATURAIS ==================== */
+/*  ====================  ====================  ====================  */
+#section_metodos_naturais {
+    font-family: 'Averia Serif Libre', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+    border: 10px solid rgb(227, 221, 221);
+    border-radius: 5px;
+    width: 94vw;
+    margin: 30px auto;
+
 }
-#button_de_compra:hover {
-    scale: 0.95;
+#section_metodos_naturais p {
+    padding: 20px 0px;
+    font-size: 1.1em;
+    max-width: 800px;
+
+}
+#section_metodos_naturais h3 {
+    font-size: 1.6em;
+    max-width: 800px;
+
+}
+.icones_metodos_naturais {
+    width: 200px;
 }
 
 
@@ -175,7 +229,9 @@
 
 
 
-
+/*  ====================  ====================  ====================  */
+/*  ==================== SECTION KINDLE E MENSAGEN DE AVISO  ====================  */
+/*  ====================  ====================  ====================  */
 #img_Kindle {
     background: url(./public/istockphoto-918656496-1024x1024.jpg) center center no-repeat;
     background-size: cover;
@@ -200,6 +256,9 @@
 
 
 
+/*  ====================  ====================  ====================  */
+/*  ==================== SECTION FOOTER E CONTATOS ====================  */
+/*  ====================  ====================  ====================  */
 footer {
     font-family: 'Averia Serif Libre', sans-serif;
     font-size: 1.2em;
@@ -242,15 +301,25 @@ footer a {
     #livroRECEITAS {
         max-width: 220px;
     }
-
     
     #oferecendo_produto {
         text-align: center;
+        gap: 30px;
         flex-direction: column;
     }
 
     footer {
         text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 647px) {
+    #section_metodos_naturais {
+        flex-direction: column;
+    }
+    .icones_metodos_naturais {
+        width: 280px;
     }
 }
 
@@ -262,6 +331,9 @@ footer a {
         align-items: center;
         gap: 20px;
         padding: 30px 10px;
+    }
+    #livroRECEITAS {
+        max-width: 80%;
     }
     #kindle {
         width: 280px;
