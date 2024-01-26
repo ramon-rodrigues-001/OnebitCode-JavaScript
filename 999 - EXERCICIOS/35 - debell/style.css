@@ -334,6 +334,7 @@ footer a {
     }
     #livroRECEITAS {
         max-width: 80%;
+        min-width: 220px;
     }
     #kindle {
         width: 280px;
