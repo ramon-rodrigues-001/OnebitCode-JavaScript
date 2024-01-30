@@ -26,8 +26,8 @@ function Livro() {
 
   return (
     <div className={styles.containerLivro}>
+      
       <div className={styles.livro}>
-        <HeaderVitrine lista="false" />
 
         {/* DESCRIÇÃO DO LIVRO */}
         <div className={styles.divImgLivro}>
@@ -37,42 +37,22 @@ function Livro() {
             className={styles.imgLivro}
           />
           <div>
-            <h1>Tecnologia em evidência</h1>
             
-
-            <table>
-              <tr>
-                  <th>Título: </th>
-                  <td>Tecnologia em Evidencia</td>
-              </tr>
-              <tr>
-                  <th>Autor: </th>
-                  <td>J.R.R. Tolkien</td>
-              </tr>
-              <tr>
-                  <th>Descrição: </th>
-                  <td>Uma base da programação e da informatica.</td>
-              </tr>
-              <tr>
-                  <th>Ano: </th>
-                  <td>2008</td>
-              </tr>
-            </table>
-
-
-            <p>
-              Para quem quer dominar o mundo da ecnologia e criar Web sites incriveis
-            </p> 
-            <br />
-            <p className={styles.preco}>Preço: R$1,90</p> 
-            <br />
-            <button onClick={openModal}>COMPRAR</button>
           </div>
         </div>
 
         <a href="/vitrine" className={styles.linkVoltar}>
-          <button>&lt; VOLTAR</button>
+          <button>Ver Mais</button>
         </a>
+
+
+
+
+
+
+
+
+
 
 
 

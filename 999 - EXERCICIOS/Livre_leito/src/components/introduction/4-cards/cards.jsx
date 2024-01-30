@@ -16,16 +16,6 @@ export default function Cards() {
                     <p className={styles.cardTitle}>Card 01</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse ipsam nam dolorem pariatur eum dicta officiis placeat! Sunt, dolore ex dolor qui obcaecati repellat laboriosam dolorem facere hic quibusdam.</p>
                 </div>
-                <div className={styles.cards}>
-                    <img src="./livro4.jpg" alt="livros" />
-                    <p className={styles.cardTitle}>Card 01</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse ipsam nam dolorem pariatur eum dicta officiis placeat! Sunt, dolore ex dolor qui obcaecati repellat laboriosam dolorem facere hic quibusdam.</p>
-                </div>
-                <div className={styles.cards}>
-                    <img src="./livro2.jpg" alt="livros" />
-                    <p className={styles.cardTitle}>Card 01</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse ipsam nam dolorem pariatur eum dicta officiis placeat! Sunt, dolore ex dolor qui obcaecati repellat laboriosam dolorem facere hic quibusdam.</p>
-                </div>
             </div>
         </section>
     )

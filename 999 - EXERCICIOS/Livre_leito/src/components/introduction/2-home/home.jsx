@@ -16,7 +16,7 @@ export default function Apresentation() {
                 Leia de ende estiver a qualquer momento,  <br />E continue evoluindo e aprendendo.
             </p>
 
-            <Link to="/login/" className={styles.linkBtnPlay} id="ancoraMissao">
+            <Link to="/vitrine" className={styles.linkBtnPlay} id="ancoraMissao">
                 <button className={styles.buttonPlay}>
                     Acessar agora
                     <img src="./buttonPlay.svg" alt="Img Play" 

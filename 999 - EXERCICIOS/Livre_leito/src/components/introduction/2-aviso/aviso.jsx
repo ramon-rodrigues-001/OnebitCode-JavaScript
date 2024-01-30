@@ -19,7 +19,7 @@ export default function Aviso() {
         <div className={styles.avisoModal} onClick={ManpularMain}>
             <div className={styles.cardAviso}>
                 <div className={styles.cardHead}>
-                    <p>Avisos</p>
+                    <p>Politica de privacidade</p>
                     <p>+</p>
                 </div> 
                 {modalMain && (
