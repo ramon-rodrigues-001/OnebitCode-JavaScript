@@ -1,0 +1,42 @@
+@import "./colors.module.scss";
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sectionBackground {
+    background-image: linear-gradient(to bottom, #2a2828af, #151515), url(/public/Cover.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#sectionBackgroundVitrine {
+    background-image: linear-gradient(to bottom, #2a2828c7, #151515), url(/public/livraria.jpg);
+}
+// @media screen and (max-width: 500px) {
+//     .sectionBackground {
+//         padding-bottom: 30px;
+//     }
+// }
+
+.main {
+    background-color: $darkGray;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #151515;
+}
+::-webkit-scrollbar-track {
+    background-color: #151515;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $lightRed;
+    border-radius: 40px;
+}

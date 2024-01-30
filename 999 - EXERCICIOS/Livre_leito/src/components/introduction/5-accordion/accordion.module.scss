@@ -1,0 +1,84 @@
+@import "../../../styles/colors.module.scss";
+
+
+.sectionAccordion {
+    background-color: #252424;
+    color: $lightGray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 30px 20px;
+    border-radius: 15% 15% 0px 0px;
+    margin-top: 20px;
+
+    .divAccordion {
+        margin: 0px auto;
+        width: 90%;
+        max-width: 1000px;
+    }
+
+    .subTitle {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: $lightRed;
+        padding: 30px 0px 20px 0px;
+    }
+
+    .title {
+        color: white;
+        padding: 10px 0px 15px 0px;
+        font-size: 2.5em;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .accordionIten {
+            font-weight: bold;
+
+            .accordionHeader {
+                display: flex;
+                font-size: 1.1em;
+                justify-content: space-between;
+                cursor: pointer;
+                padding: 4px 0px;
+
+                .icon {
+                    font-size: 2em;
+                    font-weight: 100;
+                }
+            }
+
+            .accordionContentOff {
+                overflow: hidden;
+                height: 0px;
+                transition: all .3s ease;
+            }
+            .accordionContentOn {
+                color: rgb(255, 255, 255);
+                transition: all .5s ease;
+                padding-bottom: 20px;
+                transition: all .3s ease;  
+            }
+
+
+            
+            &:hover {
+                scale: 1.015;
+            }
+        }
+    }  
+}
+
+
+@media screen and (max-width: 606px) {
+    .sectionAccordion {
+        .title {
+            font-size: 2em;
+            font-weight: bold;
+        }
+    }
+}

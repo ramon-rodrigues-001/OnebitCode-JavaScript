@@ -1,0 +1,148 @@
+@import "../../../styles/colors.module.scss";
+
+
+
+.sectionLivros {
+    background-color: $darkGray;
+    min-height: 100vh;
+
+    .containerLivro {
+        // background-color: rgb(63, 62, 62);
+        width: 90vw;
+        max-width: 950px;
+        margin: 0px auto;
+        min-height: 98vh;
+
+        .pesquisa {
+            display: flex;
+            justify-content: end;
+            padding: 20px;
+
+            .inputPesquisa {
+                background-color: transparent;
+                border: solid 2px white;
+                color: white;
+                font-size: 1.1em;
+                padding: 5px 10px;
+                font-weight: bold;
+                width: 270px;
+                border-radius: 10px;
+            }
+
+            .imgLupa {
+                width: 50px;
+                position: absolute;
+            }
+        }
+
+
+        .espacoDeLivros {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+
+            .cardLivro {
+                position: relative;
+                background-color: rgb(41, 43, 43);
+                border-radius: 10px;
+                width: 270px;
+                height: 370px;
+                border: solid 2px white;
+                color: white;
+                overflow: hidden;
+                transition: .3s;
+
+                .livros {
+                    width: 100%;
+                    height: 80%;
+                }
+                .divCarrin {
+                    background-color: rgba(132, 147, 245, 0.343);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: 1s;
+                    border-radius: 50%;
+
+                    .carrin {
+                        width: 40px;
+                        transform: rotateY(600deg);
+                        transition: 1s;
+                    }
+                }
+
+                h3 {
+                    text-align: center;
+                    font-weight: 400;
+                    padding-top: 5px;
+                }
+                
+                .divPrecos {
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+
+                    .del {
+                        color: rgba(255, 255, 255, 0.308);
+                    }
+                }
+                
+
+                &:hover {
+                    scale: 1.02;
+
+                    .divCarrin {
+                        padding: 100%;
+                        opacity: 1;
+
+                        .carrin {
+                            transform: rotateY(0deg);
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .paginatio {
+            display: flex;
+            list-style: none;
+            justify-content: end;
+            padding: 15px 0px 30px 0px;
+
+            .pageLink {
+                display: inline-block;
+                border: solid 2px white;
+                font-weight: bold;
+                color: white;
+                padding: 8px 13px;
+                border-radius: 15px 0px;
+
+                &:hover {
+                    background-color: $lightRed;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .sectionLivros {
+        .containerLivro {
+            .pesquisa {
+                .inputPesquisa {
+                    width: 100%;
+                }
+            }
+            .paginatio {
+                .pageLink {
+                    padding: 5px 11px;
+                }
+            }
+        }
+    }
+}
