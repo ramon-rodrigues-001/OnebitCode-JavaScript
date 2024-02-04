@@ -1,8 +1,12 @@
 @import "./colors.module.scss";
 
+// Font 'Averia Serif Libre'
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 * {
+
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Averia Serif Libre' , sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -12,18 +16,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 #sectionBackgroundVitrine {
     background-image: linear-gradient(to bottom, #2a2828c7, #151515), url(/public/livraria.jpg);
 }
-// @media screen and (max-width: 500px) {
-//     .sectionBackground {
-//         padding-bottom: 30px;
-//     }
-// }
+
 
 .main {
     background-color: $darkGray;

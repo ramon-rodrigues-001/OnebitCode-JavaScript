@@ -85,19 +85,11 @@
     max-width: 1200px;
     width: 90vw;
     padding: 10px;
-    // margin: auto;
-
-    
-    
 
     .divImgLivro {
-        border: solid 4px;
-        border-top-color: blue;
-        border-right-color: blue;
-        border-bottom-color: rgb(255, 0, 0);
-        border-left-color: rgb(255, 0, 0);
-        box-shadow: inset 20px 20px 100px 40px rgba(255, 255, 255, 0.347);
-        backdrop-filter: blur(2px);
+        // border: solid 2px white;
+        box-shadow: inset 20px 20px 100px 10px rgba(255, 255, 255, 0.347);
+        backdrop-filter: blur(4px);
         display: flex;
         gap: 30px;
         padding: 15px;
@@ -107,23 +99,54 @@
         .imgLivro {
             border-radius: 20px;
         }
+
+        #oferta {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 30px 0px 10px 0px;
+            text-align: center;
+            padding: 20px;
+            background-color: red;
+            border-radius: 10px;
+        }
+
+        button {
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            padding: 10px;
+            border: none;
+            font-size: 1.3em;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.148);
+            transition: .3s;
+            border: solid 2px rgb(255, 255, 255);
+
+            &:hover {
+                border-color: $lightRed;
+                scale: .98;
+                box-shadow: 1px 1px 10px 1px rgba(255, 255, 255, 0.305);
+            }
+        }
     }
 
-    button {
+    #btn_voltar {
         background-color: transparent;
         color: white;
         font-weight: bold;
         border-radius: 10px;
-        border: solid 2px white;
+        border: solid 1px white;
         padding: 10px 40px;
         margin-bottom: 20px;
         width: 100%;
         transition: .3s;
         font-size: 1.4em;
+        box-shadow: inset 1px 1px 50px 1px rgba(255, 255, 255, 0.347);
 
+        
         &:hover {
             border-color: $lightRed;
             scale: .98;
+            box-shadow: 1px 1px 10px 1px rgba(255, 255, 255, 0.305);
         }
     }
 }
@@ -144,11 +167,20 @@
 
 @media screen and (max-width: 870px) {
     .livro {
+        padding: 5px;
+
         .divImgLivro {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 30px;
+            box-shadow: none;
+            padding: 5px;
+
+
+            .imgLivro {
+                width: 95%;
+            }
         }
 
         .divModal {

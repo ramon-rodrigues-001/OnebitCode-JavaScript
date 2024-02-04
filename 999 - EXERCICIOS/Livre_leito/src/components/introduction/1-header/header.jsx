@@ -5,23 +5,12 @@ import { Fragment } from "react"
 export default function Header() {
     return (
         <Fragment>
-            <div className={styles.ctaSection}>
-                    <p>
-                        Se cadastre para ter acesso aos PDFs
-                    </p>
-            </div>
-
             <header className={styles.headerIntrodution}>
                 <h1>
                     <img src="./logo-transparent.png" alt="logo livre leitor" className={styles.logo}/>
                 </h1>
                 <div>
                     <ul className={styles.list}>
-                        <li>
-                            <a href="#ancoraMissao">
-                                Missão
-                            </a>
-                        </li>
                         <li>
                             <a href="#ancoraCategorias">
                                 Categoria
@@ -34,7 +23,7 @@ export default function Header() {
                         </li>
                         <li>
                             <a href="#ancoraContatos">
-                                Contatos
+                                Suporte
                             </a>
                         </li>
                     </ul>

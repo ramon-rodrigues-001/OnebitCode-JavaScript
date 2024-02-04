@@ -9,7 +9,7 @@ export default function HomeVitrine() {
             </p>
 
             <h1 className={styles.title}>
-                literatura livre: baixe ebooks totalmente gratuito.
+                Tenha acesso aos melhores PDFs, E livros totalmente gratuito.
             </h1>
 
             <p className={styles.descrition}>

@@ -10,23 +10,22 @@ export default function Form() {
 
             <div className={styles.container_de_contatos}>
                 <div>
-                    <img src="./logo-transparent.png" alt="logo"  className={styles.logo}/>
                     <h2>
                         <span>Cont</span>atos
                     </h2>
                     <div className={styles.redesSociais}>
                         <a href="https://www.linkedin.com/in/ramon-rodrigues-515a9b244/" target="_blank">
-                            Linkedin
+                            <i class="bi bi-linkedin"></i>
                         </a>
                         <a href="https://github.com/ramon-rodrigues-001" target="_blank">
-                            Github
+                            <i class="bi bi-github"></i>
                         </a> 
                         <a href="https://www.facebook.com/profile.php?id=100084075099565" target="_blank">
-                            Facebook
+                            <i class="bi bi-facebook"></i>
                         </a>
                     </div>
-                    <p><strong>Email: </strong>ramon.rodrigues.dev@gmail.com</p>
-                    <p><strong>Cell: </strong>(33) 97879-2332</p>
+                    <p>ramon.rodrigues.dev@gmail.com</p>
+                    <p><strong>Cell: </strong>(33) 99125-1014</p>
                     <p><strong>Endereço: </strong>Capelinha-MG 39680-000</p>
                     <p>
                         V:1 04/07/2023

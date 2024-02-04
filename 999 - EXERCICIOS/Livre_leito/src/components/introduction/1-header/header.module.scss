@@ -1,13 +1,5 @@
 @import "../../../styles/colors.module.scss";
 
-.ctaSection {
-    background-color: black;
-    color: white;
-    border-bottom: solid 1px $lightRed;
-    padding: 5px 10px;
-    text-align: center;
-    font-weight: bold;
-}
 
 .headerIntrodution {
     background-color: transparent;
@@ -16,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
-    margin: 0px auto;
+    margin: 10px auto;
     width: 90%;
     max-width: 1000px;
 
@@ -40,50 +32,11 @@
         }
     }
 
-    // .btnNav {
-    //     background-color: transparent;
-    //     font-size: 1em;
-    //     font-weight: bold;
-    //     color: $lightGray;
-    //     border: solid 2px $lightRed;
-    //     padding: 5px 20px;
-    //     border-radius: 4px;
-    //     margin: 0px 13px 4px 0px;
-    //     transition: .3s;
-
-    //     &:hover {
-    //         color: white;
-    //         scale: 1.05;
-    //         transition: .1s;
-    //     }
-    // }
 }
+
 
 @media screen and (max-width: 600px) {
     .headerIntrodution {
-        gap: 10px;
-        
-        .list {
-            display: none;
-        }
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .headerIntrodution {
-
-        .logo {
-            display: inline-block;
-            padding: 30px;
-            max-width: 100%;
-            border: solid 2px white;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: inset 6px 6px 50px 10px rgba(255, 255, 255, 0.545);
-        }
-
-        // .sectionLinks {
-        //     margin: 20px 20px 0px 0px;
-        // }
+        display: none;
     }
 }

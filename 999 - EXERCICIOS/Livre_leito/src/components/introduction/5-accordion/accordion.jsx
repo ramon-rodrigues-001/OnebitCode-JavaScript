@@ -44,10 +44,10 @@ export default function Accordion() {
                                 Posso baixar os PDFs?
                             </span>
                             <div className={styles.icon} id="icon1">
-                                -
+                                +
                             </div>
                         </div>
-                        <div className={styles.accordionContentOn} id="content-1">
+                        <div className={styles.accordionContentOff} id="content-1">
                             <p>
                                 Sim você tem permição para baixar ipsum dolor sit amet consectetur adipisicing elit. Aut nobis error est qui dolores dolor, ullam non dolorem quis. Minima officiis enim ea, unde odio consequatur magni fuga libero repudiandae.
                             </p>
@@ -120,39 +120,6 @@ export default function Accordion() {
                         <div className={styles.accordionContentOff} id="content-5">
                             <p>
                                 Não, todos o livros e DPFs tiverem seus direitos autorais perdidos, agora e de direito do estado ipsum dolor. Aut nobis error est qui dolores dolor, ullam non dolorem quis. Minima officiis enim ea, unde odio consequatur magni fuga libero repudiandae.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div className={styles.accordionIten} onClick={() => {active("6")}}>
-                        <div className={styles.accordionHeader}>
-                            <span>
-                                Os livros em PDF? 
-                            </span>
-                            <div className={styles.icon}  id="icon6">
-                                +
-                            </div>
-                        </div>
-                        <div className={styles.accordionContentOff} id="content-6">
-                            <p>
-                                Não, todos o livros e DPFs tiverem seus direitos autorais perdidos, agora e de direito do estado ipsum dolor. Aut nobis error est qui dolores dolor, ullam non dolorem quis. Minima officiis enim ea, unde odio consequatur magni fuga libero repudiandae.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className={styles.accordionIten} onClick={() => {active("7")}}>
-                        <div className={styles.accordionHeader}>
-                            <span>
-                                Quem somos na fila do pão? 
-                            </span>
-                            <div className={styles.icon}  id="icon7">
-                                +
-                            </div>
-                        </div>
-                        <div className={styles.accordionContentOff} id="content-7">
-                            <p>
-                                Um desenvolvedor web solo, e um sonho de criar algo grande "e ser contratado :)", este é um dos projetos que estou desenvolvendo ainda não tenho ideia de que isso vai dá de onde vou chegar com este projeto e qual vai ser a verdadeiro objetivo, alem de que meu maior problema é o banco de dados na qual não faço ideia de onde encontrar e como inplementar. do estado ipsum dolor. Aut nobis error est qui dolores dolor, ullam non dolorem quis. Minima officiis enim ea, unde odio consequatur magni fuga libero repudiandae.
                             </p>
                         </div>
                     </div>

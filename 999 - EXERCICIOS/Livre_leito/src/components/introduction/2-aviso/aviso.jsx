@@ -20,7 +20,6 @@ export default function Aviso() {
             <div className={styles.cardAviso}>
                 <div className={styles.cardHead}>
                     <p>Politica de privacidade</p>
-                    <p>+</p>
                 </div> 
                 {modalMain && (
                     <div className={styles.cardMain}>

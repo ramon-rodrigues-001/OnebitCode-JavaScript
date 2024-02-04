@@ -37,12 +37,19 @@ function Livro() {
             className={styles.imgLivro}
           />
           <div>
-            
+            <h1>Tecnologia em evidência</h1>
+            <br />
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui perspiciatis est tempore, aliquam repellat facere, consectetur, quidem labore iure error recusandae molestias aperiam voluptatem rem sunt atque fuga et quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia placeat dicta error dolorum sequi quae vero, nobis laborum perspiciatis eveniet similique ad eius voluptas. Delectus quas pariatur est soluta.</p>
+              <br />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus suscipit totam facere ipsa eaque eum sapiente enim exercitationem voluptatem sit inventore</p>
+
+            <h3 id={styles.oferta}>Por apenas R$19,90</h3>
+            <button id={styles.btnCompar}>COMPRAR</button>
           </div>
         </div>
 
         <a href="/vitrine" className={styles.linkVoltar}>
-          <button>Ver Mais</button>
+          <button id={styles.btn_voltar}>Ver Mais</button>
         </a>
 
 

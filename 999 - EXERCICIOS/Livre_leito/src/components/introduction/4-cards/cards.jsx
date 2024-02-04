@@ -3,19 +3,10 @@ import styles from "./cards.module.scss"
 export default function Cards() {
     return (
         <section className={styles.sectionCards} id="ancoraCategorias">
-            <p className={styles.subTitle}>OQUE VOCÊ VAI ACESSAR</p>
+            <p className={styles.subTitle}>QUEM SOMOS</p>
 
             <div className={styles.containerDeCards}>
-                <div className={styles.cards}>
-                    <img src="./livros.jpg" alt="livros" />
-                    <p className={styles.cardTitle}>Livros em PDF</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse ipsam nam dolorem pariatur eum dicta officiis placeat! Sunt, dolore ex dolor qui obcaecati repellat laboriosam dolorem facere hic quibusdam.</p>
-                </div>
-                <div className={styles.cards}>
-                    <img src="./livro3.jpg" alt="livros" />
-                    <p className={styles.cardTitle}>Card 01</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque esse ipsam nam dolorem pariatur eum dicta officiis placeat! Sunt, dolore ex dolor qui obcaecati repellat laboriosam dolorem facere hic quibusdam.</p>
-                </div>
+                <p className={styles.descricao}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis explicabo ab dignissimos, iusto aliquid cumque numquam quos unde possimus minus. Accusantium voluptates delectus odit suscipit obcaecati consectetur modi ratione consequatur! <br />Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis culpa, ducimus veniam vitae possimus incidunt, non ab libero at accusantium provident laboriosam! Reprehenderit vitae odio dignissimos velit soluta, distinctio facereiosam! Reprehenderit vitae odio dignissimos velit soluta, distinctio facere..</p>
             </div>
         </section>
     )

@@ -6,7 +6,7 @@
     margin: 0px auto;
     width: 90%;
     max-width: 1000px;
-    padding: 50px 10px;
+    padding: 50px 10px 30px 10px;
     min-height: 100vh;
 
     .subTitle {
@@ -18,13 +18,8 @@
 
     .title {
         color: white;
-        padding: 10px 0px 40px 0px;
+        padding: 10px 0px 20px 0px;
         font-size: 2.5em;
-    }
-
-    .logo {
-        width: 200px;
-        margin-bottom: 40px;
     }
 
 
@@ -39,20 +34,21 @@
 
     .redesSociais {
         font-weight: bold;
-        font-size: 1.1em;
+        font-size: 3em;
         display: flex;
         gap: 10px;
         padding: 10px 0px;
 
         a {
             color: $lightGray;
-            border: solid 1.9px $lightRed;
+            border: solid 1.9px transparent;
             border-radius: 5px;
             padding: 3px 8px;
             text-decoration: none;
-            transition: .2s;
+            transition: .3s;
 
             &:hover {
+                transform: rotateZ(20deg);
                 border-color: red;
                 color: white;
                 scale: 1.05;
@@ -63,11 +59,11 @@
     .form {    
         .div_name_email {
             display: flex;
-            gap: 20px;
+            gap: 10px;
 
             input {
                 font-weight: bold;
-                border-radius: 10px;
+                border-radius: 5px;
                 border: none;
                 margin: 5px 0px;
                 padding: 10px 20px;
@@ -81,7 +77,7 @@
                 margin: 5px 0px;
                 width: 100%;
                 max-width: 450px;
-                border-radius: 10px;
+                border-radius: 6px;
                 padding: 10px 20px;
             }
         }
@@ -115,10 +111,6 @@
         .title {
             padding-bottom: 10px;
         }
-
-        .logo {
-            display: none;
-        } 
 
         form {
             .div_name_email {
@@ -167,6 +159,10 @@
         }
         .div_name_email {
             font-size: .9em;
+
+            input {
+                margin: 0px;
+            }
         }
     }
 }
