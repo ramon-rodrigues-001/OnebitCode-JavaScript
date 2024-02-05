@@ -1,10 +1,13 @@
-const Conta = require('./entities/Contas.js')
-const contas = []
-
-const ramon = new Conta('Ramon', 'ramon@gmail.com')
-const rayane = new Conta('Rayane', 'Rayane@gmail.com')
+// Quando eu escrevo este codigo abaixo o codigo simplesmente Para de funcionar:
+// const Conta = require('./entities/Conta.js')
 
 
-ramon.fazerTranferencias(1000, 'Rayane')
+const User = require('./entities/User.js')
+
+const ramon = new User('Ramon', 'ramon@gmail.com')
+
+ramon.Conta.fazerDepositos(20000)
+ramon.Conta.fazerDepositos(13000)
+ramon.Conta.fazerDepositos(2000)
 
 console.log(ramon)
