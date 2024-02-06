@@ -23,9 +23,13 @@ class Conta {
     }
 
     fazerDepositos (valor) {
-        valor > 0 ? this.Depositos.push(
-            new Deposito(valor)
-        ) : console.log('Insira um valor acima de R$0,00 para deposito')
+        if (valor > 0) {
+            this.Depositos.push(new Deposito(valor))
+            this.Valor += valor
+        }
+        else {
+            console.log('Insira um valor acima de R$0,00 para deposito')
+        }
     }
 
     // PODE ficar devendo / Sai parselas divididas
