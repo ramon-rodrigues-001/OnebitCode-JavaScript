@@ -19,7 +19,7 @@
     align-items: center;
 }
 .logo_header {
-    width: 50px;
+    width: 200px;
 }
 
 .nav ul {
@@ -136,8 +136,8 @@
     /* background: url('https://www.cbimadeiras.com.br/arquivo/galeria_foto_topo/04.jpg') center center no-repeat;
     background-size: cover; */
     /* background-color: red; */
-    height: 100vh;  
-    padding: 10px 20px;  
+    /* minheight: 100vh;   */
+    padding: 20px;  
 }
 .title_quem_somos {
     color: rgb(87, 79, 79);
@@ -147,6 +147,7 @@
 .container_cards_quem_somos {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 .card_quem_somos {
     font-weight: bold;
@@ -161,12 +162,16 @@
     flex-direction: column;
     justify-content: flex-end;
     
-    flex: 1 1 30%;
+    flex: 1 1 250px;
 }
 .title_cards_quem_somos {
     color: #28e303d4;
     padding-bottom: 10px;
     font-size: 1.3em;
+}
+.img_card {
+    width: 100%;
+    border-radius: 10px;
 }
 #card_principal {
     box-shadow:  4px 3px 10px 1px #28e3036a;

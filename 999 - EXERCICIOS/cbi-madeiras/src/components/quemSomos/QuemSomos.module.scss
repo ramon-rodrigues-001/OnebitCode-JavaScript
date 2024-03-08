@@ -1,0 +1,62 @@
+
+.quem_somos {
+    background-color: black;
+    background: url('https://www.cbimadeiras.com.br/arquivo/galeria_foto_topo/04.jpg') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    // box-shadow: inset 5px 50px 10px 30px white;
+    padding: 20px;  
+    // min-height: 85vh;
+
+    .title_quem_somos {
+        color: rgb(0, 0, 0);
+        padding-bottom: 20px;
+        max-width: 700px;
+    }
+
+    .container_cards_quem_somos {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .card_quem_somos {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            border: solid 1px black;
+            box-shadow: inset 1px 1px 1px 1px rgba(255, 255, 255, 0.501);
+            background-color: #332f2d;
+            color: white;
+            /* max-width: 300px; */
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            flex: 1 1 250px;
+            // box-shadow:  4px 3px 10px 1px #0000006a;
+
+            .title_cards_quem_somos {
+                color: #28e303d4;
+                padding-bottom: 10px;
+                font-size: 1.3em;
+            }
+
+            &#card_principal {
+                box-shadow:  4px 3px 10px 1px #28e3036a;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 520px) {
+    .quem_somos {
+        padding: 20px;  
+    
+        .title_quem_somos {
+            font-size: 1.3em;
+        }
+    }
+}
