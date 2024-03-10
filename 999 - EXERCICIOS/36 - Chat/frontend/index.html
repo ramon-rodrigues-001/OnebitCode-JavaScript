@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Chat Comunity</title>
 </head>
 <body>
 
     <section class="container">
+        
 
         <section class="login">
+            
             <h2>Login</h2>
             <form class="form__login">
                 <input type="text" class="input__login" placeholder="Seu nome" required>
@@ -18,12 +21,28 @@
             </form>
         </section>
 
-    </section>
 
-
-    <section class="chat">
+        <section class="chat">
+            <section class="chat__menssages">
+                <!-- <div class="message__self">Helo, World!</div> 
+                <div class="mensagem__other">
+                    <span class="msg__sender">Maria Paula</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati ipsam cumque quasi expedita ea? Magnam in consequatur alias rerum?
+                </div> -->
+            </section>
         
+            <form class="chat__form">
+                <input type="text" class="chat__input" placeholder="Digite uma mensagem ..." required>
+                <button type="submit" class="chat__buttonSubmit">
+                    <i class="bi bi-send-fill"></i>
+                </button>
+            </form>
+    
+        </section>
     </section>
+
+
+    
     
     <script src="js/script.js"></script>
 </body>

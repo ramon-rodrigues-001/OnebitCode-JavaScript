@@ -9,8 +9,9 @@ wss.on("connection", (ws) => {
     ws.on("error", console.error)
 
     ws.on("message", (data) => {
+        // console.log(data.toString())
         wss.clients.forEach( clients => clients.send(data.toString()) )
     })
 
-    console.log('New client connected.')
+    console.log('=== New client connected. ===')
 })

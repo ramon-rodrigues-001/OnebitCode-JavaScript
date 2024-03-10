@@ -11,7 +11,7 @@ body {
 
 
 .container {
-    min-width: 100dvw;
+    width: 100%;
     min-height: 100dvh;
 }
 
@@ -24,7 +24,9 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 10px;
     padding: 20px;
-    display: none;
+    min-width: 300px;
+    border: solid 1px rgba(255, 255, 255, 0.389);
+    /* display: none; */
 }
 
 .login > h2 {
@@ -43,6 +45,7 @@ body {
     margin: 10px 0px;
     border-radius: 5px;
     background-color: rgba(78, 73, 73, 0.687);
+    color: white;
     padding: 5px 10px;
     font-size: 17px;
     border: solid 1px rgba(255, 255, 255, 0.324);
@@ -66,4 +69,97 @@ body {
 
 
 
+
+
+
+.chat {
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+
+.chat__menssages {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 70px;
+    max-width: 100%;
+}
+
+.chat__menssages > div {
+    padding: 10px;
+    font-size: .9em;
+    font-weight: 600;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    line-height: 22px;
+    
+}
+
+.chat__menssages > .message__self {
+    background-color: rgb(210, 210, 210);
+    color: rgb(3, 3, 3);
+    border-radius: 10px 10px 0px 10px;
+    align-self: flex-end;
+}
+.chat__menssages > .mensagem__other {
+    background-color:  rgb(39, 37, 37);
+    color: white;
+    border-radius: 0px 10px 10px 10px;
+}
+.msg__sender {
+    font-size: 1.1em;
+    font-weight: bolder;
+    padding-bottom: 15px;
+    display: block;
+}
+
+
+
+
+
+.chat__form {
+    background-color: rgb(19, 19, 19);
+    padding: 10px 20px;
+    border-top: solid 1px rgba(255, 255, 255, 0.348);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.chat__input {
+    font-size: 1.1em;
+    background-color: rgb(37, 35, 35);
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    outline: none;
+    flex-grow: 1;
+}
+
+
+.chat__buttonSubmit {
+    background-color: transparent;
+    color: white;
+    font-size: 1.6em;
+    border: none;
+    padding: 0px 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+.chat__buttonSubmit:hover {
+    transform: rotateZ(-48deg) translateY(6px);
+}
 
