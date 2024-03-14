@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(228, 231, 233);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            /* width: 230px; */
+            background-color: rgb(238, 236, 236);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: inset 1px 1px 10px 3px rgba(0, 0, 0, 0.24);
+        }
+        img {
+            width: 100%;
+            height: 150px;
+            /* box-shadow:  0px 10px 10px rgba(0, 0, 0, 0.373); */
+        }
+
+
+        .texto {
+            padding: 15px;
+        }
+
+        h3 {
+            padding: 5px 0px;
+        }
+
+        .span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .mini {
+            font-size: .8em;
+            padding: 8px 0px 4px;
+        }
+        .preco {
+            font-size: 1.4em;
+        }
+        .antigoPreco {
+            font-size: .8em;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px;
+            border: none;
+            width: 100%;
+            background-color: rgb(41, 171, 156);
+            color: rgb(218, 218, 218);
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: .3s;
+        }
+        button:hover {
+            scale: 1.05;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="./remedio1.jpeg" alt="IMG REMEDIO">
+        <div class="texto">
+            <h3>Oxicodona</h3>
+            
+            <p class="mini">Comissão de até:</p>
+            <span class="span">
+                <p class="antigoPreco"><s>R$ 170,00</s></p>
+                <p class="preco">R$ 98,50</p>
+            </span>
+            <button>COMPRAR</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://live.staticflickr.com/5041/29699292430_6e341376e8_b.jpg" alt="IMG REMEDIO">
+        <div class="texto">
+            <h3>Oxicodona</h3>
+            
+            <p class="mini">Comissão de até:</p>
+            <span class="span">
+                <p class="antigoPreco"><s>R$ 170,00</s></p>
+                <p class="preco">R$ 98,50</p>
+            </span>
+            <button>COMPRAR</button>
+        </div>
+    </div><div class="card">
+        <img src="https://live.staticflickr.com/65535/51055768291_1e010a6115_b.jpg" alt="IMG REMEDIO">
+        <div class="texto">
+            <h3>Oxicodona de hidrato</h3>
+            
+            <p class="mini">Comissão de até:</p>
+            <span class="span">
+                <p class="antigoPreco"><s>R$ 170,00</s></p>
+                <p class="preco">R$ 128,50</p>
+            </span>
+            <button>COMPRAR</button>
+        </div>
+    </div>
+</body>
+</html>
