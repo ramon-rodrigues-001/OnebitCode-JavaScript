@@ -16,19 +16,28 @@
             background-color: rgb(228, 231, 233);
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 20px 10px;
             align-items: center;
             min-height: 100vh;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            padding: 30px;
         }
         .card {
-            /* width: 230px; */
             background-color: rgb(238, 236, 236);
-            border-radius: 10px;
+            border-radius: 5px;
             overflow: hidden;
-            box-shadow: inset 1px 1px 10px 3px rgba(0, 0, 0, 0.24);
+            min-width: 230px;
+            /* border: solid 1px rgba(0, 0, 0, 0.452); */
+            box-shadow: inset 1px 1px 10px 3px rgba(0, 0, 0, 0.104);
         }
+        .card:hover button {
+            background-color: rgb(20, 109, 98);
+            transition: .3s;
+        }
+
         img {
-            width: 100%;
+            width: 230px;
             height: 150px;
             /* box-shadow:  0px 10px 10px rgba(0, 0, 0, 0.373); */
         }
@@ -38,9 +47,9 @@
             padding: 15px;
         }
 
-        h3 {
+        /* h3 {
             padding: 5px 0px;
-        }
+        } */
 
         .span {
             display: flex;
@@ -64,18 +73,22 @@
             padding: 5px;
             border: none;
             width: 100%;
-            background-color: rgb(41, 171, 156);
+            background-color: rgb(39, 153, 140);
             color: rgb(218, 218, 218);
             font-size: 1.2em;
             border-radius: 5px;
+            cursor: pointer;
             transition: .3s;
         }
-        button:hover {
+        .card button:hover {
             scale: 1.05;
         }
     </style>
 </head>
-<body>
+<body class="body">
+
+    <button class="add_produto">Adicionar Card</button>
+
     <div class="card">
         <img src="./remedio1.jpeg" alt="IMG REMEDIO">
         <div class="texto">
@@ -83,12 +96,12 @@
             
             <p class="mini">Comissão de até:</p>
             <span class="span">
-                <p class="antigoPreco"><s>R$ 170,00</s></p>
                 <p class="preco">R$ 98,50</p>
             </span>
-            <button>COMPRAR</button>
+            <button>Ver Produto</button>
         </div>
     </div>
+
     <div class="card">
         <img src="https://live.staticflickr.com/5041/29699292430_6e341376e8_b.jpg" alt="IMG REMEDIO">
         <div class="texto">
@@ -99,20 +112,24 @@
                 <p class="antigoPreco"><s>R$ 170,00</s></p>
                 <p class="preco">R$ 98,50</p>
             </span>
-            <button>COMPRAR</button>
+            <button>Ver Produto</button>
         </div>
-    </div><div class="card">
+    </div>
+    
+    <div class="card">
         <img src="https://live.staticflickr.com/65535/51055768291_1e010a6115_b.jpg" alt="IMG REMEDIO">
         <div class="texto">
             <h3>Oxicodona de hidrato</h3>
             
             <p class="mini">Comissão de até:</p>
             <span class="span">
-                <p class="antigoPreco"><s>R$ 170,00</s></p>
+                <!-- <p class="antigoPreco"><s>R$ 170,00</s></p> -->
                 <p class="preco">R$ 128,50</p>
             </span>
-            <button>COMPRAR</button>
+            <button>Ver Produto</button>
         </div>
     </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
