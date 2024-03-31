@@ -1,0 +1,59 @@
+header {
+    background-color: rgb(80, 56, 74);
+    color: white;
+    position: fixed;
+    top: -2px;
+    width: 100dvw;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.161);
+    padding: 4px;
+}
+
+header ul {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+header ul li {
+    position: relative;
+    padding: 2px;
+}
+header ul li::before {
+    position: absolute;
+    bottom: 0px;
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #ffffff;
+    z-index: 1;
+    transition: .2s;
+}
+header ul li:hover::before {
+    width: 100%;
+}
+
+header div {
+    font-size: 1.4em;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+header div p:hover {
+    transition: .3s;
+    scale: 1.4;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    header ul {
+        display: none;
+    }
+}

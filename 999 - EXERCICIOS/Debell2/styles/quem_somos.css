@@ -1,0 +1,76 @@
+.sobre_debell {
+    /* background: rgb(224, 221, 221) url('../public/b2.jpg') center center no-repeat;
+    background-size: cover; */
+    background-color: rgb(234, 193, 193);
+    padding: 50px 0px;
+    /* min-height: 80vh; */
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+h2 {
+    position: relative;
+    font-size: 2.5em;
+}
+h2::before {
+    position: absolute;
+    bottom: 0px;
+    content: '';
+    width: 110px;
+    height: 5px;
+    background-color: #30290e;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.descrition_quem_somos {
+    font-size: 1.05em;
+    font-weight: bold;
+    max-width: 400px;
+    margin: auto;
+    width: 85%;
+}
+
+.mostrar_mais {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: auto;
+    padding-top: 20px;
+    /* padding-left: 7.5%; */
+}
+.mostrar_mais::before {
+    position: absolute;
+    bottom: 0px;
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #000000;
+    z-index: 1;
+    transition: .2s;
+}
+.mostrar_mais:hover::before {
+    width: 100%;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    .sobre_debell {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    h2 {
+        max-width: 400px;
+        width: 85%;
+        text-align: left;
+    }
+}

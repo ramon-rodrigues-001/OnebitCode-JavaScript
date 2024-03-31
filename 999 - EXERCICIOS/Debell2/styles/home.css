@@ -1,0 +1,102 @@
+
+.introdution {
+    /* background-color: red; */
+    background: rgb(226, 220, 220) url('../public/2.jpg') center center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.texto_inicial {
+    padding: 20px;
+    max-width: 440px;
+}
+
+.mini_text {
+    font-size: 1em;
+}
+
+.texto {
+    padding: 0px 0px 20px 0px;
+}
+.title {
+    font-size: 4.1em;
+}
+.subTitle {
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.button {
+    border: none;
+    background-color: #efca38;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 15px 40px;
+    width: 100%;
+    border-radius: 10%;
+    transition: .4s;
+}
+.button:hover {
+    border-radius: 11%;
+    scale: 1.05;
+}
+
+
+.img_livro {
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.088);
+}
+
+
+.seta_para_baixo {
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: setaAnimate infinite 1s;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    padding: 15px;
+    transition: .3s;
+    border-radius: 50%;
+}
+.seta_para_baixo:hover {
+    border: solid 1px rgba(0, 0, 0, 0.343);
+}
+
+@keyframes setaAnimate {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .introdution {
+        padding: 90px 10px 30px 10px;
+        flex-direction: column-reverse;
+    }
+    .seta_para_baixo {
+        display: none;
+    }
+
+    
+    .texto_inicial {
+        text-align: center;
+    }
+
+}
