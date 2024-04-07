@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="styles/oferta_do_produto.css">
     <!-- Stilo do Medotos Naturais -->
     <link rel="stylesheet" href="styles/metodos_naturais.css">
+    <!-- Stilo do Formato de envio -->
+    <link rel="stylesheet" href="styles/formato_de_envio.css">
+    <!-- Stilo do Footer -->
+    <link rel="stylesheet" href="styles/footer.css">
     <title>Debell</title>
 </head>
 <body>
@@ -26,15 +30,15 @@
         <header>
             <h1>Debell</h1>
             <ul>
-                <li>Home</li>
-                <li>Produto</li>
-                <li>Quem Somos</li>
-                <li>Politica de privacidade</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#sobre_debell">Quem Somos</a></li>
+                <li><a href="#oferecendo_produto">Produto</a></li>
+                <li><a href="#detalhes">Detalhes</a></li>
             </ul>
             <div>
-                <p><i class="bi bi-whatsapp"></i></p>
-                <p><i class="bi bi-instagram"></i></p>
-                <p><i class="bi bi-envelope-at"></i></p>
+                <img src="./public/icon_whatsapp.png" alt="" class="iconsHeader">
+                <img src="./public/icon_instagram.png" alt="" class="iconsHeader">
+                <img src="./public/icon_email.png" alt="" class="iconsHeader">
             </div>
         </header>
     
@@ -59,7 +63,7 @@
                 <img src="https://debell.netlify.app/public/livro%20RECEITAS%20CASEIRAS%20PARA%20CABELOS%20CACHEADOS.png" alt="Livro a venda" class="img_livro">
             </div>
 
-            <p class="seta_para_baixo"><i class="bi bi-arrow-down"></i></p>
+            <p class="seta_para_baixo"><i class="bi bi-arrow-down" id="sobre_debell"></i></p>
         </section>
 
 
@@ -79,7 +83,7 @@
 
 
 
-        <section class="oferecendo_produto">
+        <section class="oferecendo_produto" id="oferecendo_produto">
             <img src="https://debell.netlify.app/public/livro%20RECEITAS%20CASEIRAS%20PARA%20CABELOS%20CACHEADOS.png" alt="livro a venda" class="img_livro">
 
             <div class="texto_oferecendo_produto">
@@ -88,7 +92,7 @@
                     O e-Book "Receitas Caseiras para Cabelos Cacheados" apresenta quatro receitas simples e eficazes para cuidar dos cabelos cacheados em casa. Cada receita é feita com ingredientes naturais e ajuda a nutrir, fortalecer e definir os cachos. Este guia é uma opção prática e econômica para quem quer cuidar dos cabelos em casa e ter cabelos cacheados saudáveis e bonitos.
                 </p>
                 <p class="preco">
-                    Oferta Especial por apenas: <strong>3x de R$5,50</strong> <br><strong>Ou R$15,00 avista</strong>
+                    Oferta Especial por apenas: <strong>3x de R$5,30</strong> <br><strong>Ou R$14,90 avista</strong>
                 </p>
 
                 <button class="button">
@@ -109,7 +113,31 @@
 
 
 
-        <section class="metodos_naturais">
+
+
+        <section class="formato_de_envio" id="detalhes">
+            <div class="formato_de_envio_card">
+                <img src="./public/2191988-delivery-truck-icon-fast-shipping-delivery-concept-vetor.jpg" alt="envio imediato" class="imgCards">
+                <h4 class="titleCard">Forma de Envio</h4>
+                <p class="descritionCard">Receba o e-book "Receitas Caseiras para Cabelos Cacheados" diretamente no seu WhatsApp ou por E-mail! Após a confirmação da sua compra, você receberá um link para download do e-book em <strong>formato digital.</strong></p>
+            </div>
+
+            <div class="formato_de_envio_card">
+                <img src="./public/Kindle.webp" alt="formato digital" class="imgCards">
+                <h4 class="titleCard">Formato Digital</h4>
+                <p class="descritionCard">Você poderá acessar o e-book no seu smartphone ou computador, e aproveitar a comodidade de receber o e-book imediatamente no seu WhatsApp ou por E-mail, e comece a cuidar dos seus cachos com carinho e atenção!</p>
+            </div>
+
+            <div class="formato_de_envio_card">
+                <img src="https://debell.netlify.app/public/Natural_icon.png" alt="formato digital" class="imgCards" style="padding: 20px;">
+                <h4 class="titleCard">Metodos Naturais</h4>
+                <p class="descritionCard">Ao longo das páginas, você encontrará dicas e truques para cuidar dos seus cabelos cacheados de forma saudável e sem gastar muito dinheiro. As receitas foram cuidadosamente selecionadas e testadas para garantir que oferecem resultados satisfatórios para diferentes tipos de cachos.</p>
+            </div>
+        </section>
+
+
+
+        <!-- <section class="metodos_naturais">
             <div class="descricao_metodo_natural">
                 <h2>Metodos Naturais</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam ab ratione recusandae quisquam vitae, atque, sequi minima suscipit ullam earum voluptate, nostrum fuga. Officia unde qui nemo veritatis recusandae.</p>
@@ -119,7 +147,20 @@
                 </button>
             </div>
             <img src="https://debell.netlify.app/public/Natural_icon.png" alt="icone_folha" class="icone_folha">
-        </section>
+        </section> -->
+
+
+        <footer class="footer">
+            <div>
+                <h3>Entre em Contato</h3>
+                <p>EMAIL: belgmararaujo15@gmail.com</p>
+                <p>FONE: (98) 98425-1407</p>
+            </div>
+            <div>
+                <p><a href="https://www.google.com/url?q=https%3A%2F%2Fshre.ink%2FkAyE&sa=D&sntz=1&usg=AOvVaw0hRC4IwOIDdWcMgzNr45v2">SUPORTE TECNICO</a></p>
+                <a href="./politica_de_privacidade/privacy.html" >POLITICA DE PRIVACIDADE</a>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

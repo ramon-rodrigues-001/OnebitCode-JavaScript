@@ -1,0 +1,44 @@
+.formato_de_envio {
+    text-align: center;
+    background-color: rgb(245, 237, 245);
+    background-color: rgb(234, 193, 193);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
+    /* min-height: 80vh; */
+    gap: 10px;
+    padding: 50px 0px;
+}
+
+/* .formato_de_envio_card {
+    background-color: red;
+} */
+
+.imgCards {
+    border-radius: 50%; height: 160px; width: 160px; box-shadow: 3px 3px 1px 3px black;
+    background-color: white;
+}
+
+.titleCard {
+
+    padding: 18px 0px;
+    font-size: 1.5em;
+}
+
+.descritionCard {
+    max-width: 400px;
+    
+    font-size: 1.05em;
+    margin: auto;
+    width: 85%;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .formato_de_envio {
+        flex-direction: column;
+        gap: 40px;
+    }
+}

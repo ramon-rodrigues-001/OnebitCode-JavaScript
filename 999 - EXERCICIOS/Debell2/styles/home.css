@@ -40,7 +40,7 @@
     font-size: 1.1em;
     padding: 15px 40px;
     width: 100%;
-    border-radius: 10%;
+    border-radius: 5px;
     transition: .4s;
 }
 .button:hover {

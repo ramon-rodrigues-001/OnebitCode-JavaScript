@@ -3,7 +3,7 @@
     background-size: cover;
     min-height: 50vh;
     display: flex;
-    padding: 40px 30px;
+    padding: 20px 30px 40px 30px;
     justify-content: space-evenly;
     align-items: center;
 }
