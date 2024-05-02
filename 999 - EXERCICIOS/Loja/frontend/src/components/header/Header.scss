@@ -1,0 +1,78 @@
+.header {
+    color: rgb(44, 44, 44);
+    background-color: #ededed;
+    padding: 20px 25px;
+
+    .container_heade {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .icones_menu_pesquisa {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .icon_menu {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                 
+                .traco {
+                    width: 30px;
+                    height: 4px;
+                    background-color: black;
+                }
+            }
+
+            .icon_pesquisa {
+                font-size: 1.5em;
+            }
+        }
+
+        
+        #logo_header {
+            width: 80px;
+        }
+
+        #carrinho {
+            background-color: transparent;
+            color: black;
+            border: none;
+
+            #icon_carrinho {
+                width: 20px;
+                display: inline-block;
+                font-size: 2em;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .inicio_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .input_pesquisa {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            width: 300px;
+        }
+    }
+
+    #logoHeader {
+        width: 150px;
+    }
+}
