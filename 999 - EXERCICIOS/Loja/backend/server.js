@@ -1,16 +1,38 @@
 const Express = require('express')
 const { default: mongoose } = require('mongoose')
+const bodyParser = require('body-parser')
+const cors = require('cors');
+const Produto = require('./models/produto.js')
 
 const app = Express()
+app.use(bodyParser.json())
+app.use(cors());
 const portaMongoose = "mongodb+srv://ramon:nIZQQ073GadooFZD@cluster0.cij4gvt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 
 app.get('/', (req, res) => {
     res.send('<h1>Hello</h1>')
 })
+app.post('/api/salvar-produto', (req, res) => {
+    const { ImgUrl, nome, valorAntigo, valorAtual } = req.body;
 
+    const produto = new Produto({
+        url: ImgUrl,
+        nomdeProduto: nome,
+        valorAntigo: valorAntigo,
+        valorAtual: valorAtual
+    })
 
-
+    try {
+        produto.save()
+        console.log('Produto salvo ao banco de dados')
+    }
+    catch {
+        console.log('===== Erro ao salvar produto =====')
+    }
+    
+    res.status(200).json({ mensagem: 'Dados recebidos com sucesso!' });
+});
 
 mongoose.connect(portaMongoose)
 .then(()=> {
@@ -20,5 +42,5 @@ mongoose.connect(portaMongoose)
         console.log('Porta: http://localhost:4000/')
     })
 }). catch(error => {
-    console.log('===================== Erro ao conectar ao banco de dados =====================')
+    console.log('============= Erro ao conectar ao banco de dados ============= :' + error)
 })

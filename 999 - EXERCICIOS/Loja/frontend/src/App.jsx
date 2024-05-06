@@ -1,3 +1,4 @@
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import './ComumStyles/geralStyles.scss'
 import Header from './components/header/Header.jsx';

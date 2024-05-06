@@ -46,7 +46,7 @@
             #icon_carrinho {
                 width: 20px;
                 display: inline-block;
-                font-size: 2.4em;
+                font-size: 2.0em;
             }
 
             .num_carinho {
@@ -72,20 +72,20 @@
 
 
 
-    .inicio_header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    // .inicio_header {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
 
-        .input_pesquisa {
-            padding: 10px;
-            border: none;
-            border-radius: 10px;
-            width: 300px;
-        }
-    }
+    //     .input_pesquisa {
+    //         padding: 10px;
+    //         border: none;
+    //         border-radius: 10px;
+    //         width: 300px;
+    //     }
+    // }
 
-    #logoHeader {
-        width: 150px;
-    }
+    // #logoHeader {
+    //     width: 150px;
+    // }
 }

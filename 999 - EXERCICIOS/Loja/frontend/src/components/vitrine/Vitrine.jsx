@@ -30,12 +30,12 @@ export default function Vitrine() {
                     <div className='div_preco'>
                         <s>R$ 129,00</s>
                         <p className='valor'>R$ 97,00</p>
-                        <p>Até 10x de R$10,00</p>
+                        <p className='parcela'>Até 10x de R$10,00</p>
                     </div>
                     
 
                     <button className='button_ver_produto' onClick={criarProduto}>
-                        <i class="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
+                        <i className="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
                         Ver Produto
                     </button>
                 </div>
@@ -49,12 +49,12 @@ export default function Vitrine() {
                     <div className='div_preco'>
                         <s>R$ 129,00</s>
                         <p className='valor'>R$ 97,00</p>
-                        <p>Até 10x de R$10,00</p>
+                        <p className='parcela'>Até 10x de R$10,00</p>
                     </div>
                     
 
                     <button className='button_ver_produto' onClick={criarProduto}>
-                        <i class="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
+                        <i className="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
                         Ver Produto
                     </button>
                 </div>
@@ -81,7 +81,7 @@ export default function Vitrine() {
                             </div>
 
                             <button className='button_ver_produto' onClick={criarProduto}>
-                                <i class="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
+                                <i className="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
                                 Ver Produto
                             </button>
                         </div>

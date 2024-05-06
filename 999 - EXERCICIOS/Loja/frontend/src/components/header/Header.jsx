@@ -14,7 +14,7 @@ export default function Header(props) {
                     </div>
                     
                     <div className='icon_pesquisa'>
-                        <i class="bi bi-search"></i>
+                        <i className="bi bi-search"></i>
                     </div>
                 </div>
 
@@ -22,7 +22,7 @@ export default function Header(props) {
 
                 <div>
                     <button type="button" id='carrinho'>
-                        <i class="bi bi-bag-check-fill" id='icon_carrinho'></i>
+                        <i className="bi bi-bag-check-fill" id='icon_carrinho'></i>
                         <span className='num_carinho'>
                             4
                         </span>
