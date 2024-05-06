@@ -10,9 +10,7 @@ app.use(cors());
 const portaMongoose = "mongodb+srv://ramon:nIZQQ073GadooFZD@cluster0.cij4gvt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 
-app.get('/', (req, res) => {
-    res.send('<h1>Hello</h1>')
-})
+
 app.post('/api/salvar-produto', (req, res) => {
     const { ImgUrl, nome, valorAntigo, valorAtual } = req.body;
 
@@ -33,6 +31,17 @@ app.post('/api/salvar-produto', (req, res) => {
     
     res.status(200).json({ mensagem: 'Dados recebidos com sucesso!' });
 });
+
+
+app.get('/api/produtos', async (req, res) => {
+    try {
+        const produtos = await Produto.find();
+        res.json(produtos)
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
 
 mongoose.connect(portaMongoose)
 .then(()=> {

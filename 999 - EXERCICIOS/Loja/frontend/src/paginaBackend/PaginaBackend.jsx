@@ -29,17 +29,12 @@ export default function PaginaBackend() {
         
         const formData = {
             ImgUrl: e.target.urlData.value,
-            nome: e.target.urlData.value,
+            nome: e.target.nomeData.value,
             valorAntigo: e.target.antigoValorData.value,
             valorAtual: e.target.atualValorData.value
         }
 
-        // const formData = {
-        //     ImgUrl: e.target.querySelector('#urlData').value,
-        //     nome: e.target.querySelector('#nomeData').value,
-        //     valorAntigo: e.target.querySelector('#antigoValorData').value,
-        //     valorAtual: e.target.querySelector('#atualValorData').value
-        // }
+        // const 
 
         console.log(formData.ImgUrl)
         
@@ -71,6 +66,7 @@ export default function PaginaBackend() {
                     </div>
                 </div>
 
+
                 <div class="col-md-4">
                     <label for="nomeData" class="form-label">Nome do produto...</label>
                     <input type="text" class="form-control" id="nomeData" placeholder='Nome' required />
@@ -78,6 +74,7 @@ export default function PaginaBackend() {
                     Looks good!
                     </div>
                 </div>
+
 
                 <div class="col-md-4">
                     <label for="antigoValorData" class="form-label">Valor antes do desconto. valor inteiro ex: 10</label>

@@ -1,21 +1,27 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Vitrine.scss'
 
 export default function Vitrine() {
     const [produtos, setProdutos] = useState([])
 
 
-    const criarProduto = () => {
-        const dadosProduto = {
-            imagem: prompt('URL da imagen...'), 
-            titulo: prompt('Nome do produto...'),
-            valorAntigo: Number(prompt('Valor antes do desconto. valor inteiro ex: 10')),
-            valorAtual: Number(prompt('Valor atual do produto.  valor inteiro ex: 10'))
+    useEffect(() => {
+        const fetchProdutos = async () => {
+            try {
+                const response = await fetch('http://localhost:4000/api/produtos');
+                const data = await response.json()
+                setProdutos(data)
+                
+                console.log(produtos)
+            }
+            catch (error) {
+                console.log(error)
+            }
+
         }
 
-        setProdutos([...produtos, dadosProduto])
-    }
-
+        fetchProdutos();
+    }, []);
 
 
     return (
@@ -34,26 +40,7 @@ export default function Vitrine() {
                     </div>
                     
 
-                    <button className='button_ver_produto' onClick={criarProduto}>
-                        <i className="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
-                        Ver Produto
-                    </button>
-                </div>
-
-
-
-                <div className='card_produto'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVNahVJbRZM9TTVjRDuF60tz3aJ6tGr2OD_Q&usqp=CAU" alt="" />
-                    <h3>Canivete Taur 61 Tatic</h3>
-
-                    <div className='div_preco'>
-                        <s>R$ 129,00</s>
-                        <p className='valor'>R$ 97,00</p>
-                        <p className='parcela'>Até 10x de R$10,00</p>
-                    </div>
-                    
-
-                    <button className='button_ver_produto' onClick={criarProduto}>
+                    <button className='button_ver_produto'>
                         <i className="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
                         Ver Produto
                     </button>
@@ -67,10 +54,10 @@ export default function Vitrine() {
                 {  
                     produtos.map((p) => (
                         <div className='card_produto'>
-                            <img src={p.imagem} alt="Imagem Do Produto" />
+                            <img src={p.url} alt="Imagem Do Produto" />
 
                             <div>
-                                <h3>{p.titulo}</h3>
+                                <h3>{p.nomdeProduto}</h3>
                                 <div className='div_preco'>
                                     <s>R$ {p.valorAntigo},00</s>
                                     <p className='valor'>
@@ -80,7 +67,7 @@ export default function Vitrine() {
                                 </div>
                             </div>
 
-                            <button className='button_ver_produto' onClick={criarProduto}>
+                            <button className='button_ver_produto'>
                                 <i className="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
                                 Ver Produto
                             </button>
