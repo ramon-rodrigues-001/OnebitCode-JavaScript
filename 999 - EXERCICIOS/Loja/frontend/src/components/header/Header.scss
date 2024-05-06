@@ -1,7 +1,9 @@
 .header {
     color: rgb(44, 44, 44);
-    background-color: #ededed;
-    padding: 20px 25px;
+    background-color: #f7f5f5;
+    border-bottom: solid 1px black;
+    padding: 10px 25px;
+
 
     .container_heade {
         display: flex;
@@ -33,7 +35,7 @@
 
         
         #logo_header {
-            width: 80px;
+            width: 70px;
         }
 
         #carrinho {
@@ -44,7 +46,18 @@
             #icon_carrinho {
                 width: 20px;
                 display: inline-block;
-                font-size: 2em;
+                font-size: 2.4em;
+            }
+
+            .num_carinho {
+                display: inline-block;
+                background-color: rgba(56, 53, 53, 0.492);
+                border-radius: 20px;
+                color: white;
+                font-size: 1.1em;
+                font-weight: bold;
+                padding: 2px 5px;
+                // width: 100px;
             }
         }
     }

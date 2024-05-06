@@ -1,0 +1,65 @@
+.container_vitrine {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    // flex: 1 1 180px;
+
+    .card_produto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 4px double rgba(0, 0, 0, 0.071);
+        border-radius: 8px;
+        width: 170px;
+        padding: 10px;
+
+        &:hover {
+            box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.079);
+        }
+
+        img {
+            display: inline-block;
+            margin: auto;
+            width: 90%;
+        }
+
+        h3 {
+            padding-top: 4px;
+            text-align: center;
+            // font-weight: bold;
+            font-size: 1.05em;
+        }
+
+        .div_preco {
+            text-align: center;
+            padding: 15px 0px;
+
+            s {
+                font-size: .9em;
+                color: rgb(81, 80, 80);
+            }
+
+            .valor {
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+        }
+
+        .button_ver_produto {
+            width: 100%;
+            background-color: aqua;
+            padding: 5px 10px;
+            font-size: 1em;
+            border-radius: 4px;
+            font-weight: bold;
+            border: none;
+
+            #icon_ver_produto {
+                padding-right: 10px;
+                font-size: 1.4em;
+            }
+        }
+    }
+}
