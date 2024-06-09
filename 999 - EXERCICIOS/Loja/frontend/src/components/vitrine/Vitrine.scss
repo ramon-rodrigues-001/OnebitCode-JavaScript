@@ -1,73 +1,144 @@
 .container_vitrine {
     padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    // flex: 1 1 180px;
 
-    .card_produto {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border: 4px double rgba(0, 0, 0, 0.071);
-        border-radius: 8px;
-        width: 170px;
+    .carrossel_categorias {
+        overflow-x: auto;
+        flex-shrink: 80px;
+        white-space: nowrap;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        text-align: center;
         padding: 10px;
+        margin: 10px 0px 20px 0px;
 
-        &:hover {
-            box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.079);
+        .card_categoria {
+            background-color: rgb(2, 210, 233);
+            align-items: center;
+
+            margin-right: 15px;
+            display: inline-block;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            // overflow: hidden;
+            line-height: 70px;
+            transition: .3s;
+            cursor: pointer;
+
+            img {
+                width: 85%;
+            }
+
+            &:hover {
+                scale: 1.1;
+            }
         }
+    }
+
+    
+    
+
+    .container_produtos {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+
+        .linkVerProduto {
+            width: 47%;
+            max-width: 200px;
+            text-decoration: none;
+            color: #000000;
+        }
+    
+        .card_produto {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            height: 100%;
+            border: 3px double rgba(0, 0, 0, 0.071);
+            border-radius: 8px;
+            transition: .3s;
+            // width: 50%;
+            padding: 10px;
+    
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.131);
+            }
+    
+            img {
+                display: inline-block;
+                margin: auto;
+                // width: calc(90% + 10px);
+                width: 100%;
+            }
+    
+            h3 {
+                padding-top: 10px;
+                text-align: center;
+                // font-weight: bold;
+                font-size: 1em;
+    
+                margin-bottom: 0px;
+            }
+    
+    
+            .div_preco {
+                text-align: center;
+                padding-bottom: 10px;
+    
+                s {
+                    font-size: .9em;
+                    color: rgba(0, 0, 0, 0.6);
+                }
+    
+                .valor {
+                    font-size: 1.2em;
+                    font-weight: bold;
+                    margin-bottom: 3px;
+                }
+    
+                .parcela {
+                    margin-bottom: 2px;
+                }
+            }
+    
+            .button_ver_produto {
+                display: none;
+                margin-left: 5%;
+                margin-bottom: 5PX;
+                width: 90%;
+                background-color: aqua;
+                padding: 5px 10px;
+                font-size: 1em;
+                border-radius: 4px;
+                font-weight: bold;
+                border: none;
+                opacity: 0;
+    
+                #icon_ver_produto {
+                    padding-right: 10px;
+                    // font-size: 1.4em;
+                }
+            }
+        }
+    }
+
+
+    .icone_voltar_ao_topo {
+        background-color: rgba(0, 0, 255, 0.258);
+        border-radius: 50%;
+        padding: 5px;
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        z-index: 995;
 
         img {
-            display: inline-block;
-            margin: auto;
-            width: 90%;
-        }
-
-        h3 {
-            padding-top: 4px;
-            text-align: center;
-            // font-weight: bold;
-            font-size: 1.05em;
-
-            margin-bottom: 0px;
-        }
-
-
-        .div_preco {
-            text-align: center;
-            padding: 15px 0px;
-
-            s {
-                font-size: .9em;
-                color: rgb(81, 80, 80);
-            }
-
-            .valor {
-                font-size: 1.3em;
-                font-weight: bold;
-                margin-bottom: 3px;
-            }
-
-            .parcela {
-                margin-bottom: 2px;
-            }
-        }
-
-        .button_ver_produto {
-            width: 100%;
-            background-color: aqua;
-            padding: 5px 10px;
-            font-size: 1em;
-            border-radius: 4px;
-            font-weight: bold;
-            border: none;
-
-            #icon_ver_produto {
-                padding-right: 10px;
-                font-size: 1.4em;
-            }
+            width: 50px;
         }
     }
 }

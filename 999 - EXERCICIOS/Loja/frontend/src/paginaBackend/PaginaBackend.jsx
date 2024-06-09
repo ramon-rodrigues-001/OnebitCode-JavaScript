@@ -112,7 +112,8 @@ export default function PaginaBackend() {
                     </div>
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-primary" type="submit" >Submit form</button>
+                    <a href="/" class="btn btn-primary">Cancelar produto</a>
+                    <button class="btn btn-primary mx-3" type="submit" >Criar produto</button>
                 </div>
             </form>
             </section>

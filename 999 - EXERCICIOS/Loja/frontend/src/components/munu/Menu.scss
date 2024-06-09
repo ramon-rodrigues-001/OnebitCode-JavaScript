@@ -1,0 +1,52 @@
+.containerMenu {
+    // display: none;
+    background-color: rgb(2, 210, 233);
+    position: absolute;
+    opacity: 0;
+    left: -300px;
+    top: 71px;
+    padding: 10px;
+    border: solid 1px rgba(0, 0, 0, 0.10);
+    transition: .2s;
+    min-height: calc(100vh - 71px);
+    width: 300px;
+    z-index: 998;
+
+    &#ativo {
+        display: block;
+        box-shadow: 200px 0px 2px 1500px rgba(0, 0, 0, 0.411);
+        opacity: 1;
+        left: 0;
+    }
+
+    a {
+        display: flex;
+        gap: 20px;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        transition: .3s;
+
+        &.login {
+            background-color: rgb(0, 195, 255);
+            padding: 20px 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        &:hover {
+            background-color: rgb(5, 221, 245);
+            cursor: pointer;
+            // scale: 1.005;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        .icones {
+            width: 20px;
+        }
+    }
+}

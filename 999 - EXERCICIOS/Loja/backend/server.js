@@ -43,6 +43,15 @@ app.get('/api/produtos', async (req, res) => {
 })
 
 
+app.get('/verProduto/:id', (req, res) => {
+    const id = req.params.id
+
+    Produto.find({_id: id}).then(produtoSelecionado => {
+        res.json(produtoSelecionado)
+    })
+})
+
+
 mongoose.connect(portaMongoose)
 .then(()=> {
     console.log('conectado ao banco de dados...')

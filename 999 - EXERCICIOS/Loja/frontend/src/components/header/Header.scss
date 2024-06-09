@@ -1,8 +1,10 @@
 .header {
     color: rgb(44, 44, 44);
-    background-color: #f7f5f5;
-    border-bottom: solid 1px black;
+    background-color: rgb(2, 210, 233);
+    border-bottom: solid 2px rgba(0, 0, 0, 0.175);
     padding: 10px 25px;
+    position: relative;
+    z-index: 999;
 
 
     .container_heade {
@@ -20,22 +22,49 @@
                 display: flex;
                 flex-direction: column;
                 gap: 4px;
+                padding: 5px;
+                transition: .3s;
                  
                 .traco {
+                    border-radius: 30px;
+                    transition: .2s;
                     width: 30px;
-                    height: 4px;
+                    height: 3px;
                     background-color: black;
+                }
+
+                &#aberto {
+
+                    #traco_1 {
+                        transform: rotateZ(43deg) translateY(5px);
+                    }
+                    #traco_2 {
+                        position: absolute;
+                        transform: translateX(-50px);
+                        opacity: 0;
+                    }
+                    #traco_3 {
+                        transform: rotateZ(-43deg) translateY(-5px);
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
                 }
             }
 
             .icon_pesquisa {
-                font-size: 1.5em;
+                // font-size: 1.5em;
+                cursor: pointer;
+                width: 25px;
             }
         }
 
         
         #logo_header {
-            width: 70px;
+            // display: none;
+            width: 150px;
+            padding-right: 20px;
         }
 
         #carrinho {
@@ -44,9 +73,9 @@
             border: none;
 
             #icon_carrinho {
-                width: 20px;
+                width: 30px;
                 display: inline-block;
-                font-size: 2.0em;
+                font-size: 2em;
             }
 
             .num_carinho {
@@ -61,31 +90,4 @@
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-    // .inicio_header {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: center;
-
-    //     .input_pesquisa {
-    //         padding: 10px;
-    //         border: none;
-    //         border-radius: 10px;
-    //         width: 300px;
-    //     }
-    // }
-
-    // #logoHeader {
-    //     width: 150px;
-    // }
 }

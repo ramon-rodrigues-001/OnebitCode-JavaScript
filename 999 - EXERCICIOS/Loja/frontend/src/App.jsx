@@ -1,31 +1,66 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './ComumStyles/geralStyles.scss'
 import Header from './components/header/Header.jsx';
 import Vitrine from './components/vitrine/Vitrine.jsx';
 import PaginaBackend from './paginaBackend/PaginaBackend.jsx';
+import Menu from './components/munu/Menu.jsx';
 
 function App() {
-  const [pgBackend, setpgBackend] = useState(false)
+  const [menuState, setMenuState] = useState(false)
 
-  const mudarParaBackend = () => {
-    setpgBackend(!pgBackend)
+  const mudarStateMenu = () => {
+    setMenuState(!menuState)
   }
 
   return (
-    <dv>
-      {!pgBackend ? (
+    <div>
+      < Header mudarStateMenu = {mudarStateMenu} />
+      < Menu
+        menuState = {menuState}
+      />
+
+
+      <main>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={
+                    < Vitrine />
+                } />
+                <Route path="/backend" element={
+                    < PaginaBackend />
+                } />
+                <Route path="/produto/:id" element={
+                    <h1>produto</h1>
+                } />
+            </Routes>
+        </BrowserRouter>
+      </main>
+      
+
+
+
+      {/* {!pgBackend ? (
           <>
-            < Header mudarParaBackend = {mudarParaBackend}/>
+            < Header mudarStateMenu = {mudarStateMenu} />
+            < Menu
+              mudarParaBackend = {mudarParaBackend}
+              menuState = {menuState}
+            />
             < Vitrine />
           </>
           ) : (
             <>
-              < Header mudarParaBackend = {mudarParaBackend}/>
+              < Header mudarStateMenu = {mudarStateMenu} />
+              < Menu
+                mudarParaBackend = {mudarParaBackend}
+                menuState = {menuState}
+              />
               < PaginaBackend />
             </>
-          )}
-    </dv>
+          )} */}
+    </div>
   )
 }
 
