@@ -6,6 +6,7 @@ import Header from './components/header/Header.jsx';
 import Vitrine from './components/vitrine/Vitrine.jsx';
 import PaginaBackend from './paginaBackend/PaginaBackend.jsx';
 import Menu from './components/munu/Menu.jsx';
+import Produto from './components/produto/Produto.jsx';
 
 function App() {
   const [menuState, setMenuState] = useState(false)
@@ -32,7 +33,7 @@ function App() {
                     < PaginaBackend />
                 } />
                 <Route path="/produto/:id" element={
-                    <h1>produto</h1>
+                    <Produto/>
                 } />
             </Routes>
         </BrowserRouter>

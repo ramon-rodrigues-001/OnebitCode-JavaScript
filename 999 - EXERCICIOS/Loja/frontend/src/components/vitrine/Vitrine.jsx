@@ -81,10 +81,64 @@ export default function Vitrine() {
                 </div>
                 
 
+     
+
+
 
                 {/* ==== Renderizador de produtos do banco de dados ==== */}
 
                 <div className='container_produtos'>
+
+
+                <a href={'#'} className='linkVerProduto'>
+                            <div className='card_produto'>
+                                <img src={'https://www.redequerobahiajaguaquara.com.br/image/cache/catalog/querobahia-notebook/11-1000x1000.PNG'} alt="Imagem Do Produto" />
+                                <div>
+                                    <h3>Notebook dell i5</h3>
+                                    <div className='div_preco'>
+                                        <s>R$ 2430,00</s>
+                                        <p className='valor'>
+                                            R$ 2000,00
+                                        </p>
+                                    </div>
+                                </div>
+                                <button className='button_ver_produto'>
+                                    <i className="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
+                                    Ver Produto
+                                </button>
+                                <button className='button_ver_produto'>
+                                    <i className="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
+                                    Ver Produto
+                                </button>
+                            </div>
+                        </a>
+                        <a href={'#'} className='linkVerProduto'>
+                            <div className='card_produto'>
+                                <img src={'https://blog.avell.com.br/wp-content/uploads/2022/08/lite.png'} alt="Imagem Do Produto" />
+                                <div>
+                                    <h3>Notebook dell i5</h3>
+                                    <div className='div_preco'>
+                                        <s>R$ 2430,00</s>
+                                        <p className='valor'>
+                                            R$ 2000,00
+                                        </p>
+                                    </div>
+                                </div>
+                                <button className='button_ver_produto'>
+                                    <i className="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
+                                    Ver Produto
+                                </button>
+                                <button className='button_ver_produto'>
+                                    <i className="bi bi-bag-check-fill" id='icon_ver_produto'></i> 
+                                    Ver Produto
+                                </button>
+                            </div>
+                        </a>
+                        
+
+
+
+
                     {produtos.map(p => (
                         <a href={'produto/'+ p._id} className='linkVerProduto' key={p._id}>
                             <div className='card_produto'>
