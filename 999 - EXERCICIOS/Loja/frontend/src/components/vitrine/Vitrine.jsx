@@ -90,8 +90,10 @@ export default function Vitrine() {
                 <div className='container_produtos'>
 
 
-                <a href={'#'} className='linkVerProduto'>
+                        <a href={'#'} className='linkVerProduto'>
                             <div className='card_produto'>
+                                <span className='porcetagem_desconto'>-30%</span>
+
                                 <img src={'https://www.redequerobahiajaguaquara.com.br/image/cache/catalog/querobahia-notebook/11-1000x1000.PNG'} alt="Imagem Do Produto" />
                                 <div>
                                     <h3>Notebook dell i5</h3>
@@ -112,6 +114,7 @@ export default function Vitrine() {
                                 </button>
                             </div>
                         </a>
+
                         <a href={'#'} className='linkVerProduto'>
                             <div className='card_produto'>
                                 <img src={'https://blog.avell.com.br/wp-content/uploads/2022/08/lite.png'} alt="Imagem Do Produto" />
@@ -142,6 +145,11 @@ export default function Vitrine() {
                     {produtos.map(p => (
                         <a href={'produto/'+ p._id} className='linkVerProduto' key={p._id}>
                             <div className='card_produto'>
+                                
+                                <span className='porcetagem_desconto'>
+                                    {Math.floor(((p.valorAtual-p.valorAntigo)/p.valorAtual)*100)}% Off
+                                </span>
+
                                 <img src={p.url} alt="Imagem Do Produto" />
                                 <div>
                                     <h3>{p.nomdeProduto}</h3>

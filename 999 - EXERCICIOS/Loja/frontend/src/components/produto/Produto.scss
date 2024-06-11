@@ -12,6 +12,7 @@
     }
 
     .corrossel_imagens {
+        padding: 10px 0px;
 
         .carousel-item {
             text-align: center;
@@ -44,6 +45,8 @@
     }
 
     .btns_comprar_add {
+        padding-bottom: 20px;
+
         button {
             display: block;
             margin: auto;
@@ -55,11 +58,16 @@
             background-color: rgb(0, 144, 137);
             color: white;
             font-size: 1.1em;
-            margin-bottom: 10px;
             font-weight: bold;
+            transition: .2s;
 
             &.comprar {
+                margin-bottom: 10px;
                 background-color: rgb(0, 166, 255);
+            }
+
+            &:hover {
+                background-color: rgba(0, 166, 255, 0.705);
             }
         }
     } 

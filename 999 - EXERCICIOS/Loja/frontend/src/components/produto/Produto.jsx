@@ -4,7 +4,7 @@ import './Produto.scss';
 
 export default function Produto() {
     const [produto, setProduto] = useState(null);
-
+    
     useEffect(() => {
         const fetchProduto = async () => {
             try {
@@ -27,6 +27,19 @@ export default function Produto() {
     if (!produto) {
         return <div>Loading...</div>;
     }
+
+
+    // Ativado componente do bootstrap (toast)
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+
+    if (toastTrigger) {
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    toastTrigger.addEventListener('click', () => {
+        toastBootstrap.show()
+    })
+    } 
+
 
     return (
         <div className='produto_selecionado'>
@@ -77,7 +90,21 @@ export default function Produto() {
 
             <div className='btns_comprar_add'>
                 <button className='comprar'>Comprar</button>
-                <button>Adicioar ao carrinho</button>
+                <button class="btn btn-primary" id="liveToastBtn">Adicioar ao carrinho</button>
+            </div>
+
+
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <strong class="me-auto">Gratos por tê-lo conosco!</strong>
+                        <small>Fechar</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Produto foi salvo no carrinho...
+                    </div>
+                </div>
             </div>
         </div>
     );
