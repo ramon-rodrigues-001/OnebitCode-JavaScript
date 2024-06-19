@@ -1,3 +1,31 @@
 .sectionPaginaDoBackend {
+    background-color: black;
+    color: white;
     padding: 20px;
+
+    #formulario_criar_produto {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .valores {
+        display: flex;
+        justify-content: center;
+        gap: 1.5%;
+
+        #valor {
+            max-width: 200px;
+        }
+
+        #atualValorData,#antigoValorData {
+            max-width: 200px;
+            margin: auto;
+        }
+    }
+
+    input {
+        border: solid 2px yellow;
+        background-color: rgb(23, 21, 21);
+    }
 }

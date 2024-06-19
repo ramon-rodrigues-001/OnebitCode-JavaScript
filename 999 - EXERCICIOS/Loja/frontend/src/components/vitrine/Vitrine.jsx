@@ -92,7 +92,7 @@ export default function Vitrine() {
 
                         <a href={'#'} className='linkVerProduto'>
                             <div className='card_produto'>
-                                <span className='porcetagem_desconto'>-30%</span>
+                                <span className='porcetagem_desconto'>-30% Off</span>
 
                                 <img src={'https://www.redequerobahiajaguaquara.com.br/image/cache/catalog/querobahia-notebook/11-1000x1000.PNG'} alt="Imagem Do Produto" />
                                 <div>
